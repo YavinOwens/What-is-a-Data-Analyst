@@ -2,8 +2,7 @@ project:
   type: website
   output-dir: docs
   render:
-    - index.qmd
-    - AndiStory.qmd
+    - "*.qmd"
 
 website:
   title: "Lean Analytics Journey"
