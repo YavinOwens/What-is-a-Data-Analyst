@@ -1,0 +1,14 @@
+/* Basic styling improvements */
+body {
+    line-height: 1.6;
+}
+
+.sidebar-title {
+    font-weight: bold;
+}
+
+blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 1em;
+    margin: 1em 0;
+} 

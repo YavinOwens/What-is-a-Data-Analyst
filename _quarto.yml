@@ -10,41 +10,32 @@ website:
   page-navigation: true
   navbar:
     left:
-      - href: DQ.qmd
-        text: "Book 1 - Kidlens Law"
-      - href: book2.qmd
-        text: "Book 2 - Documentation Journey"
-      - href: book3.qmd
-        text: "Book 3 - Getting Your Hands Dirty"
-      - href: book4.qmd
-        text: "Book 4 - ARGH Framework"
+      - text: "Home"
+        href: index.qmd
+      - text: "Andi's Story"
+        href: AndiStory.qmd
     right:
       - icon: github
         href: https://github.com/YavinOwens/What-is-a-Data-Analyst
-  sidebar:
-    style: "docked"
-    search: true
-    contents:
-      - section: "Book 1 - Kidlens Law"
-        contents:
-          - DQ.qmd
-      - section: "Book 2 - Documentation Journey"
-        contents:
-          - book2.qmd
-      - section: "Book 3 - Implementation"
-        contents:
-          - book3.qmd
-      - section: "Book 4 - ARGH Framework"
-        contents:
-          - book4.qmd
 
 format:
   html:
     theme: cosmo
+    css: styles.css
     toc: true
+    toc-depth: 3
     code-fold: true
     code-tools: true
-    css: styles.css
+    highlight-style: github
 
 execute:
-  freeze: auto 
+  echo: false
+  warning: false
+  freeze: auto
+
+resources:
+  - styles.css
+
+project-list:
+  - index.qmd
+  - AndiStory.qmd 
