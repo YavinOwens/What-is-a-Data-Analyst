@@ -396,4 +396,155 @@ Andi's journey teaches us that "good" is not a destination but a continuous jour
 Remember:
 > "The goal is not to be perfect at everything, but to be excellent at what matters most to your organization."
 
-The future of data analytics is not just about technology—it's about creating value through actionable insights, reliable systems, governed processes, and harmonized operations. As Andi would say, "ARGH!" might sound like frustration, but it's actually the sound of excellence in the making. 
+The future of data analytics is not just about technology—it's about creating value through actionable insights, reliable systems, governed processes, and harmonized operations. As Andi would say, "ARGH!" might sound like frustration, but it's actually the sound of excellence in the making.
+
+# Appendix: Data Quality Assessment
+
+## GDPR Fines Analysis
+
+### Data Profile Overview
+
+```{python}
+#| label: data-profile
+#| warning: false
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Sample data profile visualization
+profile_metrics = {
+    'Metric': ['Completeness', 'Accuracy', 'Consistency', 'Timeliness', 'Relevance'],
+    'Score': [0.95, 0.88, 0.92, 0.85, 0.90]
+}
+
+df_profile = pd.DataFrame(profile_metrics)
+
+plt.figure(figsize=(10, 6))
+bars = plt.bar(df_profile['Metric'], df_profile['Score'])
+plt.ylim(0, 1)
+plt.title('Data Quality Profile')
+plt.ylabel('Score')
+
+# Add value labels on top of bars
+for bar in bars:
+    height = bar.get_height()
+    plt.text(bar.get_x() + bar.get_width()/2., height,
+             f'{height:.2f}',
+             ha='center', va='bottom')
+
+plt.show()
+```
+
+### Temporal Distribution
+
+```{python}
+#| label: temporal-distribution
+#| warning: false
+
+# Sample temporal data
+dates = pd.date_range(start='2018-01-01', end='2023-12-31', freq='M')
+fines = np.random.exponential(1, size=len(dates)) * 1000000
+
+plt.figure(figsize=(12, 6))
+plt.plot(dates, fines)
+plt.title('GDPR Fines Over Time')
+plt.xlabel('Date')
+plt.ylabel('Fine Amount (€)')
+plt.grid(True)
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+```
+
+### Geographic Distribution
+
+```{python}
+#| label: geographic-distribution
+#| warning: false
+
+# Sample geographic data
+countries = ['Germany', 'France', 'Spain', 'Italy', 'Netherlands', 'Belgium', 'Sweden', 'Norway', 'Denmark', 'Finland']
+violations = np.random.randint(10, 100, size=len(countries))
+
+plt.figure(figsize=(10, 6))
+plt.barh(countries, violations)
+plt.title('GDPR Violations by Country')
+plt.xlabel('Number of Violations')
+plt.tight_layout()
+plt.show()
+```
+
+### Fine Amount Distribution
+
+```{python}
+#| label: amount-distribution
+#| warning: false
+
+# Generate sample fine amounts
+fine_amounts = np.random.lognormal(mean=12, sigma=1.5, size=1000)
+
+plt.figure(figsize=(10, 6))
+plt.hist(fine_amounts, bins=50, edgecolor='black')
+plt.title('Distribution of GDPR Fine Amounts')
+plt.xlabel('Fine Amount (€)')
+plt.ylabel('Frequency')
+plt.tight_layout()
+plt.show()
+```
+
+### Article Distribution
+
+```{python}
+#| label: article-distribution
+#| warning: false
+
+# Sample article data
+articles = ['Art. 5', 'Art. 6', 'Art. 7', 'Art. 12', 'Art. 13', 'Art. 14', 'Art. 15', 'Art. 32', 'Art. 33', 'Art. 34']
+frequencies = np.random.randint(20, 200, size=len(articles))
+
+plt.figure(figsize=(10, 6))
+plt.barh(articles, frequencies)
+plt.title('Most Frequently Violated GDPR Articles')
+plt.xlabel('Number of Violations')
+plt.tight_layout()
+plt.show()
+```
+
+### Industry Impact Analysis
+
+```{python}
+#| label: industry-impact
+#| warning: false
+
+# Sample industry data
+industries = ['Technology', 'Healthcare', 'Finance', 'Retail', 'Education', 
+              'Manufacturing', 'Services', 'Media', 'Telecom', 'Energy']
+avg_fines = np.random.lognormal(mean=11, sigma=1, size=len(industries))
+
+plt.figure(figsize=(12, 6))
+plt.barh(industries, avg_fines)
+plt.title('Average GDPR Fines by Industry')
+plt.xlabel('Average Fine Amount (€)')
+plt.tight_layout()
+plt.show()
+```
+
+### Severity Analysis
+
+```{python}
+#| label: severity-analysis
+#| warning: false
+
+# Create a heatmap of severity by article and industry
+severity_matrix = np.random.randint(1, 5, size=(len(articles), len(industries)))
+
+plt.figure(figsize=(12, 8))
+plt.imshow(severity_matrix, cmap='YlOrRd', aspect='auto')
+plt.colorbar(label='Severity Level')
+plt.xticks(range(len(industries)), industries, rotation=45, ha='right')
+plt.yticks(range(len(articles)), articles)
+plt.title('GDPR Violation Severity by Article and Industry')
+plt.tight_layout()
+plt.show()
+``` 
