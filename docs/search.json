@@ -63,11 +63,53 @@
     "text": "The Never-Ending Journey\nAndi’s journey teaches us that “good” is not a destination but a continuous journey of improvement. The ARGH framework provides a compass for this journey:\n\nActionable: Every insight should drive meaningful change\nReliable: Trust is built on consistent quality\nGoverned: Control enables freedom\nHarmonized: Integration creates value\n\nRemember: &gt; “The goal is not to be perfect at everything, but to be excellent at what matters most to your organization.”\nThe future of data analytics is not just about technology—it’s about creating value through actionable insights, reliable systems, governed processes, and harmonized operations. As Andi would say, “ARGH!” might sound like frustration, but it’s actually the sound of excellence in the making."
   },
   {
-    "objectID": "AndiStory.html#gdpr-fines-analysis",
-    "href": "AndiStory.html#gdpr-fines-analysis",
+    "objectID": "AndiStory.html#methodologies-and-frameworks",
+    "href": "AndiStory.html#methodologies-and-frameworks",
     "title": "Andi’s Data Journey",
-    "section": "GDPR Fines Analysis",
-    "text": "GDPR Fines Analysis\n\nData Profile Overview\n\n\n\n\n\n\n\n\n\n\n\nTemporal Distribution\n\n\n\n\n\n\n\n\n\n\n\nGeographic Distribution\n\n\n\n\n\n\n\n\n\n\n\nFine Amount Distribution\n\n\n\n\n\n\n\n\n\n\n\nArticle Distribution\n\n\n\n\n\n\n\n\n\n\n\nIndustry Impact Analysis\n\n\n\n\n\n\n\n\n\n\n\nSeverity Analysis"
+    "section": "Methodologies and Frameworks",
+    "text": "Methodologies and Frameworks\n\nDMAIC\nDefinition: A data-driven improvement cycle used to improve, optimize and stabilize business processes and designs. - Define: Identify the problem and project goals - Measure: Collect data to understand the current state - Analyze: Identify root causes of problems - Improve: Implement and verify solutions - Control: Maintain the improvements\n\n\nSix Thinking Hats\nDefinition: A thinking tool for group discussion and individual thinking involving six colored hats: - White Hat: Facts and information - Red Hat: Feelings and intuition - Black Hat: Critical judgment - Yellow Hat: Positive aspects - Green Hat: Creativity - Blue Hat: Process control\n\n\nARGH Framework\nDefinition: A framework for achieving excellence in data analytics: - Actionable: Insights that drive decisions - Reliable: Trustworthy and consistent data - Governed: Controlled and compliant processes - Harmonized: Integrated and synchronized systems\n\n\nDMBOK2\nDefinition: Data Management Body of Knowledge, a comprehensive framework for data management: - Data Governance - Data Architecture - Data Quality - Metadata Management - Data Security"
+  },
+  {
+    "objectID": "AndiStory.html#technical-terms",
+    "href": "AndiStory.html#technical-terms",
+    "title": "Andi’s Data Journey",
+    "section": "Technical Terms",
+    "text": "Technical Terms\n\nData Quality Dimensions\n\nCompleteness: The degree to which all required data is present\nAccuracy: The degree to which data correctly describes the real-world object or event\nConsistency: The degree to which data maintains consistency across the data set\nTimeliness: The degree to which data represents reality from the required point in time\nRelevance: The degree to which data is applicable and helpful for the task at hand\n\n\n\nAnalytical Engineering\nDefinition: The practice of designing, implementing, and maintaining systems that transform raw data into actionable insights: - Data Pipeline Development - Quality Control Implementation - Process Automation - Scalable Solutions Design"
+  },
+  {
+    "objectID": "AndiStory.html#books-and-publications",
+    "href": "AndiStory.html#books-and-publications",
+    "title": "Andi’s Data Journey",
+    "section": "Books and Publications",
+    "text": "Books and Publications\n\nDe Bono, E. (1985). Six Thinking Hats: An Essential Approach to Business Management. Little, Brown and Company.\nDAMA International. (2017). DAMA-DMBOK: Data Management Body of Knowledge (2nd Edition). Technics Publications.\nPyzdek, T., & Keller, P. (2018). The Six Sigma Handbook (5th Edition). McGraw-Hill Education."
+  },
+  {
+    "objectID": "AndiStory.html#online-resources",
+    "href": "AndiStory.html#online-resources",
+    "title": "Andi’s Data Journey",
+    "section": "Online Resources",
+    "text": "Online Resources\n\nInternational Organization for Standardization. (2015). ISO 9001:2015 Quality Management Systems. https://www.iso.org/standard/62085.html\nGDPR.eu. (2018). Complete guide to GDPR compliance. https://gdpr.eu/\nData Management Association (DAMA). https://www.dama.org/"
+  },
+  {
+    "objectID": "AndiStory.html#industry-standards-and-frameworks",
+    "href": "AndiStory.html#industry-standards-and-frameworks",
+    "title": "Andi’s Data Journey",
+    "section": "Industry Standards and Frameworks",
+    "text": "Industry Standards and Frameworks\n\nCOBIT (Control Objectives for Information and Related Technologies)\n\nFramework for IT management and IT governance\n\nITIL (Information Technology Infrastructure Library)\n\nSet of detailed practices for IT service management\n\nCRISP-DM (Cross-Industry Standard Process for Data Mining)\n\nIndustry-standard process model for data mining projects"
+  },
+  {
+    "objectID": "AndiStory.html#additional-reading",
+    "href": "AndiStory.html#additional-reading",
+    "title": "Andi’s Data Journey",
+    "section": "Additional Reading",
+    "text": "Additional Reading\n\nAgile Data Warehouse Design\n\nLawrence Corr & Jim Stagnitto\nCollaborative dimensional modeling\n\nData Quality Assessment Framework\n\nWorld Bank Group\nStatistical capacity building\n\nThe Data Warehouse Toolkit\n\nRalph Kimball & Margy Ross\nDimensional modeling fundamentals"
+  },
+  {
+    "objectID": "AndiStory.html#gdpr-fines-analysis-summary",
+    "href": "AndiStory.html#gdpr-fines-analysis-summary",
+    "title": "Andi’s Data Journey",
+    "section": "GDPR Fines Analysis Summary",
+    "text": "GDPR Fines Analysis Summary\n\nOverview\nThe analysis of GDPR fines reveals several key patterns and insights:\n\nTemporal Trends\n\nIncreasing trend in enforcement actions since GDPR implementation\nSeasonal variations in fine amounts and frequency\nNotable increase in large fines over time\n\nGeographic Distribution\n\nHigher enforcement activity in certain jurisdictions\nVarying fine amounts across different countries\nRegional patterns in types of violations\n\nFine Amount Patterns\n\nWide range of fine amounts, from minor to significant penalties\nCorrelation between violation severity and fine amounts\nIndustry-specific patterns in fine amounts\n\nCommon Violations\n\nMost frequently violated GDPR articles\nPatterns in violation types across industries\nRecurring compliance challenges\n\nIndustry Impact\n\nSector-specific compliance challenges\nVariation in fine severity across industries\nIndustry-specific risk patterns\n\nSeverity Analysis\n\nCorrelation between violation types and fine amounts\nIndustry-specific severity patterns\nImpact of multiple violations on fine amounts\n\n\nThis analysis provides valuable insights for organizations to: - Prioritize compliance efforts - Understand risk patterns - Develop targeted mitigation strategies - Allocate resources effectively - Improve data protection practices"
   },
   {
     "objectID": "index.html",
