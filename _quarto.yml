@@ -1,0 +1,47 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Lean Analytics Journey"
+  site-url: https://YavinOwens.github.io/Analytics-Newsletter
+  repo-url: https://github.com/YavinOwens/Analytics-Newsletter
+  navbar:
+    left:
+      - href: DQ.qmd
+        text: "Book 1 - Kidlens Law"
+      - href: book2.qmd
+        text: "Book 2 - Documentation Journey"
+      - href: book3.qmd
+        text: "Book 3 - Getting Your Hands Dirty"
+      - href: book4.qmd
+        text: "Book 4 - ARGH Framework"
+    right:
+      - icon: github
+        href: https://github.com/YavinOwens/Analytics-Newsletter
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Book 1 - Kidlens Law"
+        contents:
+          - DQ.qmd
+      - section: "Book 2 - Documentation Journey"
+        contents:
+          - book2.qmd
+      - section: "Book 3 - Implementation"
+        contents:
+          - book3.qmd
+      - section: "Book 4 - ARGH Framework"
+        contents:
+          - book4.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    code-tools: true
+
+execute:
+  freeze: auto 
