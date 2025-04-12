@@ -7,39 +7,80 @@ title: "Lean Analytics Journey"
 
 # Welcome to the Lean Analytics Journey
 
-This collection of books follows Andi's journey through the world of data analytics, documentation, and implementation. Each book builds upon the previous one, creating a comprehensive guide to modern data practices.
+This collection of books follows the journey through data analytics, documentation, and implementation. Each book builds upon the previous one, creating a comprehensive guide to modern data practices.
 
 ## The Books
 
 ### [Book 1 - Kidlens Law](DQ.qmd)
 Dive into the fundamentals of data quality assessment and GDPR fines analysis. Learn how writing down problems clearly leads to better solutions.
 
+::: {.callout-note}
+## Key Topics
+- Data Quality Assessment
+- GDPR Fines Analysis
+- Problem Definition
+:::
+
 ### [Book 2 - The Documentation Journey](book2.qmd)
 Explore the art of documentation using DMBOK2 principles and the hub and spoke model. Transform raw documentation into actionable knowledge.
+
+::: {.callout-note}
+## Key Topics
+- DMBOK2 Principles
+- Hub and Spoke Model
+- Documentation Best Practices
+:::
 
 ### [Book 3 - From Theory to Practice](book3.qmd)
 Get your hands dirty with practical implementation. Learn how to turn concepts into working solutions through detailed code examples and best practices.
 
+::: {.callout-note}
+## Key Topics
+- Implementation Guide
+- Code Examples
+- Best Practices
+:::
+
 ### [Book 4 - ARGH Framework](book4.qmd)
 Discover what "good" looks like through the ARGH framework:
+
+::: {.callout-note}
+## Framework Components
 - **A**ctionable: Insights that drive decisions
 - **R**eliable: Trustworthy and consistent data
 - **G**overned: Controlled and compliant processes
 - **H**armonized: Integrated and synchronized systems
+:::
 
-## How to Use This Resource
+## Navigation Guide
 
-1. **Sequential Learning**: Start with Book 1 and progress through the series to build a solid foundation.
-2. **Reference Guide**: Use the search functionality to find specific topics.
-3. **Practical Implementation**: Follow the code examples and adapt them to your needs.
-4. **Continuous Improvement**: Apply the ARGH framework to evaluate and enhance your data practices.
+1. Use the top navigation bar to move between books
+2. Use the sidebar for detailed navigation within each book
+3. Use the search function to find specific topics
+4. Follow the books in sequence for the best learning experience
 
 ## Getting Started
 
 Choose your path:
-- For data quality assessment, start with [Book 1](DQ.qmd)
-- For documentation best practices, jump to [Book 2](book2.qmd)
-- For implementation details, explore [Book 3](book3.qmd)
-- For excellence frameworks, check out [Book 4](book4.qmd)
+
+:::: {.columns}
+::: {.column width="50%"}
+**Sequential Learning**
+
+1. [Start with Book 1](DQ.qmd)
+2. [Move to Book 2](book2.qmd)
+3. [Continue to Book 3](book3.qmd)
+4. [Finish with Book 4](book4.qmd)
+:::
+
+::: {.column width="50%"}
+**Topic-Based Learning**
+
+- Data Quality → [Book 1](DQ.qmd)
+- Documentation → [Book 2](book2.qmd)
+- Implementation → [Book 3](book3.qmd)
+- Framework → [Book 4](book4.qmd)
+:::
+::::
 
 Remember: The journey to excellence is continuous. Each book represents a step forward in mastering data analytics and documentation practices. 
