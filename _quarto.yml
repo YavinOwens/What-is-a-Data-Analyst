@@ -4,8 +4,8 @@ project:
 
 website:
   title: "Lean Analytics Journey"
-  site-url: https://YavinOwens.github.io/Analytics-Newsletter
-  repo-url: https://github.com/YavinOwens/Analytics-Newsletter
+  site-url: https://YavinOwens.github.io/What-is-a-Data-Analyst
+  repo-url: https://github.com/YavinOwens/What-is-a-Data-Analyst
   repo-actions: [edit, issue]
   page-navigation: true
   navbar:
@@ -20,7 +20,7 @@ website:
         text: "Book 4 - ARGH Framework"
     right:
       - icon: github
-        href: https://github.com/YavinOwens/Analytics-Newsletter
+        href: https://github.com/YavinOwens/What-is-a-Data-Analyst
   sidebar:
     style: "docked"
     search: true

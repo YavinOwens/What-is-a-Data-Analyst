@@ -1,6 +1,6 @@
 # Lean Analytics Journey
 
-[![Publish Quarto Website](https://github.com/YavinOwens/Analytics-Newsletter/actions/workflows/publish.yml/badge.svg)](https://YavinOwens.github.io/Analytics-Newsletter)
+[![Publish Quarto Website](https://github.com/YavinOwens/What-is-a-Data-Analyst/actions/workflows/publish.yml/badge.svg)](https://YavinOwens.github.io/What-is-a-Data-Analyst)
 
 A comprehensive guide to data analytics, documentation, and implementation through four interconnected books.
 
@@ -26,14 +26,14 @@ Defining excellence through the ARGH framework:
 
 ## 🚀 Getting Started
 
-Visit our [website](https://YavinOwens.github.io/Analytics-Newsletter) to start your analytics journey.
+Visit our [website](https://YavinOwens.github.io/What-is-a-Data-Analyst) to start your analytics journey.
 
 ## 🛠️ Local Development
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YavinOwens/Analytics-Newsletter.git
-cd Analytics-Newsletter
+git clone https://github.com/YavinOwens/What-is-a-Data-Analyst.git
+cd What-is-a-Data-Analyst
 ```
 
 2. Install dependencies:
