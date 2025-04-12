@@ -331,7 +331,7 @@ Markdown(tabulate(
 # Book 4: ARGH - What Does Good Look Like?
 
 > "Perfect is the enemy of good, but 'good enough' is the enemy of excellence."  
-> — Andi's Data Philosophy
+> — Unknown... inside joke
 
 ## The ARGH Framework
 

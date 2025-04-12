@@ -30,10 +30,15 @@ format:
     code-fold: true
     code-tools: true
     highlight-style: github
+    fig-format: png
+    fig-width: 8
+    fig-height: 6
+    fig-dpi: 300
 
 execute:
   echo: false
   warning: false
+  error: false
   freeze: auto
 
 resources:
