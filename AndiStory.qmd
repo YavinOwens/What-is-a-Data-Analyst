@@ -231,7 +231,7 @@ After establishing the documentation framework and metrics, Andi moves into the 
 ### Setting Up the Development Environment
 
 ```{mermaid}
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#01579b', 'primaryTextColor': '#01579b', 'primaryBorderColor': '#01579b', 'secondaryColor': '#fff3e0', 'secondaryTextColor': '#ff6f00', 'secondaryBorderColor': '#ff6f00' }}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#01579b', 'primaryTextColor': '#ffffff', 'primaryBorderColor': '#01579b', 'secondaryColor': '#fff3e0', 'secondaryTextColor': '#000000', 'secondaryBorderColor': '#ff6f00', 'tertiaryColor': '#f5f5f5', 'tertiaryTextColor': '#000000', 'tertiaryBorderColor': '#666' }}}%%
 flowchart LR
     %% Main Development Environment Node
     A[Development Environment] --> B[Project Structure]
@@ -284,65 +284,65 @@ flowchart LR
     subgraph Tech[Technology Stack]
         direction TB
         K --> L[Backend]
-        L --> L1[Python 3.9+]
-        L --> L2[FastAPI]
-        L --> L3[SQLAlchemy]
-        L --> L4[Alembic]
+        L --> L1["Python 3.9+<br/>(Core Language)"]
+        L --> L2["FastAPI<br/>(Web Framework)"]
+        L --> L3["SQLAlchemy<br/>(ORM)"]
+        L --> L4["Alembic<br/>(Migrations)"]
         
         K --> M[Data Processing]
-        M --> M1[Pandas]
-        M --> M2[NumPy]
-        M --> M3[Scikit-learn]
-        M --> M4[PySpark]
+        M --> M1["Pandas<br/>(Data Analysis)"]
+        M --> M2["NumPy<br/>(Numerical Ops)"]
+        M --> M3["Scikit-learn<br/>(ML)"]
+        M --> M4["PySpark<br/>(Big Data)"]
         
         K --> N[Visualization]
-        N --> N1[Plotly]
-        N --> N2[Dash]
-        N --> N3[Streamlit]
-        N --> N4[D3.js]
+        N --> N1["Plotly<br/>(Interactive Viz)"]
+        N --> N2["Dash<br/>(Dashboards)"]
+        N --> N3["Streamlit<br/>(Data Apps)"]
+        N --> N4["D3.js<br/>(Custom Viz)"]
         
         K --> O[Database]
-        O --> O1[PostgreSQL]
-        O --> O2[Redis]
-        O --> O3[MongoDB]
-        O --> O4[DuckDB]
+        O --> O1["PostgreSQL<br/>(Primary DB)"]
+        O --> O2["Redis<br/>(Caching)"]
+        O --> O3["MongoDB<br/>(Document DB)"]
+        O --> O4["DuckDB<br/>(Analytics)"]
         
         K --> P[Infrastructure]
-        P --> P1[Docker]
-        P --> P2[Kubernetes]
-        P --> P3[AWS]
-        P --> P4[GitHub Actions]
+        P --> P1["Docker<br/>(Containers)"]
+        P --> P2["Kubernetes<br/>(Orchestration)"]
+        P --> P3["AWS<br/>(Cloud)"]
+        P --> P4["GitHub Actions<br/>(CI/CD)"]
     end
     
     %% Development Tools
     subgraph Tools[Development Tools]
         direction TB
         R --> S[IDEs]
-        S --> S1[VS Code]
-        S --> S2[PyCharm]
-        S --> S3[Jupyter Lab]
+        S --> S1["VS Code<br/>(Primary IDE)"]
+        S --> S2["PyCharm<br/>(Python IDE)"]
+        S --> S3["Jupyter Lab<br/>(Notebooks)"]
         
         R --> T[Version Control]
-        T --> T1[Git]
-        T --> T2[DVC]
-        T --> T3[GitHub]
+        T --> T1["Git<br/>(Code Version)"]
+        T --> T2["DVC<br/>(Data Version)"]
+        T --> T3["GitHub<br/>(Repository)"]
         
         R --> U[Documentation]
-        U --> U1[Quarto]
-        U --> U2[Sphinx]
-        U --> U3[MkDocs]
+        U --> U1["Quarto<br/>(Tech Writing)"]
+        U --> U2["Sphinx<br/>(API Docs)"]
+        U --> U3["MkDocs<br/>(Project Docs)"]
         
         R --> V[Quality & Testing]
-        V --> V1[pytest]
-        V --> V2[Black]
-        V --> V3[isort]
-        V --> V4[mypy]
+        V --> V1["pytest<br/>(Testing)"]
+        V --> V2["Black<br/>(Formatting)"]
+        V --> V3["isort<br/>(Import Sort)"]
+        V --> V4["mypy<br/>(Type Check)"]
     end
     
     %% Styling
-    style A fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    style K fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    style L1,M1,N1,O1,P1,S1,T1,U1,V1 fill:#fff3e0,stroke:#ff6f00,stroke-width:2px
+    style A fill:#01579b,stroke:#01579b,stroke-width:2px,color:#ffffff
+    style K fill:#01579b,stroke:#01579b,stroke-width:2px,color:#ffffff
+    style L1,M1,N1,O1,P1,S1,T1,U1,V1 fill:#fff3e0,stroke:#ff6f00,stroke-width:2px,color:#000000
     
     %% Subgraph styling
     style Project fill:#f5f5f5,stroke:#666,stroke-width:2px
