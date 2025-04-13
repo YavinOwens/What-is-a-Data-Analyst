@@ -353,33 +353,23 @@ flowchart LR
 click A "javascript:void(0);" "Click to download as JPEG"
 ```
 
-<script>
-function downloadAsJPEG(filename) {
-    const svg = document.querySelector(".mermaid svg");
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
-    const data = (new XMLSerializer()).serializeToString(svg);
-    const DOMURL = window.URL || window.webkitURL || window;
-    const img = new Image();
-    const svgBlob = new Blob([data], {type: "image/svg+xml;charset=utf-8"});
-    const url = DOMURL.createObjectURL(svgBlob);
-    
-    img.onload = function() {
-        canvas.width = svg.viewBox.baseVal.width;
-        canvas.height = svg.viewBox.baseVal.height;
-        ctx.drawImage(img, 0, 0);
-        DOMURL.revokeObjectURL(url);
-        
-        const jpegUrl = canvas.toDataURL("image/jpeg");
-        const link = document.createElement("a");
-        link.download = filename + ".jpg";
-        link.href = jpegUrl;
-        link.click();
-    };
-    
-    img.src = url;
-}
-</script>
+### Key Components Legend
+
+The highlighted components (in orange) represent the primary tools in each category:
+
+| Component | Description | Role |
+|-----------|-------------|------|
+| L1 | Python 3.9+ | Core programming language for all development |
+| M1 | Pandas | Primary library for data analysis and manipulation |
+| N1 | Plotly | Main tool for creating interactive visualizations |
+| O1 | PostgreSQL | Primary database for data storage and management |
+| P1 | Docker | Container platform for consistent environments |
+| S1 | VS Code | Primary integrated development environment |
+| T1 | Git | Version control system for code management |
+| U1 | Quarto | Technical documentation and report generation |
+| V1 | pytest | Testing framework for code quality assurance |
+
+These tools form the foundation of our development stack, each chosen for its reliability, community support, and integration capabilities.
 
 ## Setting Up the Development Environment
 
