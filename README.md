@@ -1,5 +1,7 @@
 # What is a Data Analyst? - A Journey Through Modern Data Analytics
 
+📖 **[Read the full interactive notes here](https://yavinowens.github.io/What-is-a-Data-Analyst/AndiStory.html)**
+
 > "Learn as if you will live forever, earn as if you will die tomorrow, return as if this is your legacy."  
 > — Stoic Philosophy
 
