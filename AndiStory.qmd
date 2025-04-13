@@ -1,13 +1,19 @@
 ---
 title: "Andi's Data Journey"
-format: 
+format:
   html:
-    toc: true
-    toc-depth: 3
-    code-fold: true
     theme: cosmo
-    highlight-style: github
-    code-tools: true
+    toc: true
+    code-fold: true
+    code-summary: "Show the code"
+    html-math-method: mathjax
+    css: styles.css
+    include-in-header:
+      - text: |
+          <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+          <script>
+            mermaid.initialize({ startOnLoad: true });
+          </script>
 ---
 
 # Introduction
@@ -225,20 +231,7 @@ After establishing the documentation framework and metrics, Andi moves into the 
 ### Setting Up the Development Environment
 
 ```{mermaid}
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'fontSize': '16px',
-    'fontFamily': 'arial',
-    'lineColor': '#333',
-    'primaryColor': '#e1f5fe',
-    'primaryTextColor': '#01579b',
-    'primaryBorderColor': '#01579b',
-    'secondaryColor': '#fff3e0',
-    'secondaryTextColor': '#ff6f00',
-    'secondaryBorderColor': '#ff6f00'
-  }
-}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#01579b', 'primaryTextColor': '#01579b', 'primaryBorderColor': '#01579b', 'secondaryColor': '#fff3e0', 'secondaryTextColor': '#ff6f00', 'secondaryBorderColor': '#ff6f00' }}}%%
 flowchart LR
     %% Main Development Environment Node
     A[Development Environment] --> B[Project Structure]
