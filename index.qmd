@@ -11,7 +11,7 @@ Welcome to the Lean Analytics Journey, a comprehensive guide to data analysis an
 
 ## Books
 
-### [Book 1 - Kidlens Law](book1.qmd)
+### [Book 1 - Kidlens Law](AndiStory.qmd#book-1-kidlens-law)
 Explore the fundamentals of data quality and analysis through the lens of Kidlens Law.
 
 ::: {.callout-note}
@@ -21,7 +21,7 @@ Explore the fundamentals of data quality and analysis through the lens of Kidlen
 - Problem Definition
 :::
 
-### [Book 2 - Documentation Journey](book2.qmd)
+### [Book 2 - Documentation Journey](AndiStory.qmd#book-2-the-documentation-journey)
 Learn about the importance of documentation and knowledge management in data projects.
 
 ::: {.callout-note}
@@ -31,7 +31,7 @@ Learn about the importance of documentation and knowledge management in data pro
 - Documentation Best Practices
 :::
 
-### [Book 3 - Getting Your Hands Dirty](book3.qmd)
+### [Book 3 - Getting Your Hands Dirty](AndiStory.qmd#book-3-from-theory-to-practice-getting-your-hands-dirty)
 Dive into practical implementation and hands-on data engineering.
 
 ::: {.callout-note}
@@ -41,7 +41,7 @@ Dive into practical implementation and hands-on data engineering.
 - Best Practices
 :::
 
-### [Book 4 - ARGH Framework](book4.qmd)
+### [Book 4 - ARGH Framework](AndiStory.qmd#book-4-argh-what-does-good-look-like)
 Discover the ARGH framework for defining and achieving excellence in data projects.
 
 ::: {.callout-note}
@@ -52,21 +52,21 @@ Discover the ARGH framework for defining and achieving excellence in data projec
 - **H**armonized: Integrated and synchronized systems
 :::
 
-### [Andi's Story](AndiStory.qmd)
+### [Andi's Complete Story](AndiStory.qmd)
 Follow Andi's journey through all four books in a single narrative.
 
 ## Getting Started
 
-1. [Start with Book 1](book1.qmd)
-2. [Explore Documentation in Book 2](book2.qmd)
-3. [Get Practical in Book 3](book3.qmd)
-4. [Define Excellence in Book 4](book4.qmd)
+1. [Start with Book 1](AndiStory.qmd#book-1-kidlens-law)
+2. [Explore Documentation in Book 2](AndiStory.qmd#book-2-the-documentation-journey)
+3. [Get Practical in Book 3](AndiStory.qmd#book-3-from-theory-to-practice-getting-your-hands-dirty)
+4. [Define Excellence in Book 4](AndiStory.qmd#book-4-argh-what-does-good-look-like)
 
 ## Key Topics
 
-- Data Quality → [Book 1](book1.qmd)
-- Documentation → [Book 2](book2.qmd)
-- Implementation → [Book 3](book3.qmd)
-- Excellence → [Book 4](book4.qmd)
+- Data Quality → [Book 1](AndiStory.qmd#book-1-kidlens-law)
+- Documentation → [Book 2](AndiStory.qmd#book-2-the-documentation-journey)
+- Implementation → [Book 3](AndiStory.qmd#book-3-from-theory-to-practice-getting-your-hands-dirty)
+- Excellence → [Book 4](AndiStory.qmd#book-4-argh-what-does-good-look-like)
 
 Remember: The journey to excellence is continuous. Each book represents a step forward in mastering data analytics and documentation practices. 
