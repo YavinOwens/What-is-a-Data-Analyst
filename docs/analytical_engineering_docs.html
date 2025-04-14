@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lean Analytics Journey</title>
+<title>Analytical Engineering Documentation – Lean Analytics Journey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -125,13 +125,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./AndiStory.html"> 
 <span class="menu-text">Andi’s Story</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-documentation" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Documentation</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-documentation">    
+        <li>
+    <a class="dropdown-item" href="./analytical_engineering_docs.html">
+ <span class="dropdown-text">Engineering Docs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./project_planning.html">
+ <span class="dropdown-text">Project Planning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./meeting_templates.html">
+ <span class="dropdown-text">Meeting Templates</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./findings_templates.qmd">
+ <span class="dropdown-text">Findings Templates</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./issues_and_bugs.qmd">
+ <span class="dropdown-text">Issues and Bugs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./reference_materials.qmd">
+ <span class="dropdown-text">Reference Materials</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./analysis_notebooks.qmd">
+ <span class="dropdown-text">Analysis Notebooks</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./data_quality_checks.qmd">
+ <span class="dropdown-text">Data Quality Checks</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -155,28 +194,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lean-analytics-journey" id="toc-lean-analytics-journey" class="nav-link active" data-scroll-target="#lean-analytics-journey">Lean Analytics Journey</a>
+  <li><a href="#analytical-engineering-documentation" id="toc-analytical-engineering-documentation" class="nav-link active" data-scroll-target="#analytical-engineering-documentation">Analytical Engineering Documentation</a>
   <ul class="collapse">
-  <li><a href="#books" id="toc-books" class="nav-link" data-scroll-target="#books">Books</a>
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#documentation-structure" id="toc-documentation-structure" class="nav-link" data-scroll-target="#documentation-structure">Documentation Structure</a>
   <ul class="collapse">
-  <li><a href="#book-1---kidlens-law" id="toc-book-1---kidlens-law" class="nav-link" data-scroll-target="#book-1---kidlens-law">Book 1 - Kidlens Law</a></li>
-  <li><a href="#book-2---documentation-journey" id="toc-book-2---documentation-journey" class="nav-link" data-scroll-target="#book-2---documentation-journey">Book 2 - Documentation Journey</a></li>
-  <li><a href="#book-3---getting-your-hands-dirty" id="toc-book-3---getting-your-hands-dirty" class="nav-link" data-scroll-target="#book-3---getting-your-hands-dirty">Book 3 - Getting Your Hands Dirty</a></li>
-  <li><a href="#book-4---argh-framework" id="toc-book-4---argh-framework" class="nav-link" data-scroll-target="#book-4---argh-framework">Book 4 - ARGH Framework</a></li>
-  <li><a href="#andis-complete-story" id="toc-andis-complete-story" class="nav-link" data-scroll-target="#andis-complete-story">Andi’s Complete Story</a></li>
+  <li><a href="#project-management" id="toc-project-management" class="nav-link" data-scroll-target="#project-management">Project Management</a></li>
+  <li><a href="#technical-documentation" id="toc-technical-documentation" class="nav-link" data-scroll-target="#technical-documentation">Technical Documentation</a></li>
   </ul></li>
+  <li><a href="#quick-links" id="toc-quick-links" class="nav-link" data-scroll-target="#quick-links">Quick Links</a></li>
   <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-  <li><a href="#key-topics-3" id="toc-key-topics-3" class="nav-link" data-scroll-target="#key-topics-3">Key Topics</a></li>
+  <li><a href="#documentation-updates" id="toc-documentation-updates" class="nav-link" data-scroll-target="#documentation-updates">Documentation Updates</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/edit/main/analytical_engineering_docs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Lean Analytics Journey</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Analytical Engineering Documentation</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -193,123 +232,66 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<blockquote class="blockquote">
-<p>“If you write a problem down clearly, then the matter is half solved.”<br>
-— Kidlens Law</p>
-</blockquote>
-<section id="lean-analytics-journey" class="level1">
-<h1>Lean Analytics Journey</h1>
-<p>Welcome to the Lean Analytics Journey, a comprehensive guide to data analysis and engineering.</p>
-<section id="books" class="level2">
-<h2 class="anchored" data-anchor-id="books">Books</h2>
-<section id="book-1---kidlens-law" class="level3">
-<h3 class="anchored" data-anchor-id="book-1---kidlens-law"><a href="./AndiStory.html#book-1-kidlens-law">Book 1 - Kidlens Law</a></h3>
-<p>Explore the fundamentals of data quality and analysis through the lens of Kidlens Law.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Key Topics
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="analytical-engineering-documentation" class="level1">
+<h1>Analytical Engineering Documentation</h1>
+<p>Welcome to the Analytical Engineering documentation for the GDPR Fines Analysis project. This documentation serves as a comprehensive guide for the team’s processes, standards, and best practices.</p>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>The GDPR Fines Analysis project aims to analyze and visualize GDPR fine data to provide insights into compliance trends, geographic distribution, and industry impacts. This documentation supports the team in maintaining high standards of data quality, analytical rigor, and project management.</p>
+</section>
+<section id="documentation-structure" class="level2">
+<h2 class="anchored" data-anchor-id="documentation-structure">Documentation Structure</h2>
+<section id="project-management" class="level3">
+<h3 class="anchored" data-anchor-id="project-management">Project Management</h3>
 <ul>
-<li>Data Quality Assessment</li>
-<li>GDPR Fines Analysis</li>
-<li>Problem Definition</li>
+<li><a href="./project_planning.html">Project Planning</a> - Templates and guidelines for project management</li>
+<li><a href="./meeting_templates.html">Meeting Templates</a> - Templates for various team meetings</li>
+<li><a href="findings_templates.qmd">Findings Templates</a> - Templates for documenting analysis results</li>
+<li><a href="issues_and_bugs.qmd">Issues and Bugs</a> - Templates for tracking and managing issues</li>
 </ul>
-</div>
-</div>
 </section>
-<section id="book-2---documentation-journey" class="level3">
-<h3 class="anchored" data-anchor-id="book-2---documentation-journey"><a href="./AndiStory.html#book-2-the-documentation-journey">Book 2 - Documentation Journey</a></h3>
-<p>Learn about the importance of documentation and knowledge management in data projects.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Key Topics
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="technical-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="technical-documentation">Technical Documentation</h3>
 <ul>
-<li>DMBOK2 Principles</li>
-<li>Hub and Spoke Model</li>
-<li>Documentation Best Practices</li>
+<li><a href="reference_materials.qmd">Reference Materials</a> - Technical standards and best practices</li>
+<li><a href="team_wiki.qmd">Team Wiki</a> - Development environment setup and team resources</li>
+<li><a href="analysis_notebooks.qmd">Analysis Notebooks</a> - Templates for data analysis</li>
+<li><a href="data_quality_checks.qmd">Data Quality Checks</a> - Templates for data validation</li>
 </ul>
-</div>
-</div>
 </section>
-<section id="book-3---getting-your-hands-dirty" class="level3">
-<h3 class="anchored" data-anchor-id="book-3---getting-your-hands-dirty"><a href="./AndiStory.html#book-3-from-theory-to-practice-getting-your-hands-dirty">Book 3 - Getting Your Hands Dirty</a></h3>
-<p>Dive into practical implementation and hands-on data engineering.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Key Topics
-</div>
-</div>
-<div class="callout-body-container callout-body">
+</section>
+<section id="quick-links" class="level2">
+<h2 class="anchored" data-anchor-id="quick-links">Quick Links</h2>
 <ul>
-<li>Implementation Guide</li>
-<li>Code Examples</li>
-<li>Best Practices</li>
+<li><a href="#project-overview">Project Overview</a></li>
+<li><a href="#documentation-structure">Documentation Structure</a></li>
+<li><a href="getting_started.qmd">Getting Started</a></li>
+<li><a href="documentation_updates.qmd">Documentation Updates</a></li>
+<li><a href="contact.qmd">Contact</a></li>
 </ul>
-</div>
-</div>
-</section>
-<section id="book-4---argh-framework" class="level3">
-<h3 class="anchored" data-anchor-id="book-4---argh-framework"><a href="./AndiStory.html#book-4-argh-what-does-good-look-like">Book 4 - ARGH Framework</a></h3>
-<p>Discover the ARGH framework for defining and achieving excellence in data projects.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Framework Components
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>A</strong>ctionable: Insights that drive decisions</li>
-<li><strong>R</strong>eliable: Trustworthy and consistent data</li>
-<li><strong>G</strong>overned: Controlled and compliant processes</li>
-<li><strong>H</strong>armonized: Integrated and synchronized systems</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="andis-complete-story" class="level3">
-<h3 class="anchored" data-anchor-id="andis-complete-story"><a href="./AndiStory.html">Andi’s Complete Story</a></h3>
-<p>Follow Andi’s journey through all four books in a single narrative.</p>
-</section>
 </section>
 <section id="getting-started" class="level2">
 <h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
+<p>New team members should:</p>
 <ol type="1">
-<li><a href="./AndiStory.html#book-1-kidlens-law">Start with Book 1</a></li>
-<li><a href="./AndiStory.html#book-2-the-documentation-journey">Explore Documentation in Book 2</a></li>
-<li><a href="./AndiStory.html#book-3-from-theory-to-practice-getting-your-hands-dirty">Get Practical in Book 3</a></li>
-<li><a href="./AndiStory.html#book-4-argh-what-does-good-look-like">Define Excellence in Book 4</a></li>
+<li>Review the <a href="#project-overview">Project Overview</a></li>
+<li>Set up their development environment using the <a href="team_wiki.qmd">Team Wiki</a></li>
+<li>Familiarize themselves with the <a href="#documentation-structure">Documentation Structure</a></li>
+<li>Go through the <a href="analysis_notebooks.qmd">Analysis Notebooks</a> to understand our analytical approach</li>
 </ol>
 </section>
-<section id="key-topics-3" class="level2">
-<h2 class="anchored" data-anchor-id="key-topics-3">Key Topics</h2>
+<section id="documentation-updates" class="level2">
+<h2 class="anchored" data-anchor-id="documentation-updates">Documentation Updates</h2>
+<p>This documentation is maintained by the Data Analytics team. Updates are made on a regular basis to ensure all information remains current and relevant.</p>
+<p>Last updated: 2023-05-01</p>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p>For questions or suggestions regarding this documentation, please contact:</p>
 <ul>
-<li>Data Quality → <a href="./AndiStory.html#book-1-kidlens-law">Book 1</a></li>
-<li>Documentation → <a href="./AndiStory.html#book-2-the-documentation-journey">Book 2</a></li>
-<li>Implementation → <a href="./AndiStory.html#book-3-from-theory-to-practice-getting-your-hands-dirty">Book 3</a></li>
-<li>Excellence → <a href="./AndiStory.html#book-4-argh-what-does-good-look-like">Book 4</a></li>
+<li><strong>Data Analytics Team</strong>: data.analytics@example.com</li>
+<li><strong>Project Lead</strong>: project.lead@example.com</li>
 </ul>
-<p>Remember: The journey to excellence is continuous. Each book represents a step forward in mastering data analytics and documentation practices.</p>
 
 
 <!-- -->
@@ -769,81 +751,74 @@ Framework Components
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Lean Analytics Journey"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "If you write a problem down clearly, then the matter is half solved."</span>  </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; — Kidlens Law</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu"># Lean Analytics Journey</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Welcome to the Lean Analytics Journey, a comprehensive guide to data analysis and engineering.</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Books</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">### [Book 1 - Kidlens Law](AndiStory.qmd#book-1-kidlens-law)</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Explore the fundamentals of data quality and analysis through the lens of Kidlens Law.</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Analytical Engineering Documentation"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: cosmo</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    code-summary: "Show the code"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    html-math-method: mathjax</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    css: styles.css</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu"># Analytical Engineering Documentation</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Welcome to the Analytical Engineering documentation for the GDPR Fines Analysis project. This documentation serves as a comprehensive guide for the team's processes, standards, and best practices.</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Topics</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Data Quality Assessment</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GDPR Fines Analysis</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Problem Definition</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### [Book 2 - Documentation Journey](AndiStory.qmd#book-2-the-documentation-journey)</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Learn about the importance of documentation and knowledge management in data projects.</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Topics</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>DMBOK2 Principles</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hub and Spoke Model</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Documentation Best Practices</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">### [Book 3 - Getting Your Hands Dirty](AndiStory.qmd#book-3-from-theory-to-practice-getting-your-hands-dirty)</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>Dive into practical implementation and hands-on data engineering.</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Project Overview</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>The GDPR Fines Analysis project aims to analyze and visualize GDPR fine data to provide insights into compliance trends, geographic distribution, and industry impacts. This documentation supports the team in maintaining high standards of data quality, analytical rigor, and project management.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Documentation Structure</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">### Project Management</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Project Planning</span><span class="co">](project_planning.qmd)</span> - Templates and guidelines for project management</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Meeting Templates</span><span class="co">](meeting_templates.qmd)</span> - Templates for various team meetings</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Findings Templates</span><span class="co">](findings_templates.qmd)</span> - Templates for documenting analysis results</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Issues and Bugs</span><span class="co">](issues_and_bugs.qmd)</span> - Templates for tracking and managing issues</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">### Technical Documentation</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Reference Materials</span><span class="co">](reference_materials.qmd)</span> - Technical standards and best practices</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Team Wiki</span><span class="co">](team_wiki.qmd)</span> - Development environment setup and team resources</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Analysis Notebooks</span><span class="co">](analysis_notebooks.qmd)</span> - Templates for data analysis</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Data Quality Checks</span><span class="co">](data_quality_checks.qmd)</span> - Templates for data validation</span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Topics</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Implementation Guide</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Code Examples</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Best Practices</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">### [Book 4 - ARGH Framework](AndiStory.qmd#book-4-argh-what-does-good-look-like)</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>Discover the ARGH framework for defining and achieving excellence in data projects.</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quick Links</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Project Overview</span><span class="co">](#project-overview)</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Documentation Structure</span><span class="co">](#documentation-structure)</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Getting Started</span><span class="co">](getting_started.qmd)</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Documentation Updates</span><span class="co">](documentation_updates.qmd)</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Contact</span><span class="co">](contact.qmd)</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Getting Started</span></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Framework Components</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A**ctionable: Insights that drive decisions</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**R**eliable: Trustworthy and consistent data</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**G**overned: Controlled and compliant processes</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**H**armonized: Integrated and synchronized systems</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="fu">### [Andi's Complete Story](AndiStory.qmd)</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Follow Andi's journey through all four books in a single narrative.</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>New team members should:</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Review the <span class="co">[</span><span class="ot">Project Overview</span><span class="co">](#project-overview)</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Set up their development environment using the <span class="co">[</span><span class="ot">Team Wiki</span><span class="co">](team_wiki.qmd)</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Familiarize themselves with the <span class="co">[</span><span class="ot">Documentation Structure</span><span class="co">](#documentation-structure)</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Go through the <span class="co">[</span><span class="ot">Analysis Notebooks</span><span class="co">](analysis_notebooks.qmd)</span> to understand our analytical approach</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## Documentation Updates</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>This documentation is maintained by the Data Analytics team. Updates are made on a regular basis to ensure all information remains current and relevant.</span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## Getting Started</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>Last updated: 2023-05-01</span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span><span class="co">[</span><span class="ot">Start with Book 1</span><span class="co">](AndiStory.qmd#book-1-kidlens-law)</span></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span><span class="co">[</span><span class="ot">Explore Documentation in Book 2</span><span class="co">](AndiStory.qmd#book-2-the-documentation-journey)</span></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span><span class="co">[</span><span class="ot">Get Practical in Book 3</span><span class="co">](AndiStory.qmd#book-3-from-theory-to-practice-getting-your-hands-dirty)</span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span><span class="co">[</span><span class="ot">Define Excellence in Book 4</span><span class="co">](AndiStory.qmd#book-4-argh-what-does-good-look-like)</span></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Topics</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Data Quality → <span class="co">[</span><span class="ot">Book 1</span><span class="co">](AndiStory.qmd#book-1-kidlens-law)</span></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Documentation → <span class="co">[</span><span class="ot">Book 2</span><span class="co">](AndiStory.qmd#book-2-the-documentation-journey)</span></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Implementation → <span class="co">[</span><span class="ot">Book 3</span><span class="co">](AndiStory.qmd#book-3-from-theory-to-practice-getting-your-hands-dirty)</span></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Excellence → <span class="co">[</span><span class="ot">Book 4</span><span class="co">](AndiStory.qmd#book-4-argh-what-does-good-look-like)</span></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>Remember: The journey to excellence is continuous. Each book represents a step forward in mastering data analytics and documentation practices. </span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contact</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>For questions or suggestions regarding this documentation, please contact:</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data Analytics Team**: data.analytics@example.com</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Project Lead**: project.lead@example.com </span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/edit/main/analytical_engineering_docs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

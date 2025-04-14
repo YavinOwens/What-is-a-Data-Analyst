@@ -1,0 +1,436 @@
+---
+title: "Meeting Templates"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    code-summary: "Show the code"
+    html-math-method: mathjax
+    css: styles.css
+---
+
+# Meeting Templates
+
+This document provides templates for various team meetings in the GDPR Fines Analysis project.
+
+## Weekly Team Meeting Template
+
+```markdown
+# Weekly Team Meeting: [Date]
+
+## Meeting Information
+- **Date**: [YYYY-MM-DD]
+- **Time**: [HH:MM] - [HH:MM]
+- **Location**: [Location/Link]
+- **Meeting Organizer**: [Name]
+- **Note Taker**: [Name]
+
+## Attendees
+- [Name, Role]
+- [Name, Role]
+- [Name, Role]
+- [Name, Role]
+
+## Absent
+- [Name, Role]
+- [Name, Role]
+
+## Agenda
+1. **Review Previous Action Items** (10 mins)
+2. **Project Status Updates** (15 mins)
+3. **Key Discussion Topics** (20 mins)
+   - [Topic 1]
+   - [Topic 2]
+   - [Topic 3]
+4. **Roadblocks/Issues** (10 mins)
+5. **Next Steps and Action Items** (5 mins)
+
+## Previous Action Item Follow-up
+| Action Item | Owner | Status | Notes |
+|-------------|-------|--------|-------|
+| [Item 1]    | [Name] | [Complete/In Progress/Not Started] | [Notes] |
+| [Item 2]    | [Name] | [Complete/In Progress/Not Started] | [Notes] |
+| [Item 3]    | [Name] | [Complete/In Progress/Not Started] | [Notes] |
+
+## Discussion Notes
+### Project Status Updates
+- [Update 1]
+- [Update 2]
+- [Update 3]
+
+### Key Discussion Topic 1: [Topic]
+- [Point 1]
+- [Point 2]
+- [Point 3]
+
+### Key Discussion Topic 2: [Topic]
+- [Point 1]
+- [Point 2]
+- [Point 3]
+
+### Key Discussion Topic 3: [Topic]
+- [Point 1]
+- [Point 2]
+- [Point 3]
+
+### Roadblocks/Issues
+- [Issue 1]
+  - **Impact**: [Impact]
+  - **Proposed Solution**: [Solution]
+- [Issue 2]
+  - **Impact**: [Impact]
+  - **Proposed Solution**: [Solution]
+
+## New Action Items
+| Action Item | Description | Owner | Due Date | Priority |
+|-------------|-------------|-------|----------|----------|
+| [Item 1]    | [Description] | [Name] | [Date] | [High/Medium/Low] |
+| [Item 2]    | [Description] | [Name] | [Date] | [High/Medium/Low] |
+| [Item 3]    | [Description] | [Name] | [Date] | [High/Medium/Low] |
+
+## Next Meeting
+- **Date**: [YYYY-MM-DD]
+- **Time**: [HH:MM] - [HH:MM]
+- **Location**: [Location/Link]
+- **Agenda Items**:
+  - [Item 1]
+  - [Item 2]
+  - [Item 3]
+
+## Additional Notes
+[Any additional information or comments]
+```
+
+## Sprint Planning Meeting Template
+
+```markdown
+# Sprint Planning Meeting: Sprint [#]
+
+## Meeting Information
+- **Date**: [YYYY-MM-DD]
+- **Time**: [HH:MM] - [HH:MM]
+- **Location**: [Location/Link]
+- **Sprint Duration**: [Start Date] to [End Date]
+- **Meeting Organizer**: [Name]
+- **Note Taker**: [Name]
+
+## Attendees
+- [Name, Role]
+- [Name, Role]
+- [Name, Role]
+- [Name, Role]
+
+## Sprint Goal
+[Clear, concise statement of what the team aims to achieve in this sprint]
+
+## Sprint Backlog
+| User Story/Task | Description | Acceptance Criteria | Story Points | Assignee |
+|-----------------|-------------|---------------------|--------------|----------|
+| [ID-001]        | [Description] | - [Criterion 1]<br>- [Criterion 2]<br>- [Criterion 3] | [Points] | [Name] |
+| [ID-002]        | [Description] | - [Criterion 1]<br>- [Criterion 2]<br>- [Criterion 3] | [Points] | [Name] |
+| [ID-003]        | [Description] | - [Criterion 1]<br>- [Criterion 2]<br>- [Criterion 3] | [Points] | [Name] |
+
+## Team Capacity
+- **Total Team Members**: [Number]
+- **Available Working Days**: [Number] days
+- **Total Team Capacity**: [Number] story points
+- **Committed Story Points**: [Number]
+- **Buffer**: [Number] story points ([Percentage]%)
+
+## Dependencies
+- [ID-001] depends on [External Dependency]
+- [ID-002] depends on [ID-003]
+- [Team Member] will be out on [Date]
+
+## Risks and Concerns
+- [Risk 1]
+  - **Mitigation**: [Strategy]
+- [Risk 2]
+  - **Mitigation**: [Strategy]
+
+## Definition of Done
+For a story to be considered complete:
+- Code is written and meets established coding standards
+- Unit tests are written and passing
+- Code is reviewed by at least one team member
+- Feature is tested in a development environment
+- Documentation is updated
+- [Additional criteria]
+
+## Action Items
+| Action Item | Description | Owner | Due Date |
+|-------------|-------------|-------|----------|
+| [Item 1]    | [Description] | [Name] | [Date] |
+| [Item 2]    | [Description] | [Name] | [Date] |
+
+## Additional Notes
+[Any additional information or comments]
+```
+
+## Sprint Retrospective Template
+
+```markdown
+# Sprint Retrospective: Sprint [#]
+
+## Meeting Information
+- **Date**: [YYYY-MM-DD]
+- **Time**: [HH:MM] - [HH:MM]
+- **Location**: [Location/Link]
+- **Sprint Duration**: [Start Date] to [End Date]
+- **Meeting Organizer**: [Name]
+- **Note Taker**: [Name]
+
+## Attendees
+- [Name, Role]
+- [Name, Role]
+- [Name, Role]
+- [Name, Role]
+
+## Sprint Overview
+- **Sprint Goal**: [Goal]
+- **Committed Story Points**: [Number]
+- **Completed Story Points**: [Number]
+- **Completion Rate**: [Percentage]
+
+## What Went Well
+- [Item 1]
+- [Item 2]
+- [Item 3]
+
+## What Could Be Improved
+- [Item 1]
+- [Item 2]
+- [Item 3]
+
+## What We Learned
+- [Item 1]
+- [Item 2]
+- [Item 3]
+
+## Action Items for Improvement
+| Action Item | Description | Owner | Due Date |
+|-------------|-------------|-------|----------|
+| [Item 1]    | [Description] | [Name] | [Date] |
+| [Item 2]    | [Description] | [Name] | [Date] |
+| [Item 3]    | [Description] | [Name] | [Date] |
+
+## Team Mood
+- **Overall Team Mood**: [Description]
+- **Team Morale Indicators**:
+  - Communication: [Good/Neutral/Needs Improvement]
+  - Collaboration: [Good/Neutral/Needs Improvement]
+  - Motivation: [Good/Neutral/Needs Improvement]
+  - Workload: [Good/Neutral/Needs Improvement]
+
+## Follow-up on Previous Retrospective Actions
+| Action Item | Status | Outcome | Next Steps |
+|-------------|--------|---------|------------|
+| [Item 1]    | [Complete/In Progress/Not Started] | [Outcome] | [Next Steps] |
+| [Item 2]    | [Complete/In Progress/Not Started] | [Outcome] | [Next Steps] |
+
+## Additional Notes
+[Any additional information or comments]
+```
+
+## Data Review Meeting Template
+
+```markdown
+# Data Review Meeting: [Topic]
+
+## Meeting Information
+- **Date**: [YYYY-MM-DD]
+- **Time**: [HH:MM] - [HH:MM]
+- **Location**: [Location/Link]
+- **Meeting Organizer**: [Name]
+- **Note Taker**: [Name]
+
+## Attendees
+- [Name, Role]
+- [Name, Role]
+- [Name, Role]
+- [Name, Role]
+
+## Agenda
+1. **Introduction and Meeting Objectives** (5 mins)
+2. **Data Overview** (10 mins)
+3. **Data Quality Assessment** (15 mins)
+4. **Analysis Findings** (20 mins)
+5. **Discussion and Interpretation** (15 mins)
+6. **Next Steps and Action Items** (10 mins)
+
+## Data Overview
+- **Data Sources**: [List of data sources reviewed]
+- **Time Period**: [Time period covered by the data]
+- **Data Volume**: [Amount of data reviewed]
+- **Key Metrics**: [Primary metrics being analyzed]
+
+## Data Quality Assessment
+| Quality Dimension | Status | Issues | Recommendations |
+|-------------------|--------|--------|-----------------|
+| Completeness      | [Good/Fair/Poor] | [Issues identified] | [Recommendations] |
+| Accuracy          | [Good/Fair/Poor] | [Issues identified] | [Recommendations] |
+| Consistency       | [Good/Fair/Poor] | [Issues identified] | [Recommendations] |
+| Timeliness        | [Good/Fair/Poor] | [Issues identified] | [Recommendations] |
+| Uniqueness        | [Good/Fair/Poor] | [Issues identified] | [Recommendations] |
+
+## Analysis Findings
+### Finding 1: [Brief Description]
+- **Observation**: [Detailed description]
+- **Supporting Data**: [Specific data points or trends]
+- **Significance**: [Why this matters]
+- **Visualizations**: [Reference to visualizations]
+
+### Finding 2: [Brief Description]
+- **Observation**: [Detailed description]
+- **Supporting Data**: [Specific data points or trends]
+- **Significance**: [Why this matters]
+- **Visualizations**: [Reference to visualizations]
+
+### Finding 3: [Brief Description]
+- **Observation**: [Detailed description]
+- **Supporting Data**: [Specific data points or trends]
+- **Significance**: [Why this matters]
+- **Visualizations**: [Reference to visualizations]
+
+## Discussion and Interpretation
+- **Key Insights**:
+  - [Insight 1]
+  - [Insight 2]
+  - [Insight 3]
+- **Questions Raised**:
+  - [Question 1]
+  - [Question 2]
+  - [Question 3]
+- **Alternative Interpretations**:
+  - [Interpretation 1]
+  - [Interpretation 2]
+
+## Action Items
+| Action Item | Description | Owner | Due Date | Priority |
+|-------------|-------------|-------|----------|----------|
+| [Item 1]    | [Description] | [Name] | [Date] | [High/Medium/Low] |
+| [Item 2]    | [Description] | [Name] | [Date] | [High/Medium/Low] |
+| [Item 3]    | [Description] | [Name] | [Date] | [High/Medium/Low] |
+
+## Next Meeting
+- **Date**: [YYYY-MM-DD]
+- **Time**: [HH:MM] - [HH:MM]
+- **Focus Areas**:
+  - [Area 1]
+  - [Area 2]
+  - [Area 3]
+
+## Additional Notes
+[Any additional information or comments]
+```
+
+## Stakeholder Update Meeting Template
+
+```markdown
+# Stakeholder Update Meeting: [Project Name]
+
+## Meeting Information
+- **Date**: [YYYY-MM-DD]
+- **Time**: [HH:MM] - [HH:MM]
+- **Location**: [Location/Link]
+- **Meeting Organizer**: [Name]
+- **Note Taker**: [Name]
+
+## Attendees
+### Project Team
+- [Name, Role]
+- [Name, Role]
+
+### Stakeholders
+- [Name, Role, Organization]
+- [Name, Role, Organization]
+- [Name, Role, Organization]
+
+## Agenda
+1. **Project Overview and Status** (10 mins)
+2. **Accomplishments Since Last Update** (15 mins)
+3. **Key Metrics and Results** (15 mins)
+4. **Challenges and Mitigations** (10 mins)
+5. **Next Steps and Timeline** (10 mins)
+6. **Q&A and Discussion** (15 mins)
+
+## Project Overview and Status
+- **Project Goal**: [Brief reminder of project objectives]
+- **Overall Status**: [On Track / At Risk / Delayed]
+- **Current Phase**: [Phase name and brief description]
+- **Timeline Status**: [X weeks/months complete, Y weeks/months remaining]
+- **Budget Status**: [On Budget / Under Budget / Over Budget]
+
+## Accomplishments Since Last Update
+- [Accomplishment 1]
+- [Accomplishment 2]
+- [Accomplishment 3]
+- [Accomplishment 4]
+
+## Key Metrics and Results
+| Metric | Target | Current | Status | Trend |
+|--------|--------|---------|--------|-------|
+| [Metric 1] | [Target] | [Current value] | [On Track/At Risk/Off Track] | [Up/Down/Stable] |
+| [Metric 2] | [Target] | [Current value] | [On Track/At Risk/Off Track] | [Up/Down/Stable] |
+| [Metric 3] | [Target] | [Current value] | [On Track/At Risk/Off Track] | [Up/Down/Stable] |
+
+### Key Findings
+- [Finding 1]
+- [Finding 2]
+- [Finding 3]
+
+## Challenges and Mitigations
+| Challenge | Impact | Mitigation Strategy | Status |
+|-----------|--------|---------------------|--------|
+| [Challenge 1] | [Impact] | [Strategy] | [Status] |
+| [Challenge 2] | [Impact] | [Strategy] | [Status] |
+| [Challenge 3] | [Impact] | [Strategy] | [Status] |
+
+## Next Steps and Timeline
+- **Short-term Milestones** (Next 2-4 weeks):
+  - [Milestone 1]: [Due date]
+  - [Milestone 2]: [Due date]
+- **Medium-term Goals** (Next 1-3 months):
+  - [Goal 1]: [Timeframe]
+  - [Goal 2]: [Timeframe]
+- **Decisions Needed from Stakeholders**:
+  - [Decision 1]
+  - [Decision 2]
+
+## Questions and Discussion Notes
+- [Question 1]
+  - **Answer/Discussion**: [Notes]
+- [Question 2]
+  - **Answer/Discussion**: [Notes]
+- [Question 3]
+  - **Answer/Discussion**: [Notes]
+
+## Action Items
+| Action Item | Description | Owner | Due Date |
+|-------------|-------------|-------|----------|
+| [Item 1]    | [Description] | [Name] | [Date] |
+| [Item 2]    | [Description] | [Name] | [Date] |
+| [Item 3]    | [Description] | [Name] | [Date] |
+
+## Next Update Meeting
+- **Date**: [YYYY-MM-DD]
+- **Time**: [HH:MM] - [HH:MM]
+- **Focus Areas**:
+  - [Area 1]
+  - [Area 2]
+
+## Additional Notes
+[Any additional information or comments]
+```
+
+## How to Use These Templates
+
+1. Copy the template markdown for the appropriate meeting type.
+2. Replace all placeholders (text within `[brackets]`) with meeting-specific information.
+3. Distribute the agenda to all participants before the meeting.
+4. Take notes during the meeting.
+5. After the meeting, update the template with notes and distribute to all participants.
+6. Store in the project documentation repository for future reference.
+
+These templates are designed to be flexible and can be adapted to fit the specific needs of your meetings. 

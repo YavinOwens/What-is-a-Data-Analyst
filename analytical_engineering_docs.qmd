@@ -1,0 +1,65 @@
+---
+title: "Analytical Engineering Documentation"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    code-summary: "Show the code"
+    html-math-method: mathjax
+    css: styles.css
+---
+
+# Analytical Engineering Documentation
+
+Welcome to the Analytical Engineering documentation for the GDPR Fines Analysis project. This documentation serves as a comprehensive guide for the team's processes, standards, and best practices.
+
+## Project Overview
+
+The GDPR Fines Analysis project aims to analyze and visualize GDPR fine data to provide insights into compliance trends, geographic distribution, and industry impacts. This documentation supports the team in maintaining high standards of data quality, analytical rigor, and project management.
+
+## Documentation Structure
+
+### Project Management
+
+- [Project Planning](project_planning.qmd) - Templates and guidelines for project management
+- [Meeting Templates](meeting_templates.qmd) - Templates for various team meetings
+- [Findings Templates](findings_templates.qmd) - Templates for documenting analysis results
+- [Issues and Bugs](issues_and_bugs.qmd) - Templates for tracking and managing issues
+
+### Technical Documentation
+
+- [Reference Materials](reference_materials.qmd) - Technical standards and best practices
+- [Team Wiki](team_wiki.qmd) - Development environment setup and team resources
+- [Analysis Notebooks](analysis_notebooks.qmd) - Templates for data analysis
+- [Data Quality Checks](data_quality_checks.qmd) - Templates for data validation
+
+## Quick Links
+
+- [Project Overview](#project-overview)
+- [Documentation Structure](#documentation-structure)
+- [Getting Started](getting_started.qmd)
+- [Documentation Updates](documentation_updates.qmd)
+- [Contact](contact.qmd)
+
+## Getting Started
+
+New team members should:
+
+1. Review the [Project Overview](#project-overview)
+2. Set up their development environment using the [Team Wiki](team_wiki.qmd)
+3. Familiarize themselves with the [Documentation Structure](#documentation-structure)
+4. Go through the [Analysis Notebooks](analysis_notebooks.qmd) to understand our analytical approach
+
+## Documentation Updates
+
+This documentation is maintained by the Data Analytics team. Updates are made on a regular basis to ensure all information remains current and relevant.
+
+Last updated: 2023-05-01
+
+## Contact
+
+For questions or suggestions regarding this documentation, please contact:
+
+- **Data Analytics Team**: data.analytics@example.com
+- **Project Lead**: project.lead@example.com 

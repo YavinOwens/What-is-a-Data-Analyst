@@ -1,0 +1,313 @@
+---
+title: "Data Quality Checks"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    theme: cosmo
+    code-fold: true
+---
+
+# Data Quality Checks
+
+This document provides templates and guidelines for performing data quality checks in the GDPR Fines Analysis project.
+
+## Data Quality Framework
+
+### Core Dimensions of Data Quality
+
+| Dimension | Description | Key Questions |
+|-----------|-------------|---------------|
+| **Completeness** | The degree to which all required data is present | Are there missing values? What percentage of data is complete? |
+| **Accuracy** | The degree to which data correctly reflects the real-world entity | Does the data match known correct values? Are there validation rules in place? |
+| **Consistency** | The degree to which data is consistent across datasets | Are values consistent across related tables? Are formats standardized? |
+| **Timeliness** | The degree to which data is available within the expected time frame | How recent is the data? Is it updated frequently enough? |
+| **Validity** | The degree to which data conforms to defined formats and ranges | Does the data conform to specified formats, types, and ranges? |
+| **Uniqueness** | The degree to which data is free from duplication | Are there duplicate records? How are they identified and managed? |
+| **Integrity** | The degree to which relationships between data elements are maintained | Are referential integrity constraints enforced? Are relationships preserved? |
+
+## Data Quality Assessment Template
+
+```markdown
+# Data Quality Assessment Report
+
+## Overview
+- **Dataset Name**: [Dataset Name]
+- **Assessment Date**: [YYYY-MM-DD]
+- **Assessed By**: [Name]
+- **Dataset Version/Date**: [Version/Date]
+- **Total Records**: [Number]
+
+## Data Quality Score Summary
+
+| Dimension | Score (1-5) | Weight | Weighted Score | Threshold | Pass/Fail |
+|-----------|-------------|--------|----------------|-----------|-----------|
+| Completeness | [Score] | [Weight] | [Weighted Score] | [Threshold] | [Pass/Fail] |
+| Accuracy | [Score] | [Weight] | [Weighted Score] | [Threshold] | [Pass/Fail] |
+| Consistency | [Score] | [Weight] | [Weighted Score] | [Threshold] | [Pass/Fail] |
+| Timeliness | [Score] | [Weight] | [Weighted Score] | [Threshold] | [Pass/Fail] |
+| Validity | [Score] | [Weight] | [Weighted Score] | [Threshold] | [Pass/Fail] |
+| Uniqueness | [Score] | [Weight] | [Weighted Score] | [Threshold] | [Pass/Fail] |
+| Integrity | [Score] | [Weight] | [Weighted Score] | [Threshold] | [Pass/Fail] |
+| **Overall Score** | | | [Total Weighted Score] | [Overall Threshold] | [Pass/Fail] |
+
+## Detailed Assessment
+
+### Completeness
+- **Score**: [1-5]
+- **Issues Detected**: 
+  - [Issue 1]: [Details]
+  - [Issue 2]: [Details]
+- **Metrics**:
+  - Missing Value Rate: [Percentage]
+  - Fields with Missing Values: [Field List]
+- **Recommendations**:
+  - [Recommendation 1]
+  - [Recommendation 2]
+
+### Accuracy
+- **Score**: [1-5]
+- **Issues Detected**: 
+  - [Issue 1]: [Details]
+  - [Issue 2]: [Details]
+- **Metrics**:
+  - Error Rate: [Percentage]
+  - Fields with Errors: [Field List]
+- **Recommendations**:
+  - [Recommendation 1]
+  - [Recommendation 2]
+
+### Consistency
+- **Score**: [1-5]
+- **Issues Detected**: 
+  - [Issue 1]: [Details]
+  - [Issue 2]: [Details]
+- **Metrics**:
+  - Inconsistency Rate: [Percentage]
+  - Inconsistent Elements: [Element List]
+- **Recommendations**:
+  - [Recommendation 1]
+  - [Recommendation 2]
+
+### Timeliness
+- **Score**: [1-5]
+- **Issues Detected**: 
+  - [Issue 1]: [Details]
+  - [Issue 2]: [Details]
+- **Metrics**:
+  - Data Freshness: [Time Since Last Update]
+  - Update Frequency: [Frequency]
+- **Recommendations**:
+  - [Recommendation 1]
+  - [Recommendation 2]
+
+### Validity
+- **Score**: [1-5]
+- **Issues Detected**: 
+  - [Issue 1]: [Details]
+  - [Issue 2]: [Details]
+- **Metrics**:
+  - Invalid Data Rate: [Percentage]
+  - Fields with Invalid Data: [Field List]
+- **Recommendations**:
+  - [Recommendation 1]
+  - [Recommendation 2]
+
+### Uniqueness
+- **Score**: [1-5]
+- **Issues Detected**: 
+  - [Issue 1]: [Details]
+  - [Issue 2]: [Details]
+- **Metrics**:
+  - Duplication Rate: [Percentage]
+  - Duplicate Patterns: [Pattern Description]
+- **Recommendations**:
+  - [Recommendation 1]
+  - [Recommendation 2]
+
+### Integrity
+- **Score**: [1-5]
+- **Issues Detected**: 
+  - [Issue 1]: [Details]
+  - [Issue 2]: [Details]
+- **Metrics**:
+  - Referential Integrity Violations: [Count]
+  - Affected Relations: [Relation List]
+- **Recommendations**:
+  - [Recommendation 1]
+  - [Recommendation 2]
+
+## Critical Issues Summary
+| Issue ID | Description | Dimension | Severity | Impact | Recommended Action | Owner | Due Date |
+|----------|-------------|-----------|----------|--------|---------------------|-------|----------|
+| DQ001 | [Description] | [Dimension] | [High/Medium/Low] | [Impact] | [Action] | [Name] | [Date] |
+| DQ002 | [Description] | [Dimension] | [High/Medium/Low] | [Impact] | [Action] | [Name] | [Date] |
+| DQ003 | [Description] | [Dimension] | [High/Medium/Low] | [Impact] | [Action] | [Name] | [Date] |
+
+## Data Quality Improvement Plan
+- **Short-term Actions** (Next 2 weeks):
+  - [Action 1]
+  - [Action 2]
+- **Medium-term Actions** (Next 1-2 months):
+  - [Action 1]
+  - [Action 2]
+- **Long-term Actions** (Next 3-6 months):
+  - [Action 1]
+  - [Action 2]
+
+## Appendix
+- **Data Quality Checks Performed**: [List of specific checks]
+- **Tools Used**: [List of tools]
+- **Reference Documentation**: [List of references]
+```
+
+## Data Quality Control Procedures
+
+### Automated Data Quality Checks
+
+#### SQL-Based Data Quality Checks
+
+```sql
+-- Example: Check for Completeness (Missing Values)
+SELECT 
+  column_name, 
+  COUNT(*) AS total_records,
+  SUM(CASE WHEN column_name IS NULL THEN 1 ELSE 0 END) AS null_count,
+  ROUND(100.0 * SUM(CASE WHEN column_name IS NULL THEN 1 ELSE 0 END) / COUNT(*), 2) AS null_percentage
+FROM table_name
+GROUP BY column_name
+ORDER BY null_percentage DESC;
+
+-- Example: Check for Duplicates
+SELECT 
+  id_column, 
+  COUNT(*) AS occurrence_count
+FROM table_name
+GROUP BY id_column
+HAVING COUNT(*) > 1;
+
+-- Example: Data Range Validation
+SELECT 
+  COUNT(*) AS invalid_records
+FROM table_name
+WHERE numeric_column < min_value OR numeric_column > max_value;
+
+-- Example: Referential Integrity Check
+SELECT 
+  a.foreign_key_column
+FROM table_a a
+LEFT JOIN table_b b ON a.foreign_key_column = b.primary_key_column
+WHERE b.primary_key_column IS NULL;
+```
+
+#### Python-Based Data Quality Checks
+
+```python
+import pandas as pd
+import numpy as np
+import great_expectations as ge
+
+# Example: Load data and create a Great Expectations DataFrame
+df = pd.read_csv("your_data.csv")
+ge_df = ge.from_pandas(df)
+
+# Example: Check column completeness
+completeness_results = ge_df.expect_column_values_to_not_be_null("column_name")
+
+# Example: Check for valid values in a category
+category_results = ge_df.expect_column_values_to_be_in_set(
+    "category_column", ["value1", "value2", "value3"]
+)
+
+# Example: Check for value ranges
+range_results = ge_df.expect_column_values_to_be_between(
+    "numeric_column", min_value=0, max_value=100
+)
+
+# Example: Check for unique values
+uniqueness_results = ge_df.expect_column_values_to_be_unique("id_column")
+
+# Example: Get all validation results
+validation_results = ge_df.validate()
+```
+
+### Regular Data Quality Monitoring
+
+#### Daily Checks
+- Missing value counts
+- New record counts
+- Basic validity checks
+
+#### Weekly Checks
+- Comprehensive schema validation
+- Cross-table consistency checks
+- Trend analysis 
+
+#### Monthly Checks
+- Full data quality assessment
+- Historical comparison
+- Quality improvement tracking
+
+## Data Quality Issue Resolution Process
+
+1. **Issue Detection**
+   - Automated monitoring alerts
+   - Manual review findings
+   - User-reported issues
+
+2. **Issue Triage**
+   - Assess severity and impact
+   - Determine root cause
+   - Assign priority
+
+3. **Resolution Planning**
+   - Develop fix strategy
+   - Estimate resources needed
+   - Establish timeline
+
+4. **Implementation**
+   - Apply fixes
+   - Document changes
+   - Update relevant data
+
+5. **Verification**
+   - Confirm issue resolution
+   - Run validation tests
+   - Approve changes
+
+6. **Documentation and Learning**
+   - Update documentation
+   - Share lessons learned
+   - Improve prevention measures
+
+## GDPR-Specific Data Quality Considerations
+
+### Personal Data Quality Requirements
+
+| Requirement | Description | Quality Dimensions | Example Checks |
+|-------------|-------------|-------------------|----------------|
+| **Accuracy** | Personal data must be accurate and kept up to date | Accuracy, Timeliness | Date of last update checks, Verification against trusted sources |
+| **Completeness** | Required personal data fields must be complete | Completeness | Mandatory field validation, Conditional completeness checks |
+| **Consistency** | Personal data must be consistent across systems | Consistency | Cross-system validation, Format standardization |
+| **Retention** | Data should not be kept longer than necessary | Timeliness | Age of data checks, Automated retention policy enforcement |
+| **Relevance** | Only relevant personal data should be processed | Validity | Purpose specification checks, Minimization validation |
+
+### Data Subject Rights Support
+
+| Right | Data Quality Requirements | Implementation Approaches |
+|-------|--------------------------|--------------------------|
+| **Right to Access** | Data must be complete and available | Comprehensive data inventory, Access request procedures |
+| **Right to Rectification** | Data must be correctable and changes tracked | Change management process, Data lineage tracking |
+| **Right to Erasure** | Data must be identifiable and removable | Data mapping, Deletion verification |
+| **Right to Restrict Processing** | Processing status must be trackable | Processing flags, Access controls |
+| **Right to Data Portability** | Data must be in machine-readable format | Standard format validation, Export functionality |
+
+## How to Use These Templates
+
+1. Adapt the templates to your specific dataset requirements.
+2. Implement the automated checks as part of your data processing pipeline.
+3. Establish regular data quality assessment schedules.
+4. Document all findings and actions in a centralized repository.
+5. Review and update data quality procedures as needs evolve.
+
+The templates and procedures in this document provide a foundation for maintaining high data quality standards. They should be customized based on the specific requirements of your data and project goals. 

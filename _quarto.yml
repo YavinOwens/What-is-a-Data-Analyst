@@ -4,6 +4,14 @@ project:
   render:
     - index.qmd
     - AndiStory.qmd
+    - analytical_engineering_docs.qmd
+    - project_planning.qmd
+    - meeting_templates.qmd
+    - findings_templates.qmd
+    - issues_and_bugs.qmd
+    - reference_materials.qmd
+    - analysis_notebooks.qmd
+    - data_quality_checks.qmd
 
 website:
   title: "Lean Analytics Journey"
@@ -17,6 +25,24 @@ website:
         href: index.qmd
       - text: "Andi's Story"
         href: AndiStory.qmd
+      - text: "Documentation"
+        menu:
+          - text: "Engineering Docs"
+            href: analytical_engineering_docs.qmd
+          - text: "Project Planning"
+            href: project_planning.qmd
+          - text: "Meeting Templates"
+            href: meeting_templates.qmd
+          - text: "Findings Templates"
+            href: findings_templates.qmd
+          - text: "Issues and Bugs"
+            href: issues_and_bugs.qmd
+          - text: "Reference Materials"
+            href: reference_materials.qmd
+          - text: "Analysis Notebooks"
+            href: analysis_notebooks.qmd
+          - text: "Data Quality Checks"
+            href: data_quality_checks.qmd
     right:
       - icon: github
         href: https://github.com/YavinOwens/What-is-a-Data-Analyst
@@ -46,4 +72,12 @@ resources:
 
 project-list:
   - index.qmd
-  - AndiStory.qmd 
+  - AndiStory.qmd
+  - analytical_engineering_docs.qmd
+  - project_planning.qmd
+  - meeting_templates.qmd
+  - findings_templates.qmd
+  - issues_and_bugs.qmd
+  - reference_materials.qmd
+  - analysis_notebooks.qmd
+  - data_quality_checks.qmd 
