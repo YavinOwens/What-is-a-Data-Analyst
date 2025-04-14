@@ -25,24 +25,16 @@ website:
         href: index.qmd
       - text: "Andi's Story"
         href: AndiStory.qmd
-      - text: "Documentation"
-        menu:
-          - text: "Engineering Docs"
-            href: docs/analytical_engineering_docs.html
-          - text: "Project Planning"
-            href: docs/project_planning.html
-          - text: "Meeting Templates"
-            href: docs/meeting_templates.html
-          - text: "Findings Templates"
-            href: docs/findings_templates.html
-          - text: "Issues and Bugs"
-            href: docs/issues_and_bugs.html
-          - text: "Reference Materials"
-            href: docs/reference_materials.html
-          - text: "Analysis Notebooks"
-            href: docs/analysis_notebooks.html
-          - text: "Data Quality Checks"
-            href: docs/data_quality_checks.html
+      - text: "Eng Docs"
+        href: docs/analytical_engineering_docs.html
+      - text: "Planning"
+        href: docs/project_planning.html
+      - text: "Meetings"
+        href: docs/meeting_templates.html
+      - text: "Findings"
+        href: docs/findings_templates.html
+      - text: "Quality Checks"
+        href: docs/data_quality_checks.html
     right:
       - icon: github
         href: https://github.com/YavinOwens/What-is-a-Data-Analyst

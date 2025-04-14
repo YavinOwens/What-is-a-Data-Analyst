@@ -933,7 +933,6 @@ The future of data analytics is not just about technology—it's about creating 
 
 ## Interactive GDPR Fines Dashboard
 
-::: {.panel-tabset}
 ### Overview
 ```{python}
 #| label: gdpr-overview
@@ -1093,3 +1092,69 @@ The analysis of GDPR fines reveals several key patterns and insights:
    - Impact of multiple violations on fine amounts
 
 > **Disclaimer**: The data used in these visualizations is generated dummy data for illustrative purposes only. For access to real GDPR enforcement data and up-to-date information about fines, please visit [GDPR Enforcement Tracker](https://www.enforcementtracker.com).
+```
+
+## Development Environment and Templates
+
+### Docker-Based Development Environment
+
+To support efficient data analysis and documentation, we've set up a Docker-based development environment that can be run locally on your machine. This environment includes:
+
+- VS Code in browser for easy access and collaboration
+- PostgreSQL for data storage
+- Redis for caching
+- pgAdmin for database management
+
+Note: This development environment must be run locally on your machine. GitHub Pages cannot run Docker containers or host development environments.
+
+To set up the development environment locally:
+1. Clone the repository
+2. Navigate to the `_DevelopmentEnvironment` directory
+3. Run `docker-compose up -d`
+
+The development environment can then be accessed at:
+- VS Code: http://localhost:8080
+- pgAdmin: http://localhost:5050
+- PostgreSQL: localhost:5432
+- Redis: localhost:6379
+
+### Documentation Templates
+
+To maintain consistency and quality in our data analysis work, we've created a set of templates that cover various aspects of the data analysis process:
+
+1. **Analysis Notebooks**
+   - Standardized format for documenting data analysis workflows
+   - Includes sections for data exploration, cleaning, and visualization
+   - Ensures reproducibility and transparency
+
+2. **Data Quality Checks**
+   - Templates for assessing data quality
+   - Covers completeness, accuracy, consistency, and timeliness
+   - Helps identify and document data issues
+
+3. **Findings Templates**
+   - Structured format for presenting analysis results
+   - Includes executive summary, methodology, and recommendations
+   - Ensures clear communication of insights
+
+4. **Issues and Bugs Tracking**
+   - Templates for documenting data-related issues
+   - Tracks resolution progress and impact
+   - Maintains a history of data quality improvements
+
+5. **Meeting Templates**
+   - Standardized format for data team meetings
+   - Covers agenda, action items, and follow-ups
+   - Ensures effective communication and accountability
+
+6. **Project Planning**
+   - Templates for planning data analysis projects
+   - Includes scope, timeline, and resource allocation
+   - Helps manage project execution and delivery
+
+7. **Reference Materials**
+   - Templates for documenting data sources and methodologies
+   - Maintains a knowledge base of analysis approaches
+   - Supports team learning and development
+
+These templates are available in the [Templates section](index.html#andis-templates) of our documentation and can be accessed through the development environment.
