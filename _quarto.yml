@@ -28,21 +28,21 @@ website:
       - text: "Documentation"
         menu:
           - text: "Engineering Docs"
-            href: analytical_engineering_docs.qmd
+            href: docs/analytical_engineering_docs.html
           - text: "Project Planning"
-            href: project_planning.qmd
+            href: docs/project_planning.html
           - text: "Meeting Templates"
-            href: meeting_templates.qmd
+            href: docs/meeting_templates.html
           - text: "Findings Templates"
-            href: findings_templates.qmd
+            href: docs/findings_templates.html
           - text: "Issues and Bugs"
-            href: issues_and_bugs.qmd
+            href: docs/issues_and_bugs.html
           - text: "Reference Materials"
-            href: reference_materials.qmd
+            href: docs/reference_materials.html
           - text: "Analysis Notebooks"
-            href: analysis_notebooks.qmd
+            href: docs/analysis_notebooks.html
           - text: "Data Quality Checks"
-            href: data_quality_checks.qmd
+            href: docs/data_quality_checks.html
     right:
       - icon: github
         href: https://github.com/YavinOwens/What-is-a-Data-Analyst
