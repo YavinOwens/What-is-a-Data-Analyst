@@ -1,0 +1,112 @@
+[
+  {
+    "country": "Germany",
+    "authority": "BfDI",
+    "company": "Deutsche Wohnen SE",
+    "amount": 14500000,
+    "date": "2019-10-30",
+    "article_violated": "Art. 5 GDPR",
+    "type_of_violation": "Insufficient legal basis for data processing",
+    "summary": "Fine for storing personal data longer than necessary.",
+    "source_url": "https://www.enforcementtracker.com/ETid-28"
+  },
+  {
+    "country": "France",
+    "authority": "CNIL",
+    "company": "Google LLC",
+    "amount": 50000000,
+    "date": "2019-01-21",
+    "article_violated": "Art. 6, 12-14 GDPR",
+    "type_of_violation": "Lack of transparency",
+    "summary": "Fine for lack of transparency and valid consent.",
+    "source_url": "https://www.enforcementtracker.com/ETid-13"
+  },
+  {
+    "country": "Italy",
+    "authority": "Garante",
+    "company": "TIM",
+    "amount": 27800000,
+    "date": "2020-01-15",
+    "article_violated": "Art. 5, 6, 17, 21 GDPR",
+    "type_of_violation": "Insufficient legal basis for data processing",
+    "summary": "Fine for aggressive marketing practices and excessive data retention.",
+    "source_url": "https://www.enforcementtracker.com/ETid-409"
+  },
+  {
+    "country": "Sweden",
+    "authority": "Datainspektionen",
+    "company": "Google LLC",
+    "amount": 7000000,
+    "date": "2020-03-11",
+    "article_violated": "Art. 5, 6, 17 GDPR",
+    "type_of_violation": "Lack of fulfillment of data subjects rights",
+    "summary": "Fine for inadequate handling of right to be forgotten requests.",
+    "source_url": "https://www.enforcementtracker.com/ETid-436"
+  },
+  {
+    "country": "United Kingdom",
+    "authority": "ICO",
+    "company": "British Airways",
+    "amount": 22000000,
+    "date": "2020-10-16",
+    "article_violated": "Art. 5, 32 GDPR",
+    "type_of_violation": "Insufficient technical and organisational measures",
+    "summary": "Fine for lack of security measures leading to a data breach affecting 400,000 customers.",
+    "source_url": "https://www.enforcementtracker.com/ETid-712"
+  },
+  {
+    "country": "Spain",
+    "authority": "AEPD",
+    "company": "Vodafone España",
+    "amount": 8150000,
+    "date": "2021-03-11",
+    "article_violated": "Art. 5, 6, 28 GDPR",
+    "type_of_violation": "Insufficient legal basis for data processing",
+    "summary": "Fine for unlawful marketing activities and contracting.",
+    "source_url": "https://www.enforcementtracker.com/ETid-787"
+  },
+  {
+    "country": "Netherlands",
+    "authority": "AP",
+    "company": "Booking.com",
+    "amount": 475000,
+    "date": "2021-03-31",
+    "article_violated": "Art. 33 GDPR",
+    "type_of_violation": "Failure to notify data breach",
+    "summary": "Fine for late notification of a data breach.",
+    "source_url": "https://www.enforcementtracker.com/ETid-824"
+  },
+  {
+    "country": "Ireland",
+    "authority": "DPC",
+    "company": "WhatsApp Ireland",
+    "amount": 225000000,
+    "date": "2021-09-02",
+    "article_violated": "Art. 5, 12-14 GDPR",
+    "type_of_violation": "Insufficient legal basis for data processing",
+    "summary": "Fine for lack of transparency about data sharing with Facebook.",
+    "source_url": "https://www.enforcementtracker.com/ETid-953"
+  },
+  {
+    "country": "Luxembourg",
+    "authority": "CNPD",
+    "company": "Amazon Europe Core SARL",
+    "amount": 746000000,
+    "date": "2021-07-16",
+    "article_violated": "Art. 6, 12, 17 GDPR",
+    "type_of_violation": "Lack of transparency",
+    "summary": "Fine for non-compliance with general data processing principles.",
+    "source_url": "https://www.enforcementtracker.com/ETid-937"
+  },
+  {
+    "country": "Belgium",
+    "authority": "APD",
+    "company": "IAB Europe",
+    "amount": 250000,
+    "date": "2022-02-02",
+    "article_violated": "Art. 5, 6, 12-14 GDPR",
+    "type_of_violation": "Lack of transparency",
+    "summary": "Fine for violations related to the Transparency and Consent Framework.",
+    "source_url": "https://www.enforcementtracker.com/ETid-1108"
+  }
+] 

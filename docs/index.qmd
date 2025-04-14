@@ -1,0 +1,79 @@
+---
+title: "Analytical Engineering Documentation"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    theme: cosmo
+    code-fold: true
+---
+
+# Analytical Engineering Documentation
+
+Welcome to the Analytical Engineering documentation for the GDPR Fines Analysis project. This documentation serves as a comprehensive guide for the team's processes, standards, and best practices.
+
+## Project Overview
+
+The GDPR Fines Analysis project aims to analyze and visualize GDPR fine data to provide insights into compliance trends, geographic distribution, and industry impacts. This documentation supports the team in maintaining high standards of data quality, analytical rigor, and project management.
+
+## Documentation Structure
+
+### Project Management
+- [Project Planning](project_planning.qmd) - Templates and guidelines for project management
+- [Meeting Templates](meeting_templates.qmd) - Templates for various team meetings
+- [Findings Templates](findings_templates.qmd) - Templates for documenting analysis results
+- [Issues and Bugs](issues_and_bugs.qmd) - Templates for tracking and managing issues
+
+### Technical Documentation
+- [Reference Materials](reference_materials.qmd) - Technical standards and best practices
+- [Team Wiki](team_wiki.qmd) - Development environment setup and team resources
+- [Analysis Notebooks](analysis_notebooks.qmd) - Templates for data analysis
+- [Data Quality Checks](data_quality_checks.qmd) - Templates for data validation
+
+### Andi's Story and Templates
+- [Andi's Data Journey](AndiStory.html) - The story of a data analyst's journey
+- [Analysis Notebooks](analysis_notebooks.html) - Templates for data analysis documentation
+- [Data Quality Checks](data_quality_checks.html) - Templates for data quality assessment
+- [Findings Templates](findings_templates.html) - Templates for presenting analysis findings
+- [Issues and Bugs](issues_and_bugs.html) - Templates for tracking data issues
+- [Meeting Templates](meeting_templates.html) - Templates for data team meetings
+- [Project Planning](project_planning.html) - Templates for data project planning
+- [Reference Materials](reference_materials.html) - Templates for documentation references
+
+## Quick Links
+
+### Development Environment
+- [VS Code in Browser](http://localhost:8080) (requires local Docker setup)
+- [PgAdmin](http://localhost:5050) (requires local Docker setup)
+- [PostgreSQL](postgres://andi_user:andi_password@localhost:5432/gdpr_fines) (requires local Docker setup)
+- [Redis](redis://localhost:6379) (requires local Docker setup)
+
+### Project Resources
+- [GitHub Repository](https://github.com/YavinOwens/What-is-a-Data-Analyst)
+- [Project Website](https://yavinowens.github.io/What-is-a-Data-Analyst/)
+
+## Getting Started
+
+1. Set up the development environment locally:
+   ```bash
+   cd _DevelopmentEnvironment
+   docker-compose up -d
+   ```
+   Note: The Docker environment must be run locally on your machine. GitHub Pages cannot run Docker containers.
+
+2. Access the documentation:
+   - Local preview: `quarto preview`
+   - Build site: `quarto render`
+
+3. Start contributing:
+   - Use the provided templates for documentation
+   - Follow the coding standards
+   - Document your findings and analysis
+
+## Documentation Updates
+
+This documentation is a living document. Team members are encouraged to:
+- Update templates as needed
+- Add new sections for emerging needs
+- Improve existing content
+- Share best practices

@@ -23,6 +23,71 @@ format:
 
 This is the story of Andi, a data analyst who embarks on a journey to transform raw data into meaningful insights. Through her experiences, we'll explore the principles of data quality, documentation, implementation, and excellence in data analytics.
 
+## Development Environment and Templates
+
+### Docker-Based Development Environment
+
+To support efficient data analysis and documentation, we've set up a Docker-based development environment that can be run locally on your machine. This environment includes:
+
+- VS Code in browser for easy access and collaboration
+- PostgreSQL for data storage
+- Redis for caching
+- pgAdmin for database management
+
+Note: This development environment must be run locally on your machine. GitHub Pages cannot run Docker containers or host development environments.
+
+To set up the development environment locally:
+1. Clone the repository
+2. Navigate to the `_DevelopmentEnvironment` directory
+3. Run `docker-compose up -d`
+
+The development environment can then be accessed at:
+- VS Code: http://localhost:8080
+- pgAdmin: http://localhost:5050
+- PostgreSQL: localhost:5432
+- Redis: localhost:6379
+
+### Documentation Templates
+
+To maintain consistency and quality in our data analysis work, we've created a set of templates that cover various aspects of the data analysis process:
+
+1. **Analysis Notebooks**
+   - Standardized format for documenting data analysis workflows
+   - Includes sections for data exploration, cleaning, and visualization
+   - Ensures reproducibility and transparency
+
+2. **Data Quality Checks**
+   - Templates for assessing data quality
+   - Covers completeness, accuracy, consistency, and timeliness
+   - Helps identify and document data issues
+
+3. **Findings Templates**
+   - Structured format for presenting analysis results
+   - Includes executive summary, methodology, and recommendations
+   - Ensures clear communication of insights
+
+4. **Issues and Bugs Tracking**
+   - Templates for documenting data-related issues
+   - Tracks resolution progress and impact
+   - Maintains a history of data quality improvements
+
+5. **Meeting Templates**
+   - Standardized format for data team meetings
+   - Covers agenda, action items, and follow-ups
+   - Ensures effective communication and accountability
+
+6. **Project Planning**
+   - Templates for planning data analysis projects
+   - Includes scope, timeline, and resource allocation
+   - Helps manage project execution and delivery
+
+7. **Reference Materials**
+   - Templates for documenting data sources and methodologies
+   - Maintains a knowledge base of analysis approaches
+   - Supports team learning and development
+
+These templates are available in the [Templates section](index.html#andis-templates) of our documentation and can be accessed through the development environment.
+
 # Book 1: Kidlens Law
 
 > "If you write a problem down clearly, then the matter is half solved."  
@@ -318,7 +383,7 @@ flowchart LR
     subgraph Tools[Development Tools]
         direction TB
         R --> S[IDEs]
-        S --> S1["VS Code<br/>(Primary IDE)"]
+        S --> S1["VS Code<br/>(Browser-based)"]
         S --> S2["PyCharm<br/>(Python IDE)"]
         S --> S3["Jupyter Lab<br/>(Notebooks)"]
         
@@ -364,7 +429,7 @@ The highlighted components (in orange) represent the primary tools in each categ
 | N1 | Plotly | Main tool for creating interactive visualizations |
 | O1 | PostgreSQL | Primary database for data storage and management |
 | P1 | Docker | Container platform for consistent environments |
-| S1 | VS Code | Primary integrated development environment |
+| S1 | VS Code | Browser-based integrated development environment |
 | T1 | Git | Version control system for code management |
 | U1 | Quarto | Technical documentation and report generation |
 | V1 | pytest | Testing framework for code quality assurance |
@@ -400,7 +465,10 @@ Our comprehensive stack includes:
 
 ### Development Tools
 Essential tools for efficient development:
-1. **IDEs**: VS Code, PyCharm, Jupyter Lab
+1. **IDEs**: 
+   - VS Code (browser-based via code-server)
+   - PyCharm
+   - Jupyter Lab
 2. **Version Control**: Git, DVC, GitHub
 3. **Documentation**: Quarto, Sphinx, MkDocs
 4. **Quality & Testing**: pytest, Black, isort, mypy
@@ -414,32 +482,56 @@ git clone <repository-url>
 cd <project-directory>
 ```
 
-2. Create and activate a virtual environment:
+2. Start the Docker containers:
+```bash
+cd _DevelopmentEnvironment
+docker-compose up -d
+```
+
+This will launch:
+- PostgreSQL database (port 5432)
+- Redis cache service (port 6379)
+- PgAdmin interface (port 5050)
+- VS Code in browser via code-server (port 8080)
+
+3. Create and activate a virtual environment:
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Install dependencies:
+4. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Configure environment variables:
+5. Configure environment variables:
 ```bash
 cp .env.template .env
 # Edit .env with your specific configurations
 ```
 
-5. Initialize the database:
+6. Initialize the database:
 ```bash
 python src/db/init_db.py
 ```
 
-6. Run tests to verify setup:
+7. Run tests to verify setup:
 ```bash
 pytest tests/
 ```
+
+### Browser-Based Development
+One of the key features of our development environment is the integration of code-server, which provides:
+
+- Full VS Code experience in a browser
+- Access to the development environment from any device
+- Consistent development environment for all team members
+- Pre-configured extensions and settings
+
+To access the browser-based VS Code environment:
+- URL: http://localhost:8080
+- Password: andi_password (customizable)
 
 ### Best Practices
 - Always work in a virtual environment
@@ -453,7 +545,7 @@ pytest tests/
 
 ::: {.panel-tabset}
 
-## Overview
+### Overview
 ```{python}
 #| label: data-processing-overview
 #| code-fold: true
@@ -548,7 +640,7 @@ print("1. The total GDPR fines collected amount to €{:,.2f}, indicating signif
 print("2. With {:,} cases processed, the average fine of €{:,.2f} suggests a balanced enforcement approach".format(total_cases, avg_fine))
 ```
 
-## Temporal Analysis
+### Temporal Analysis
 ```{python}
 #| label: data-processing-temporal
 #| code-fold: true
@@ -570,7 +662,7 @@ print("1. There is a clear upward trend in fine amounts over time, suggesting in
 print("2. Seasonal patterns show peaks in Q4 of each year, possibly due to year-end regulatory reviews")
 ```
 
-## Geographic Distribution
+### Geographic Distribution
 ```{python}
 #| label: data-processing-geo
 #| code-fold: true
@@ -589,7 +681,7 @@ print("1. Germany leads in total fine amounts, followed by France and Spain, ref
 print("2. The top 3 countries account for over 60% of total fines, indicating concentrated enforcement in major EU economies")
 ```
 
-## Violation Types
+### Violation Types
 ```{python}
 #| label: data-processing-violations
 #| code-fold: true
@@ -608,7 +700,7 @@ print("1. Article 5 (Data Processing Principles) is the most frequently violated
 print("2. Articles 5, 6, and 7 account for 75% of violations, suggesting focus areas for compliance training")
 ```
 
-## Industry Impact
+### Industry Impact
 ```{python}
 #| label: data-processing-industry
 #| code-fold: true
@@ -846,12 +938,11 @@ The future of data analytics is not just about technology—it's about creating 
 
 # Appendix: Data Quality Assessment
 
-## Interactive GDPR Fines Dashboard {.tabset}
+## Interactive GDPR Fines Dashboard
 
 ::: {.panel-tabset}
 
-## Overview
-
+### Overview
 ```{python}
 #| label: gdpr-overview
 #| code-fold: true
@@ -887,8 +978,7 @@ Markdown(tabulate(
 ))
 ```
 
-## Temporal Analysis
-
+### Temporal Analysis
 ```{python}
 #| label: gdpr-temporal
 #| code-fold: true
@@ -905,8 +995,7 @@ fig_time = px.line(monthly_fines,
 fig_time.show()
 ```
 
-## Geographic Distribution
-
+### Geographic Distribution
 ```{python}
 #| label: gdpr-geo
 #| code-fold: true
@@ -923,8 +1012,7 @@ fig_geo = px.bar(country_fines,
 fig_geo.show()
 ```
 
-## Violation Types
-
+### Violation Types
 ```{python}
 #| label: gdpr-violations
 #| code-fold: true
@@ -941,8 +1029,7 @@ fig_violations = px.pie(violation_counts,
 fig_violations.show()
 ```
 
-## Industry Impact
-
+### Industry Impact
 ```{python}
 #| label: gdpr-industry
 #| code-fold: true
@@ -1000,3 +1087,69 @@ The analysis of GDPR fines reveals several key patterns and insights:
    - Impact of multiple violations on fine amounts
 
 > **Disclaimer**: The data used in these visualizations is generated dummy data for illustrative purposes only. For access to real GDPR enforcement data and up-to-date information about fines, please visit [GDPR Enforcement Tracker](https://www.enforcementtracker.com).
+```
+
+## Development Environment and Templates
+
+### Docker-Based Development Environment
+
+To support efficient data analysis and documentation, we've set up a Docker-based development environment that can be run locally on your machine. This environment includes:
+
+- VS Code in browser for easy access and collaboration
+- PostgreSQL for data storage
+- Redis for caching
+- pgAdmin for database management
+
+Note: This development environment must be run locally on your machine. GitHub Pages cannot run Docker containers or host development environments.
+
+To set up the development environment locally:
+1. Clone the repository
+2. Navigate to the `_DevelopmentEnvironment` directory
+3. Run `docker-compose up -d`
+
+The development environment can then be accessed at:
+- VS Code: http://localhost:8080
+- pgAdmin: http://localhost:5050
+- PostgreSQL: localhost:5432
+- Redis: localhost:6379
+
+### Documentation Templates
+
+To maintain consistency and quality in our data analysis work, we've created a set of templates that cover various aspects of the data analysis process:
+
+1. **Analysis Notebooks**
+   - Standardized format for documenting data analysis workflows
+   - Includes sections for data exploration, cleaning, and visualization
+   - Ensures reproducibility and transparency
+
+2. **Data Quality Checks**
+   - Templates for assessing data quality
+   - Covers completeness, accuracy, consistency, and timeliness
+   - Helps identify and document data issues
+
+3. **Findings Templates**
+   - Structured format for presenting analysis results
+   - Includes executive summary, methodology, and recommendations
+   - Ensures clear communication of insights
+
+4. **Issues and Bugs Tracking**
+   - Templates for documenting data-related issues
+   - Tracks resolution progress and impact
+   - Maintains a history of data quality improvements
+
+5. **Meeting Templates**
+   - Standardized format for data team meetings
+   - Covers agenda, action items, and follow-ups
+   - Ensures effective communication and accountability
+
+6. **Project Planning**
+   - Templates for planning data analysis projects
+   - Includes scope, timeline, and resource allocation
+   - Helps manage project execution and delivery
+
+7. **Reference Materials**
+   - Templates for documenting data sources and methodologies
+   - Maintains a knowledge base of analysis approaches
+   - Supports team learning and development
+
+These templates are available in the [Templates section](index.html#andis-templates) of our documentation and can be accessed through the development environment.

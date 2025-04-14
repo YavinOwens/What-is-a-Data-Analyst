@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Analytical Engineering Documentation</title>
+<title>Findings Templates</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,55 +20,20 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="index_files/libs/clipboard/clipboard.min.js"></script>
-<script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="index_files/libs/quarto-html/popper.min.js"></script>
-<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="index_files/libs/quarto-html/anchor.min.js"></script>
-<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-c73da311dcb4b46904599e04e07723a5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="findings_templates_files/libs/clipboard/clipboard.min.js"></script>
+<script src="findings_templates_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="findings_templates_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="findings_templates_files/libs/quarto-html/popper.min.js"></script>
+<script src="findings_templates_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="findings_templates_files/libs/quarto-html/anchor.min.js"></script>
+<link href="findings_templates_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="findings_templates_files/libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="findings_templates_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="findings_templates_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="findings_templates_files/libs/bootstrap/bootstrap-c73da311dcb4b46904599e04e07723a5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -81,22 +46,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#analytical-engineering-documentation" id="toc-analytical-engineering-documentation" class="nav-link active" data-scroll-target="#analytical-engineering-documentation">Analytical Engineering Documentation</a>
+  <li><a href="#findings-templates" id="toc-findings-templates" class="nav-link active" data-scroll-target="#findings-templates">Findings Templates</a>
   <ul class="collapse">
-  <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
-  <li><a href="#documentation-structure" id="toc-documentation-structure" class="nav-link" data-scroll-target="#documentation-structure">Documentation Structure</a>
+  <li><a href="#data-analysis-findings-template" id="toc-data-analysis-findings-template" class="nav-link" data-scroll-target="#data-analysis-findings-template">Data Analysis Findings Template</a>
   <ul class="collapse">
-  <li><a href="#project-management" id="toc-project-management" class="nav-link" data-scroll-target="#project-management">Project Management</a></li>
-  <li><a href="#technical-documentation" id="toc-technical-documentation" class="nav-link" data-scroll-target="#technical-documentation">Technical Documentation</a></li>
-  <li><a href="#andis-story-and-templates" id="toc-andis-story-and-templates" class="nav-link" data-scroll-target="#andis-story-and-templates">Andi’s Story and Templates</a></li>
+  <li><a href="#analysis-title-title" id="toc-analysis-title-title" class="nav-link" data-scroll-target="#analysis-title-title">Analysis Title: [Title]</a></li>
+  <li><a href="#date-yyyy-mm-dd" id="toc-date-yyyy-mm-dd" class="nav-link" data-scroll-target="#date-yyyy-mm-dd">Date: [YYYY-MM-DD]</a></li>
+  <li><a href="#analyst-name" id="toc-analyst-name" class="nav-link" data-scroll-target="#analyst-name">Analyst: [Name]</a></li>
   </ul></li>
-  <li><a href="#quick-links" id="toc-quick-links" class="nav-link" data-scroll-target="#quick-links">Quick Links</a>
+  <li><a href="#data-quality-assessment-template" id="toc-data-quality-assessment-template" class="nav-link" data-scroll-target="#data-quality-assessment-template">Data Quality Assessment Template</a>
   <ul class="collapse">
-  <li><a href="#development-environment" id="toc-development-environment" class="nav-link" data-scroll-target="#development-environment">Development Environment</a></li>
-  <li><a href="#project-resources" id="toc-project-resources" class="nav-link" data-scroll-target="#project-resources">Project Resources</a></li>
+  <li><a href="#assessment-date-yyyy-mm-dd" id="toc-assessment-date-yyyy-mm-dd" class="nav-link" data-scroll-target="#assessment-date-yyyy-mm-dd">Assessment Date: [YYYY-MM-DD]</a></li>
+  <li><a href="#dataset-dataset-name" id="toc-dataset-dataset-name" class="nav-link" data-scroll-target="#dataset-dataset-name">Dataset: [Dataset Name]</a></li>
   </ul></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-  <li><a href="#documentation-updates" id="toc-documentation-updates" class="nav-link" data-scroll-target="#documentation-updates">Documentation Updates</a></li>
+  <li><a href="#gdpr-compliance-findings-template" id="toc-gdpr-compliance-findings-template" class="nav-link" data-scroll-target="#gdpr-compliance-findings-template">GDPR Compliance Findings Template</a>
+  <ul class="collapse">
+  <li><a href="#assessment-date-yyyy-mm-dd-1" id="toc-assessment-date-yyyy-mm-dd-1" class="nav-link" data-scroll-target="#assessment-date-yyyy-mm-dd-1">Assessment Date: [YYYY-MM-DD]</a></li>
+  <li><a href="#scope-assessment-scope" id="toc-scope-assessment-scope" class="nav-link" data-scroll-target="#scope-assessment-scope">Scope: [Assessment Scope]</a></li>
+  </ul></li>
+  <li><a href="#technical-implementation-findings" id="toc-technical-implementation-findings" class="nav-link" data-scroll-target="#technical-implementation-findings">Technical Implementation Findings</a>
+  <ul class="collapse">
+  <li><a href="#component-component-name" id="toc-component-component-name" class="nav-link" data-scroll-target="#component-component-name">Component: [Component Name]</a></li>
+  <li><a href="#date-yyyy-mm-dd-1" id="toc-date-yyyy-mm-dd-1" class="nav-link" data-scroll-target="#date-yyyy-mm-dd-1">Date: [YYYY-MM-DD]</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -105,7 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Analytical Engineering Documentation</h1>
+<h1 class="title">Findings Templates</h1>
 </div>
 
 
@@ -122,89 +94,278 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="analytical-engineering-documentation" class="level1">
-<h1>Analytical Engineering Documentation</h1>
-<p>Welcome to the Analytical Engineering documentation for the GDPR Fines Analysis project. This documentation serves as a comprehensive guide for the team’s processes, standards, and best practices.</p>
-<section id="project-overview" class="level2">
-<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
-<p>The GDPR Fines Analysis project aims to analyze and visualize GDPR fine data to provide insights into compliance trends, geographic distribution, and industry impacts. This documentation supports the team in maintaining high standards of data quality, analytical rigor, and project management.</p>
+<section id="findings-templates" class="level1">
+<h1>Findings Templates</h1>
+<section id="data-analysis-findings-template" class="level2">
+<h2 class="anchored" data-anchor-id="data-analysis-findings-template">Data Analysis Findings Template</h2>
+<section id="analysis-title-title" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-title-title">Analysis Title: [Title]</h3>
 </section>
-<section id="documentation-structure" class="level2">
-<h2 class="anchored" data-anchor-id="documentation-structure">Documentation Structure</h2>
-<section id="project-management" class="level3">
-<h3 class="anchored" data-anchor-id="project-management">Project Management</h3>
+<section id="date-yyyy-mm-dd" class="level3">
+<h3 class="anchored" data-anchor-id="date-yyyy-mm-dd">Date: [YYYY-MM-DD]</h3>
+</section>
+<section id="analyst-name" class="level3">
+<h3 class="anchored" data-anchor-id="analyst-name">Analyst: [Name]</h3>
+<section id="executive-summary" class="level4">
+<h4 class="anchored" data-anchor-id="executive-summary">Executive Summary</h4>
+<p>[Brief overview of key findings and recommendations]</p>
+</section>
+<section id="methodology" class="level4">
+<h4 class="anchored" data-anchor-id="methodology">Methodology</h4>
 <ul>
-<li><a href="project_planning.qmd">Project Planning</a> - Templates and guidelines for project management</li>
-<li><a href="meeting_templates.qmd">Meeting Templates</a> - Templates for various team meetings</li>
-<li><a href="findings_templates.qmd">Findings Templates</a> - Templates for documenting analysis results</li>
-<li><a href="issues_and_bugs.qmd">Issues and Bugs</a> - Templates for tracking and managing issues</li>
+<li>Data Sources:</li>
+<li>Analysis Approach:</li>
+<li>Tools Used:</li>
+<li>Limitations:</li>
 </ul>
 </section>
-<section id="technical-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="technical-documentation">Technical Documentation</h3>
-<ul>
-<li><a href="reference_materials.qmd">Reference Materials</a> - Technical standards and best practices</li>
-<li><a href="team_wiki.qmd">Team Wiki</a> - Development environment setup and team resources</li>
-<li><a href="analysis_notebooks.qmd">Analysis Notebooks</a> - Templates for data analysis</li>
-<li><a href="data_quality_checks.qmd">Data Quality Checks</a> - Templates for data validation</li>
-</ul>
-</section>
-<section id="andis-story-and-templates" class="level3">
-<h3 class="anchored" data-anchor-id="andis-story-and-templates">Andi’s Story and Templates</h3>
-<ul>
-<li><a href="AndiStory.html">Andi’s Data Journey</a> - The story of a data analyst’s journey</li>
-<li><a href="analysis_notebooks.html">Analysis Notebooks</a> - Templates for data analysis documentation</li>
-<li><a href="data_quality_checks.html">Data Quality Checks</a> - Templates for data quality assessment</li>
-<li><a href="findings_templates.html">Findings Templates</a> - Templates for presenting analysis findings</li>
-<li><a href="issues_and_bugs.html">Issues and Bugs</a> - Templates for tracking data issues</li>
-<li><a href="meeting_templates.html">Meeting Templates</a> - Templates for data team meetings</li>
-<li><a href="project_planning.html">Project Planning</a> - Templates for data project planning</li>
-<li><a href="reference_materials.html">Reference Materials</a> - Templates for documentation references</li>
-</ul>
-</section>
-</section>
-<section id="quick-links" class="level2">
-<h2 class="anchored" data-anchor-id="quick-links">Quick Links</h2>
-<section id="development-environment" class="level3">
-<h3 class="anchored" data-anchor-id="development-environment">Development Environment</h3>
-<ul>
-<li><a href="http://localhost:8080">VS Code in Browser</a> (requires local Docker setup)</li>
-<li><a href="http://localhost:5050">PgAdmin</a> (requires local Docker setup)</li>
-<li><a href="postgres://andi_user:andi_password@localhost:5432/gdpr_fines">PostgreSQL</a> (requires local Docker setup)</li>
-<li><a href="redis://localhost:6379">Redis</a> (requires local Docker setup)</li>
-</ul>
-</section>
-<section id="project-resources" class="level3">
-<h3 class="anchored" data-anchor-id="project-resources">Project Resources</h3>
-<ul>
-<li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst">GitHub Repository</a></li>
-<li><a href="https://yavinowens.github.io/What-is-a-Data-Analyst/">Project Website</a></li>
-</ul>
-</section>
-</section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
+<section id="key-findings" class="level4">
+<h4 class="anchored" data-anchor-id="key-findings">Key Findings</h4>
 <ol type="1">
-<li><p>Set up the development environment locally:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> _DevelopmentEnvironment</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> up <span class="at">-d</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note: The Docker environment must be run locally on your machine. GitHub Pages cannot run Docker containers.</p></li>
-<li><p>Access the documentation:</p>
+<li>[Finding 1]
 <ul>
-<li>Local preview: <code>quarto preview</code></li>
-<li>Build site: <code>quarto render</code></li>
+<li>Supporting Evidence:</li>
+<li>Impact:</li>
+<li>Recommendations:</li>
 </ul></li>
-<li><p>Start contributing:</p>
+<li>[Finding 2]
 <ul>
-<li>Use the provided templates for documentation</li>
-<li>Follow the coding standards</li>
-<li>Document your findings and analysis</li>
+<li>Supporting Evidence:</li>
+<li>Impact:</li>
+<li>Recommendations:</li>
 </ul></li>
 </ol>
 </section>
-<section id="documentation-updates" class="level2">
-<h2 class="anchored" data-anchor-id="documentation-updates">Documentation Updates</h2>
-<p>This documentation is a living document. Team members are encouraged to: - Update templates as needed - Add new sections for emerging needs - Improve existing content - Share best practices</p>
+<section id="visualizations" class="level4">
+<h4 class="anchored" data-anchor-id="visualizations">Visualizations</h4>
+<p>[Include relevant charts/graphs with captions]</p>
+</section>
+<section id="next-steps" class="level4">
+<h4 class="anchored" data-anchor-id="next-steps">Next Steps</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">[Action Item 1]</label></li>
+<li><label><input type="checkbox">[Action Item 2]</label></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="data-quality-assessment-template" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-assessment-template">Data Quality Assessment Template</h2>
+<section id="assessment-date-yyyy-mm-dd" class="level3">
+<h3 class="anchored" data-anchor-id="assessment-date-yyyy-mm-dd">Assessment Date: [YYYY-MM-DD]</h3>
+</section>
+<section id="dataset-dataset-name" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-dataset-name">Dataset: [Dataset Name]</h3>
+<section id="data-quality-dimensions" class="level4">
+<h4 class="anchored" data-anchor-id="data-quality-dimensions">Data Quality Dimensions</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Score (1-5)</th>
+<th>Issues Found</th>
+<th>Recommendations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Completeness</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Accuracy</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Consistency</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Timeliness</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Validity</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="critical-issues" class="level4">
+<h4 class="anchored" data-anchor-id="critical-issues">Critical Issues</h4>
+<ol type="1">
+<li>[Issue 1]
+<ul>
+<li>Impact:</li>
+<li>Root Cause:</li>
+<li>Mitigation Plan:</li>
+</ul></li>
+<li>[Issue 2]
+<ul>
+<li>Impact:</li>
+<li>Root Cause:</li>
+<li>Mitigation Plan:</li>
+</ul></li>
+</ol>
+</section>
+<section id="improvement-plan" class="level4">
+<h4 class="anchored" data-anchor-id="improvement-plan">Improvement Plan</h4>
+<ul>
+<li>Short-term Actions:</li>
+<li>Long-term Solutions:</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="gdpr-compliance-findings-template" class="level2">
+<h2 class="anchored" data-anchor-id="gdpr-compliance-findings-template">GDPR Compliance Findings Template</h2>
+<section id="assessment-date-yyyy-mm-dd-1" class="level3">
+<h3 class="anchored" data-anchor-id="assessment-date-yyyy-mm-dd-1">Assessment Date: [YYYY-MM-DD]</h3>
+</section>
+<section id="scope-assessment-scope" class="level3">
+<h3 class="anchored" data-anchor-id="scope-assessment-scope">Scope: [Assessment Scope]</h3>
+<section id="compliance-status" class="level4">
+<h4 class="anchored" data-anchor-id="compliance-status">Compliance Status</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Requirement</th>
+<th>Status</th>
+<th>Evidence</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[Requirement 1]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>[Requirement 2]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="risk-assessment" class="level4">
+<h4 class="anchored" data-anchor-id="risk-assessment">Risk Assessment</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Risk</th>
+<th>Likelihood</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[Risk 1]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>[Risk 2]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="recommendations" class="level4">
+<h4 class="anchored" data-anchor-id="recommendations">Recommendations</h4>
+<ol type="1">
+<li>[Recommendation 1]
+<ul>
+<li>Priority:</li>
+<li>Timeline:</li>
+<li>Resources Needed:</li>
+</ul></li>
+<li>[Recommendation 2]
+<ul>
+<li>Priority:</li>
+<li>Timeline:</li>
+<li>Resources Needed:</li>
+</ul></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="technical-implementation-findings" class="level2">
+<h2 class="anchored" data-anchor-id="technical-implementation-findings">Technical Implementation Findings</h2>
+<section id="component-component-name" class="level3">
+<h3 class="anchored" data-anchor-id="component-component-name">Component: [Component Name]</h3>
+</section>
+<section id="date-yyyy-mm-dd-1" class="level3">
+<h3 class="anchored" data-anchor-id="date-yyyy-mm-dd-1">Date: [YYYY-MM-DD]</h3>
+<section id="architecture-review" class="level4">
+<h4 class="anchored" data-anchor-id="architecture-review">Architecture Review</h4>
+<ul>
+<li>Current Design:</li>
+<li>Proposed Changes:</li>
+<li>Technical Debt:</li>
+</ul>
+</section>
+<section id="performance-metrics" class="level4">
+<h4 class="anchored" data-anchor-id="performance-metrics">Performance Metrics</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Current</th>
+<th>Target</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[Metric 1]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>[Metric 2]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="security-considerations" class="level4">
+<h4 class="anchored" data-anchor-id="security-considerations">Security Considerations</h4>
+<ul>
+<li>Vulnerabilities Found:</li>
+<li>Mitigation Steps:</li>
+<li>Compliance Requirements:</li>
+</ul>
+</section>
+<section id="implementation-plan" class="level4">
+<h4 class="anchored" data-anchor-id="implementation-plan">Implementation Plan</h4>
+<ul>
+<li>Phase 1:</li>
+<li>Phase 2:</li>
+<li>Phase 3:</li>
+</ul>
+</section>
+</section>
 </section>
 </section>
 

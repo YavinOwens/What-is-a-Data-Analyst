@@ -1,0 +1,110 @@
+---
+title: "Team Wiki"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    theme: cosmo
+    code-fold: true
+---
+
+# Development Environment Setup
+
+## Docker Services
+
+Our development environment uses Docker containers for various services. Here's how to access them:
+
+### VS Code in Browser (code-server)
+- URL: http://localhost:8080
+- Password: andi_password
+- Features:
+  - Full VS Code experience in browser
+  - Pre-configured extensions
+  - Integrated terminal
+  - Git integration
+  - Debugging support
+
+### PostgreSQL Database
+- Host: localhost
+- Port: 5432
+- Database: gdpr_fines
+- Username: andi_user
+- Password: andi_password
+
+### PgAdmin
+- URL: http://localhost:5050
+- Username: admin@admin.com
+- Password: admin
+
+### Redis Cache
+- Host: localhost
+- Port: 6379
+- Password: andi_password
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/YavinOwens/What-is-a-Data-Analyst.git
+cd What-is-a-Data-Analyst
+```
+
+2. Start the development environment:
+```bash
+cd _DevelopmentEnvironment
+docker-compose up -d
+```
+
+3. Access the services:
+- VS Code: http://localhost:8080
+- PgAdmin: http://localhost:5050
+- PostgreSQL: localhost:5432
+- Redis: localhost:6379
+
+## Best Practices
+
+1. **Version Control**
+   - Use feature branches for new work
+   - Write clear commit messages
+   - Keep branches up to date
+   - Review code before merging
+
+2. **Documentation**
+   - Update documentation as you work
+   - Use the provided templates
+   - Keep documentation in sync with code
+   - Document any environment changes
+
+3. **Development Workflow**
+   - Start with a clear plan
+   - Write tests for new features
+   - Follow coding standards
+   - Review your work before committing
+
+4. **Environment Management**
+   - Keep dependencies updated
+   - Document environment changes
+   - Use virtual environments
+   - Follow security best practices
+
+## Project Structure
+
+```
+lean_analytics/
+├── _DevelopmentEnvironment/  # Docker configuration
+├── docs/                     # Documentation and website
+├── src/                      # Source code
+└── data/                     # Data files
+```
+
+## Troubleshooting
+
+If you encounter port conflicts:
+1. Check running containers: `docker ps`
+2. Stop all containers: `docker-compose down`
+3. Start containers again: `docker-compose up -d`
+
+For database connection issues:
+1. Verify PostgreSQL container is running: `docker ps | grep postgres`
+2. Check container logs: `docker logs andi_postgres`
+3. Ensure correct credentials are being used 

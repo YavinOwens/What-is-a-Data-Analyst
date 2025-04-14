@@ -1,0 +1,186 @@
+---
+title: "Reference Materials"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    theme: cosmo
+    code-fold: true
+---
+
+# Reference Materials
+
+## Technical Documentation
+
+### Development Environment Setup
+- [Docker Setup Guide](team_wiki.qmd#development-environment-setup)
+- [VS Code in Browser](team_wiki.qmd#vs-code-in-browser-code-server)
+- [Database Access](team_wiki.qmd#pgadmin-database-management)
+
+### Data Engineering Standards
+
+#### ETL Best Practices
+1. Data Extraction
+   - Source System Documentation
+   - Extraction Methods
+   - Error Handling
+
+2. Data Transformation
+   - Data Cleaning Rules
+   - Data Validation Rules
+   - Transformation Logic
+
+3. Data Loading
+   - Loading Strategies
+   - Error Recovery
+   - Performance Optimization
+
+#### Data Quality Framework
+- Completeness Checks
+- Accuracy Validation
+- Consistency Rules
+- Timeliness Metrics
+
+### GDPR Compliance Guidelines
+
+#### Key Requirements
+1. Data Protection Principles
+2. Individual Rights
+3. Data Security
+4. Accountability
+
+#### Implementation Checklist
+- [ ] Data Inventory
+- [ ] Risk Assessment
+- [ ] Privacy Notices
+- [ ] Data Processing Agreements
+- [ ] Security Measures
+
+## Analytical Engineering Guides
+
+### Data Analysis Workflow
+1. Problem Definition
+2. Data Collection
+3. Data Preparation
+4. Analysis
+5. Visualization
+6. Reporting
+
+### Statistical Methods
+- Descriptive Statistics
+- Inferential Statistics
+- Time Series Analysis
+- Regression Analysis
+
+### Visualization Best Practices
+- Chart Selection Guide
+- Color Schemes
+- Accessibility Guidelines
+- Interactive Features
+
+## Code Standards
+
+### Python Coding Standards
+```python
+# Example of proper Python code structure
+def process_data(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Process the input data according to business rules.
+    
+    Args:
+        data: Input DataFrame containing raw data
+        
+    Returns:
+        Processed DataFrame with cleaned data
+    """
+    # Implementation
+    pass
+```
+
+### SQL Standards
+```sql
+-- Example of proper SQL query structure
+SELECT 
+    column1,
+    column2,
+    COUNT(*) as count
+FROM 
+    table_name
+WHERE 
+    condition
+GROUP BY 
+    column1, column2
+HAVING 
+    count > 1
+ORDER BY 
+    column1;
+```
+
+## Documentation Templates
+
+### API Documentation
+```markdown
+## Endpoint: /api/v1/resource
+
+### Description
+[Endpoint description]
+
+### Parameters
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| param1 | string | Yes | [Description] |
+
+### Response
+```json
+{
+    "field1": "value1",
+    "field2": "value2"
+}
+```
+
+### Error Codes
+| Code | Description |
+|------|-------------|
+| 400 | Bad Request |
+| 404 | Not Found |
+```
+
+### Database Schema Documentation
+```sql
+-- Table: table_name
+-- Description: [Table description]
+
+CREATE TABLE table_name (
+    id SERIAL PRIMARY KEY,
+    column1 VARCHAR(255) NOT NULL,
+    column2 TIMESTAMP,
+    column3 INTEGER
+);
+
+-- Indexes
+CREATE INDEX idx_column1 ON table_name(column1);
+
+-- Foreign Keys
+ALTER TABLE table_name
+    ADD CONSTRAINT fk_other_table
+    FOREIGN KEY (column1)
+    REFERENCES other_table(id);
+```
+
+## Troubleshooting Guides
+
+### Common Issues
+1. Database Connection Issues
+   - Check network connectivity
+   - Verify credentials
+   - Check database status
+
+2. Data Processing Errors
+   - Validate input data
+   - Check transformation logic
+   - Review error logs
+
+3. Performance Issues
+   - Check query optimization
+   - Review indexing strategy
+   - Monitor resource usage 
