@@ -12,6 +12,7 @@ project:
     - reference_materials.qmd
     - analysis_notebooks.qmd
     - data_quality_checks.qmd
+    - team_wiki.qmd
 
 website:
   title: "Lean Analytics Journey"
@@ -26,15 +27,19 @@ website:
       - text: "Andi's Story"
         href: AndiStory.qmd
       - text: "Eng Docs"
-        href: docs/analytical_engineering_docs.html
+        href: analytical_engineering_docs.qmd
       - text: "Planning"
-        href: docs/project_planning.html
+        href: project_planning.qmd
       - text: "Meetings"
-        href: docs/meeting_templates.html
+        href: meeting_templates.qmd
       - text: "Findings"
-        href: docs/findings_templates.html
+        href: findings_templates.qmd
+      - text: "Analysis Notebooks"
+        href: analysis_notebooks.qmd
       - text: "Quality Checks"
-        href: docs/data_quality_checks.html
+        href: data_quality_checks.qmd
+      - text: "Team Wiki"
+        href: team_wiki.qmd
     right:
       - icon: github
         href: https://github.com/YavinOwens/What-is-a-Data-Analyst
@@ -72,4 +77,5 @@ project-list:
   - issues_and_bugs.qmd
   - reference_materials.qmd
   - analysis_notebooks.qmd
-  - data_quality_checks.qmd 
+  - data_quality_checks.qmd
+  - team_wiki.qmd 

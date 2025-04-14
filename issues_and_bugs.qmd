@@ -1,0 +1,316 @@
+---
+title: "Issues and Bugs Tracking"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    theme: cosmo
+    code-fold: true
+---
+
+# Issues and Bugs Tracking Templates
+
+This document provides templates for tracking and managing issues in the GDPR Fines Analysis project.
+
+## Issue Tracking Template
+
+```markdown
+# Issue Report: [Issue ID]
+
+## Basic Information
+- **Issue ID**: [e.g., BUG-001]
+- **Title**: [Brief descriptive title]
+- **Reported By**: [Name]
+- **Reported Date**: [YYYY-MM-DD]
+- **Priority**: [High/Medium/Low]
+- **Severity**: [Critical/Major/Minor/Trivial]
+- **Status**: [Open/In Progress/Under Review/Resolved/Closed]
+- **Assigned To**: [Name]
+
+## Description
+[Detailed description of the issue, including background information and context]
+
+## Steps to Reproduce
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
+4. ...
+
+## Expected Behavior
+[Description of what should happen if there was no issue]
+
+## Actual Behavior
+[Description of what actually happens]
+
+## Impact
+- **Business Impact**: [Description of how this affects business operations]
+- **Affected Users**: [Number or category of users affected]
+- **Affected Systems**: [List of systems affected]
+
+## Environment
+- **System Version**: [Version information]
+- **Browser/Client**: [Browser/client name and version]
+- **Operating System**: [OS name and version]
+- **Additional Environment Details**: [Any other relevant environment details]
+
+## Attachments
+- [Error logs]
+- [Screenshots]
+- [Videos]
+- [Other relevant files]
+
+## Related Issues
+- [Link to related issue 1]
+- [Link to related issue 2]
+
+## Root Cause Analysis
+[Preliminary assessment of what caused the issue, to be updated as investigation proceeds]
+
+## Resolution
+- **Fix Description**: [Description of the solution implemented]
+- **Fixed By**: [Name]
+- **Fixed Date**: [YYYY-MM-DD]
+- **Code Changes**: [Links to relevant code commits]
+
+## Verification
+- **Verified By**: [Name]
+- **Verification Date**: [YYYY-MM-DD]
+- **Verification Method**: [Description of testing performed to verify the fix]
+
+## Lessons Learned
+- [Key takeaways]
+- [Preventive measures for the future]
+```
+
+## Bug Report Template
+
+```markdown
+# Bug Report: [Bug ID]
+
+## Bug Information
+- **Bug ID**: [e.g., BUG-001]
+- **Title**: [Brief descriptive title]
+- **Reported By**: [Name]
+- **Reported Date**: [YYYY-MM-DD]
+- **Component**: [System component where the bug was found]
+- **Version**: [Software version where the bug was found]
+- **Priority**: [P1/P2/P3/P4]
+- **Severity**: [Blocker/Critical/Major/Minor/Trivial]
+- **Status**: [New/Assigned/In Progress/Fixed/Verified/Closed]
+- **Assigned To**: [Name]
+- **Due Date**: [YYYY-MM-DD]
+
+## Description
+[Detailed description of the bug]
+
+## Steps to Reproduce
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
+4. ...
+
+## Expected Result
+[What should happen when steps are followed]
+
+## Actual Result
+[What actually happens when steps are followed]
+
+## Reproducibility
+[Always/Sometimes/Rarely/Unable to reproduce]
+
+## Environment
+- **Operating System**: [OS name and version]
+- **Browser**: [Browser name and version, if applicable]
+- **Database**: [Database name and version, if applicable]
+- **Screen Resolution**: [If relevant to the bug]
+- **Other Environment Details**: [Any other relevant environment details]
+
+## Attachments
+- [Screenshot 1]
+- [Screenshot 2]
+- [Error logs]
+- [Videos demonstrating the bug]
+
+## Regression Information
+- **Previous Working Version**: [Version where this worked correctly]
+- **Introduced In Version**: [Version where this bug first appeared, if known]
+
+## Workaround
+[Temporary solution until the bug is fixed, if available]
+
+## Resolution
+- **Resolution Type**: [Fixed/Cannot Reproduce/Duplicate/Won't Fix/By Design]
+- **Resolution Description**: [Details of how the bug was fixed or why it won't be fixed]
+- **Fixed By**: [Name]
+- **Fixed Date**: [YYYY-MM-DD]
+- **Fix Version**: [Version where the fix will be/was implemented]
+- **Code Changes**: [Links to relevant code commits]
+
+## Testing Notes
+- **Tested By**: [Name]
+- **Test Date**: [YYYY-MM-DD]
+- **Test Cases**: [References to test cases used]
+- **Test Results**: [Summary of test results]
+
+## Related Items
+- **Related Bugs**: [Links to related bugs]
+- **Related Features**: [Links to related features]
+- **Related Documents**: [Links to related documentation]
+```
+
+## Data Quality Issue Template
+
+```markdown
+# Data Quality Issue: [Issue ID]
+
+## Basic Information
+- **Issue ID**: [e.g., DQI-001]
+- **Title**: [Brief descriptive title]
+- **Reported By**: [Name]
+- **Reported Date**: [YYYY-MM-DD]
+- **Priority**: [High/Medium/Low]
+- **Severity**: [Critical/Major/Minor/Trivial]
+- **Status**: [Open/In Progress/Under Review/Resolved/Closed]
+- **Assigned To**: [Name]
+
+## Issue Description
+[Detailed description of the data quality issue]
+
+## Data Sources Affected
+- **Primary Source**: [Name of the primary data source]
+- **Additional Sources**: [Names of other affected data sources]
+- **Tables/Fields**: [Specific tables and fields affected]
+- **Data Volume Affected**: [Amount or percentage of data affected]
+
+## Data Quality Dimension
+- **Type**: [Completeness/Accuracy/Consistency/Timeliness/Validity/Uniqueness/Integrity]
+- **Metrics**: [Specific metrics showing the issue, e.g., "15% of records have missing values"]
+
+## Impact Assessment
+- **Business Impact**: [How this affects business operations or decision-making]
+- **Downstream Systems**: [Systems that may be affected by this issue]
+- **Reporting Impact**: [How this affects reports or dashboards]
+- **Compliance Impact**: [Any compliance concerns raised by this issue]
+
+## Root Cause Analysis
+- **Primary Cause**: [Main reason for the data quality issue]
+- **Contributing Factors**: [Other factors that contributed to the issue]
+- **Process Failures**: [Process breakdowns that allowed the issue to occur]
+
+## Remediation Plan
+- **Short-term Fix**: [Immediate steps to address the issue]
+- **Long-term Solution**: [Comprehensive solution to prevent recurrence]
+- **Validation Method**: [How the fix will be validated]
+- **Timeline**: [Expected timeline for resolution]
+
+## Resolution
+- **Actions Taken**: [Description of actions taken to resolve the issue]
+- **Data Corrections**: [Specific corrections made to the data]
+- **Process Improvements**: [Changes to processes to prevent recurrence]
+- **Resolved By**: [Name]
+- **Resolution Date**: [YYYY-MM-DD]
+
+## Verification
+- **Verification Method**: [How the resolution was verified]
+- **Verification Results**: [Results of verification testing]
+- **Verified By**: [Name]
+- **Verification Date**: [YYYY-MM-DD]
+
+## Preventive Measures
+- **Monitoring Controls**: [New monitoring implemented]
+- **Process Changes**: [Changes to processes]
+- **System Enhancements**: [Changes to systems]
+- **Training/Documentation**: [Training or documentation updates]
+
+## Lessons Learned
+- [Key takeaways from this issue]
+- [Recommendations for future data management]
+```
+
+## Feature Request Template
+
+```markdown
+# Feature Request: [Feature ID]
+
+## Basic Information
+- **Feature ID**: [e.g., FR-001]
+- **Title**: [Brief descriptive title]
+- **Requested By**: [Name]
+- **Requested Date**: [YYYY-MM-DD]
+- **Priority**: [High/Medium/Low]
+- **Status**: [New/Under Review/Approved/In Development/Implemented/Rejected]
+- **Assigned To**: [Name]
+- **Target Release**: [Version or sprint where this should be implemented]
+
+## Description
+[Detailed description of the feature being requested]
+
+## Justification
+[Business justification for the feature, including benefits and value]
+
+## User Stories
+- As a [type of user], I want [goal] so that [benefit].
+- As a [type of user], I want [goal] so that [benefit].
+- ...
+
+## Acceptance Criteria
+- [ ] [Criterion 1]
+- [ ] [Criterion 2]
+- [ ] [Criterion 3]
+- ...
+
+## Technical Considerations
+- **Implementation Approach**: [High-level description of how this might be implemented]
+- **Dependencies**: [Other features or components this depends on]
+- **Technical Risks**: [Potential technical challenges or risks]
+- **Performance Considerations**: [Performance impacts to consider]
+- **Security Considerations**: [Security aspects to consider]
+
+## UI/UX Design
+[Wireframes, mockups, or descriptions of user interface changes]
+
+## Alternatives Considered
+- **Alternative 1**: [Description and pros/cons]
+- **Alternative 2**: [Description and pros/cons]
+- ...
+
+## Stakeholders
+[List of stakeholders who should be consulted or informed about this feature]
+
+## Resource Estimate
+- **Development Effort**: [Estimated person-days/hours]
+- **QA Effort**: [Estimated person-days/hours]
+- **Documentation Effort**: [Estimated person-days/hours]
+- **Total Effort**: [Total estimated effort]
+
+## Approval
+- **Approved By**: [Name]
+- **Approval Date**: [YYYY-MM-DD]
+- **Approval Notes**: [Any notes regarding the approval decision]
+
+## Implementation
+- **Implemented By**: [Name]
+- **Implementation Date**: [YYYY-MM-DD]
+- **Implementation Details**: [Brief overview of the implementation]
+- **Code Changes**: [Links to relevant code commits]
+
+## Testing
+- **Tested By**: [Name]
+- **Test Date**: [YYYY-MM-DD]
+- **Test Results**: [Summary of test results]
+
+## Documentation
+- **Documentation Required**: [Yes/No]
+- **Documentation Location**: [Link to documentation]
+- **Documentation Status**: [Not Started/In Progress/Completed]
+```
+
+## How to Use These Templates
+
+1. Copy the relevant template markdown.
+2. Fill in the details specific to your issue or bug.
+3. Save the completed document in the project's issue tracking system.
+4. Update the document as the issue progresses through its lifecycle.
+5. Reference the issue ID in any related code commits or documentation.
+
+These templates should be customized based on your team's specific needs and processes. 

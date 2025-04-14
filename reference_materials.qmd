@@ -1,0 +1,417 @@
+---
+title: "Reference Materials"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    theme: cosmo
+    code-fold: true
+---
+
+# Reference Materials
+
+This document provides technical standards and best practices for the GDPR Fines Analysis project.
+
+## Coding Standards
+
+### Python Coding Standards
+
+#### Style Guide
+
+We follow [PEP 8](https://www.python.org/dev/peps/pep-0008/) with the following specifics:
+
+1. **Indentation**: Use 4 spaces per indentation level.
+2. **Maximum Line Length**: 88 characters (compatible with Black formatter).
+3. **Imports**:
+   - Group imports in the following order:
+     1. Standard library imports
+     2. Related third-party imports
+     3. Local application/library-specific imports
+   - Within each group, imports should be in alphabetical order.
+   - Use absolute imports rather than relative imports.
+
+```python
+# Standard library imports
+import os
+import sys
+from datetime import datetime
+
+# Third-party imports
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+
+# Local imports
+from src.data import load_data
+from src.models import train_model
+```
+
+4. **Naming Conventions**:
+   - `snake_case` for functions, variables, and methods
+   - `PascalCase` for classes
+   - `UPPER_CASE` for constants
+   - Prefix private attributes with underscore: `_private_variable`
+
+5. **Documentation**:
+   - All modules, classes, methods, and functions must include docstrings following [NumPy docstring style](https://numpydoc.readthedocs.io/en/latest/format.html).
+   - Include type hints for function parameters and return values.
+
+```python
+def process_data(data_frame: pd.DataFrame, column_name: str) -> pd.DataFrame:
+    """
+    Process the data by normalizing values in the specified column.
+    
+    Parameters
+    ----------
+    data_frame : pd.DataFrame
+        Input dataframe containing the data to process
+    column_name : str
+        Name of the column to normalize
+        
+    Returns
+    -------
+    pd.DataFrame
+        Processed dataframe with normalized values
+        
+    Examples
+    --------
+    >>> df = pd.DataFrame({'value': [1, 2, 3]})
+    >>> process_data(df, 'value')
+       value  normalized_value
+    0      1              0.0
+    1      2              0.5
+    2      3              1.0
+    """
+    # Implementation here
+    return processed_dataframe
+```
+
+#### Code Quality Tools
+
+1. **Linting**: Use `flake8` for code linting.
+2. **Formatting**: Use `black` for code formatting.
+3. **Type Checking**: Use `mypy` for static type checking.
+4. **Import Sorting**: Use `isort` for sorting imports.
+5. **Docstring Checking**: Use `pydocstyle` for docstring formatting checks.
+
+Configure these tools in a `setup.cfg` or `pyproject.toml` file at the project root.
+
+#### Unit Testing
+
+1. Use `pytest` for unit testing.
+2. Organize tests in a `tests` directory with the same structure as the source code.
+3. Name test files as `test_*.py` and test functions as `test_*`.
+4. Aim for at least 80% code coverage.
+
+```python
+# In tests/data/test_preprocessing.py
+import pytest
+import pandas as pd
+from src.data.preprocessing import normalize_column
+
+def test_normalize_column():
+    """Test that the normalize_column function correctly scales values between 0 and 1."""
+    # Arrange
+    df = pd.DataFrame({'value': [1, 2, 3]})
+    
+    # Act
+    result = normalize_column(df, 'value')
+    
+    # Assert
+    expected = pd.DataFrame({
+        'value': [1, 2, 3],
+        'value_normalized': [0.0, 0.5, 1.0]
+    })
+    pd.testing.assert_frame_equal(result, expected)
+```
+
+### SQL Coding Standards
+
+1. **Capitalization**:
+   - Keywords and function names in UPPERCASE
+   - Table names, column names, and aliases in snake_case
+
+2. **Formatting**:
+   - Indent subqueries and CTEs
+   - Place each column on a separate line
+   - Place each JOIN on a separate line
+   - Align keywords for readability
+
+3. **Naming Conventions**:
+   - Table names should be plural (e.g., `customers`, not `customer`)
+   - Column names should be singular (e.g., `first_name`, not `first_names`)
+   - Primary keys should be named `id`
+   - Foreign keys should be named `table_name_id` (e.g., `customer_id`)
+
+4. **Example Query**:
+
+```sql
+WITH monthly_fines AS (
+    SELECT
+        DATE_TRUNC('month', fine_date) AS month,
+        country,
+        article,
+        SUM(fine_amount) AS total_fines,
+        COUNT(*) AS fine_count
+    FROM
+        gdpr_fines
+    WHERE
+        fine_date >= '2018-05-25'
+        AND fine_amount > 0
+    GROUP BY
+        DATE_TRUNC('month', fine_date),
+        country,
+        article
+)
+
+SELECT
+    mf.month,
+    mf.country,
+    c.region,
+    mf.article,
+    a.description AS article_description,
+    mf.total_fines,
+    mf.fine_count,
+    ROUND(mf.total_fines / mf.fine_count, 2) AS average_fine
+FROM
+    monthly_fines mf
+JOIN
+    countries c ON mf.country = c.country_name
+JOIN
+    gdpr_articles a ON mf.article = a.article_id
+WHERE
+    mf.total_fines > 10000
+ORDER BY
+    mf.month DESC,
+    mf.total_fines DESC
+```
+
+## Data Governance
+
+### Data Dictionary Template
+
+Document all datasets using this template:
+
+```markdown
+# Data Dictionary: [Dataset Name]
+
+## Dataset Overview
+- **Name**: [Dataset name]
+- **Description**: [Brief description of the dataset]
+- **Source**: [Where the data comes from]
+- **Owner**: [Team or person responsible for the dataset]
+- **Update Frequency**: [How often the data is updated]
+- **Last Updated**: [Date of last update]
+- **Version**: [Version number]
+
+## Table: [Table Name]
+
+| Column Name | Data Type | Description | Example Values | Constraints | Notes |
+|-------------|-----------|-------------|----------------|-------------|-------|
+| id | INTEGER | Primary key | 1, 2, 3 | NOT NULL, UNIQUE | Auto-incremented |
+| first_name | VARCHAR(50) | Person's first name | "John", "Jane" | NOT NULL | |
+| email | VARCHAR(100) | Email address | "example@example.com" | UNIQUE | Lowercase storage |
+| created_at | TIMESTAMP | Record creation timestamp | "2023-01-01 12:00:00" | NOT NULL | UTC timezone |
+| status | ENUM | Current status | "active", "inactive", "pending" | NOT NULL | Default: "pending" |
+
+## Relationships
+- **[Relationship 1]**: Table A.column_x references Table B.column_y
+- **[Relationship 2]**: Table C.column_z references Table A.column_w
+
+## Usage Guidelines
+- [Guideline 1]
+- [Guideline 2]
+- [Guideline 3]
+
+## Known Issues
+- [Issue 1]
+- [Issue 2]
+
+## Changelog
+- **[Date]**: [Changes made]
+- **[Date]**: [Changes made]
+```
+
+### Data Quality Rules
+
+Define data quality rules for each dataset using this template:
+
+```markdown
+# Data Quality Rules: [Dataset Name]
+
+## Quality Dimensions
+
+### Completeness
+- **Rule C1**: [Column X] must not be NULL
+- **Rule C2**: At least one of [Column Y] or [Column Z] must have a value
+
+### Accuracy
+- **Rule A1**: [Column X] must be within range [min-max]
+- **Rule A2**: [Column Y] must match pattern [regex pattern]
+
+### Consistency
+- **Rule CS1**: If [Column X] = [Value], then [Column Y] must be [Value]
+- **Rule CS2**: [Column Z] must be consistent with [Related Table.Column]
+
+### Timeliness
+- **Rule T1**: [Timestamp Column] must not be in the future
+- **Rule T2**: Records must be updated at least every [time period]
+
+### Uniqueness
+- **Rule U1**: [Column X] must be unique
+- **Rule U2**: The combination of [Column Y] and [Column Z] must be unique
+
+## Validation Procedures
+- **Daily Validation**: [Description of daily checks]
+- **Weekly Validation**: [Description of weekly checks]
+- **Monthly Validation**: [Description of monthly checks]
+
+## Error Handling
+- **Error Severity Levels**:
+  - **Critical**: [Description and actions]
+  - **High**: [Description and actions]
+  - **Medium**: [Description and actions]
+  - **Low**: [Description and actions]
+  
+- **Notification Procedures**: [Who gets notified and how]
+- **Remediation Steps**: [Standard steps for fixing issues]
+```
+
+## GDPR Compliance Reference
+
+### Key GDPR Articles for Data Analysis
+
+| Article | Title | Summary | Impact on Data Analysis |
+|---------|-------|---------|-------------------------|
+| Art. 5 | Principles relating to processing of personal data | Defines core principles: lawfulness, fairness, transparency, purpose limitation, data minimization, accuracy, storage limitation, integrity, and confidentiality | All data processing must adhere to these principles; documentation must demonstrate compliance |
+| Art. 6 | Lawfulness of processing | Defines legal bases for processing personal data | Must establish and document a valid legal basis for all data analysis activities |
+| Art. 9 | Processing of special categories of personal data | Restricts processing of sensitive data categories | Special protections needed for analysis of health, biometric, or other sensitive data |
+| Art. 17 | Right to erasure ('right to be forgotten') | Data subjects can request deletion of their data | Must be able to identify and remove specific individuals' data from analyses |
+| Art. 22 | Automated individual decision-making, including profiling | Restricts solely automated decisions with legal effects | Impacts predictive models and automated decision systems |
+| Art. 25 | Data protection by design and by default | Privacy must be built into systems from the start | Analysis systems must incorporate privacy controls from design phase |
+| Art. 32 | Security of processing | Requires appropriate security measures | Data analysis environments must implement appropriate security controls |
+| Art. 35 | Data protection impact assessment | Required for high-risk processing | Complex analyses may require formal impact assessment |
+
+### GDPR Data Processing Checklist
+
+```markdown
+# GDPR Data Processing Checklist
+
+## Before Starting Analysis
+
+- [ ] Identify the purpose of the data processing
+- [ ] Determine the legal basis for processing
+- [ ] Verify that data is necessary for the stated purpose (data minimization)
+- [ ] Check if a Data Protection Impact Assessment (DPIA) is needed
+- [ ] Ensure appropriate security measures are in place
+- [ ] Verify that data subject rights can be fulfilled
+- [ ] Document the data processing activities
+
+## During Analysis
+
+- [ ] Only process data for the documented purpose
+- [ ] Implement privacy-enhancing techniques where possible:
+  - [ ] Data aggregation
+  - [ ] Pseudonymization
+  - [ ] Anonymization
+- [ ] Restrict access to personal data
+- [ ] Maintain processing records
+- [ ] Monitor for data breaches
+
+## After Analysis
+
+- [ ] Securely store or delete the data according to retention policy
+- [ ] Document results in compliance with GDPR
+- [ ] Ensure outputs don't inadvertently allow re-identification
+- [ ] Update processing records
+```
+
+## Technical Stack Reference
+
+### Data Processing Tools
+
+#### Python Libraries
+
+| Library | Version | Purpose | Documentation |
+|---------|---------|---------|---------------|
+| pandas | 2.0.0+ | Data manipulation and analysis | [Pandas Documentation](https://pandas.pydata.org/docs/) |
+| numpy | 1.23.0+ | Numerical operations | [NumPy Documentation](https://numpy.org/doc/stable/) |
+| scikit-learn | 1.2.0+ | Machine learning algorithms | [Scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html) |
+| matplotlib | 3.7.0+ | Static visualizations | [Matplotlib Documentation](https://matplotlib.org/stable/contents.html) |
+| plotly | 5.13.0+ | Interactive visualizations | [Plotly Documentation](https://plotly.com/python/) |
+| jupyter | 1.0.0+ | Interactive notebooks | [Jupyter Documentation](https://jupyter.org/documentation) |
+| great_expectations | 0.15.0+ | Data validation | [Great Expectations Documentation](https://docs.greatexpectations.io/) |
+
+#### SQL and Database Tools
+
+| Tool | Version | Purpose | Documentation |
+|------|---------|---------|---------------|
+| PostgreSQL | 14.0+ | Primary database | [PostgreSQL Documentation](https://www.postgresql.org/docs/14/) |
+| DuckDB | 0.7.0+ | Analytical SQL engine | [DuckDB Documentation](https://duckdb.org/docs/) |
+| SQLAlchemy | 2.0.0+ | ORM for Python | [SQLAlchemy Documentation](https://docs.sqlalchemy.org/en/20/) |
+| pgAdmin | 6.0+ | PostgreSQL administration | [pgAdmin Documentation](https://www.pgadmin.org/docs/) |
+
+### Visualization Guidelines
+
+#### Color Schemes
+
+Use the following color schemes for consistency:
+
+1. **Categorical Data (up to 10 categories)**:
+   ```python
+   categorical_colors = [
+       '#4e79a7', '#f28e2c', '#e15759', '#76b7b2', '#59a14f',
+       '#edc949', '#af7aa1', '#ff9da7', '#9c755f', '#bab0ab'
+   ]
+   ```
+
+2. **Sequential Data (Light to Dark)**:
+   ```python
+   sequential_colors = [
+       '#f7fbff', '#deebf7', '#c6dbef', '#9ecae1', '#6baed6',
+       '#4292c6', '#2171b5', '#08519c', '#08306b'
+   ]
+   ```
+
+3. **Diverging Data (Negative to Positive)**:
+   ```python
+   diverging_colors = [
+       '#d73027', '#f46d43', '#fdae61', '#fee090', '#ffffbf',
+       '#e0f3f8', '#abd9e9', '#74add1', '#4575b4'
+   ]
+   ```
+
+#### Chart Type Selection Guide
+
+| Data Relationship | Recommended Chart Types | When to Use |
+|-------------------|-------------------------|-------------|
+| Comparison | Bar charts, Column charts | Comparing values across categories |
+| Distribution | Histograms, Box plots, Violin plots | Showing data distribution and outliers |
+| Composition | Pie charts, Stacked bars, Treemaps | Showing parts of a whole |
+| Trend | Line charts, Area charts | Showing changes over time |
+| Relationship | Scatter plots, Bubble charts, Heatmaps | Showing correlation between variables |
+| Geospatial | Choropleth maps, Point maps | Showing data with geographic component |
+
+## How to Use These Reference Materials
+
+These reference materials should be consulted throughout the project lifecycle:
+
+1. **Planning Phase**: 
+   - Review data governance requirements
+   - Align with GDPR compliance needs
+   - Select appropriate technical tools
+
+2. **Development Phase**:
+   - Follow coding standards
+   - Implement data quality rules
+   - Apply visualization guidelines
+
+3. **Maintenance Phase**:
+   - Update documentation as needed
+   - Ensure ongoing GDPR compliance
+   - Monitor data quality
+
+4. **Knowledge Transfer**:
+   - Use these materials for onboarding new team members
+   - Reference during knowledge sharing sessions
+   - Cite in project documentation 

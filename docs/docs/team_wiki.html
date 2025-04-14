@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lean Analytics Journey</title>
+<title>Team Wiki – Lean Analytics Journey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -125,7 +125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Quality Checks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./team_wiki.html"> 
+    <a class="nav-link active" href="./team_wiki.html" aria-current="page"> 
 <span class="menu-text">Team Wiki</span></a>
   </li>  
 </ul>
@@ -183,34 +183,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lean-analytics-journey" id="toc-lean-analytics-journey" class="nav-link active" data-scroll-target="#lean-analytics-journey">Lean Analytics Journey</a>
+  <li><a href="#development-environment-setup" id="toc-development-environment-setup" class="nav-link active" data-scroll-target="#development-environment-setup">Development Environment Setup</a>
   <ul class="collapse">
-  <li><a href="#books" id="toc-books" class="nav-link" data-scroll-target="#books">Books</a>
+  <li><a href="#docker-services" id="toc-docker-services" class="nav-link" data-scroll-target="#docker-services">Docker Services</a>
   <ul class="collapse">
-  <li><a href="#book-1---kidlens-law" id="toc-book-1---kidlens-law" class="nav-link" data-scroll-target="#book-1---kidlens-law">Book 1 - Kidlens Law</a></li>
-  <li><a href="#book-2---documentation-journey" id="toc-book-2---documentation-journey" class="nav-link" data-scroll-target="#book-2---documentation-journey">Book 2 - Documentation Journey</a></li>
-  <li><a href="#book-3---getting-your-hands-dirty" id="toc-book-3---getting-your-hands-dirty" class="nav-link" data-scroll-target="#book-3---getting-your-hands-dirty">Book 3 - Getting Your Hands Dirty</a></li>
-  <li><a href="#book-4---argh-framework" id="toc-book-4---argh-framework" class="nav-link" data-scroll-target="#book-4---argh-framework">Book 4 - ARGH Framework</a></li>
-  <li><a href="#andis-complete-story" id="toc-andis-complete-story" class="nav-link" data-scroll-target="#andis-complete-story">Andi’s Complete Story</a></li>
-  </ul></li>
-  <li><a href="#andis-templates" id="toc-andis-templates" class="nav-link" data-scroll-target="#andis-templates">Andi’s Templates</a>
-  <ul class="collapse">
-  <li><a href="#project-management" id="toc-project-management" class="nav-link" data-scroll-target="#project-management">Project Management</a></li>
-  <li><a href="#analysis-documentation" id="toc-analysis-documentation" class="nav-link" data-scroll-target="#analysis-documentation">Analysis Documentation</a></li>
-  <li><a href="#technical-resources" id="toc-technical-resources" class="nav-link" data-scroll-target="#technical-resources">Technical Resources</a></li>
+  <li><a href="#vs-code-in-browser-code-server" id="toc-vs-code-in-browser-code-server" class="nav-link" data-scroll-target="#vs-code-in-browser-code-server">VS Code in Browser (code-server)</a></li>
+  <li><a href="#postgresql-database" id="toc-postgresql-database" class="nav-link" data-scroll-target="#postgresql-database">PostgreSQL Database</a></li>
+  <li><a href="#pgadmin" id="toc-pgadmin" class="nav-link" data-scroll-target="#pgadmin">PgAdmin</a></li>
+  <li><a href="#redis-cache" id="toc-redis-cache" class="nav-link" data-scroll-target="#redis-cache">Redis Cache</a></li>
   </ul></li>
   <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a></li>
-  <li><a href="#key-topics-3" id="toc-key-topics-3" class="nav-link" data-scroll-target="#key-topics-3">Key Topics</a></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
+  <li><a href="#project-structure" id="toc-project-structure" class="nav-link" data-scroll-target="#project-structure">Project Structure</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/edit/main/team_wiki.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Lean Analytics Journey</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Team Wiki</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -227,150 +222,120 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<blockquote class="blockquote">
-<p>“If you write a problem down clearly, then the matter is half solved.”<br>
-— Kidlens Law</p>
-</blockquote>
-<section id="lean-analytics-journey" class="level1">
-<h1>Lean Analytics Journey</h1>
-<p>Welcome to the Lean Analytics Journey, a comprehensive guide to data analysis and engineering.</p>
-<section id="books" class="level2">
-<h2 class="anchored" data-anchor-id="books">Books</h2>
-<section id="book-1---kidlens-law" class="level3">
-<h3 class="anchored" data-anchor-id="book-1---kidlens-law"><a href="./AndiStory.html#book-1-kidlens-law">Book 1 - Kidlens Law</a></h3>
-<p>Explore the fundamentals of data quality and analysis through the lens of Kidlens Law.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Key Topics
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="development-environment-setup" class="level1">
+<h1>Development Environment Setup</h1>
+<section id="docker-services" class="level2">
+<h2 class="anchored" data-anchor-id="docker-services">Docker Services</h2>
+<p>Our development environment uses Docker containers for various services. Here’s how to access them:</p>
+<section id="vs-code-in-browser-code-server" class="level3">
+<h3 class="anchored" data-anchor-id="vs-code-in-browser-code-server">VS Code in Browser (code-server)</h3>
 <ul>
-<li>Data Quality Assessment</li>
-<li>GDPR Fines Analysis</li>
-<li>Problem Definition</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="book-2---documentation-journey" class="level3">
-<h3 class="anchored" data-anchor-id="book-2---documentation-journey"><a href="./AndiStory.html#book-2-the-documentation-journey">Book 2 - Documentation Journey</a></h3>
-<p>Learn about the importance of documentation and knowledge management in data projects.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Key Topics
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<li>URL: http://localhost:8080</li>
+<li>Password: andi_password</li>
+<li>Features:
 <ul>
-<li>DMBOK2 Principles</li>
-<li>Hub and Spoke Model</li>
-<li>Documentation Best Practices</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="book-3---getting-your-hands-dirty" class="level3">
-<h3 class="anchored" data-anchor-id="book-3---getting-your-hands-dirty"><a href="./AndiStory.html#book-3-from-theory-to-practice-getting-your-hands-dirty">Book 3 - Getting Your Hands Dirty</a></h3>
-<p>Dive into practical implementation and hands-on data engineering.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Key Topics
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Implementation Guide</li>
-<li>Code Examples</li>
-<li>Best Practices</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="book-4---argh-framework" class="level3">
-<h3 class="anchored" data-anchor-id="book-4---argh-framework"><a href="./AndiStory.html#book-4-argh-what-does-good-look-like">Book 4 - ARGH Framework</a></h3>
-<p>Discover the ARGH framework for defining and achieving excellence in data projects.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Framework Components
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>A</strong>ctionable: Insights that drive decisions</li>
-<li><strong>R</strong>eliable: Trustworthy and consistent data</li>
-<li><strong>G</strong>overned: Controlled and compliant processes</li>
-<li><strong>H</strong>armonized: Integrated and synchronized systems</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="andis-complete-story" class="level3">
-<h3 class="anchored" data-anchor-id="andis-complete-story"><a href="./AndiStory.html">Andi’s Complete Story</a></h3>
-<p>Follow Andi’s journey through all four books in a single narrative.</p>
-</section>
-</section>
-<section id="andis-templates" class="level2">
-<h2 class="anchored" data-anchor-id="andis-templates">Andi’s Templates</h2>
-<p>Access our comprehensive documentation and templates:</p>
-<section id="project-management" class="level3">
-<h3 class="anchored" data-anchor-id="project-management">Project Management</h3>
-<ul>
-<li><a href="docs/analytical_engineering_docs.html">Engineering Documentation</a> - Main documentation page</li>
-<li><a href="docs/project_planning.html">Project Planning</a> - Templates for project management</li>
-<li><a href="docs/meeting_templates.html">Meeting Templates</a> - Templates for team meetings</li>
+<li>Full VS Code experience in browser</li>
+<li>Pre-configured extensions</li>
+<li>Integrated terminal</li>
+<li>Git integration</li>
+<li>Debugging support</li>
+</ul></li>
 </ul>
 </section>
-<section id="analysis-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-documentation">Analysis Documentation</h3>
+<section id="postgresql-database" class="level3">
+<h3 class="anchored" data-anchor-id="postgresql-database">PostgreSQL Database</h3>
 <ul>
-<li><a href="docs/findings_templates.html">Findings Templates</a> - Templates for documenting analysis results</li>
-<li><a href="docs/data_quality_checks.html">Data Quality Checks</a> - Templates for data validation</li>
+<li>Host: localhost</li>
+<li>Port: 5432</li>
+<li>Database: gdpr_fines</li>
+<li>Username: andi_user</li>
+<li>Password: andi_password</li>
 </ul>
 </section>
-<section id="technical-resources" class="level3">
-<h3 class="anchored" data-anchor-id="technical-resources">Technical Resources</h3>
+<section id="pgadmin" class="level3">
+<h3 class="anchored" data-anchor-id="pgadmin">PgAdmin</h3>
 <ul>
-<li><a href="docs/issues_and_bugs.html">Issues and Bugs</a> - Templates for tracking and managing issues</li>
-<li><a href="docs/reference_materials.html">Reference Materials</a> - Technical standards and best practices</li>
-<li><a href="docs/analysis_notebooks.html">Analysis Notebooks</a> - Templates for data analysis</li>
+<li>URL: http://localhost:5050</li>
+<li>Username: admin@admin.com</li>
+<li>Password: admin</li>
+</ul>
+</section>
+<section id="redis-cache" class="level3">
+<h3 class="anchored" data-anchor-id="redis-cache">Redis Cache</h3>
+<ul>
+<li>Host: localhost</li>
+<li>Port: 6379</li>
+<li>Password: andi_password</li>
 </ul>
 </section>
 </section>
 <section id="getting-started" class="level2">
 <h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
 <ol type="1">
-<li><a href="./AndiStory.html#book-1-kidlens-law">Start with Book 1</a></li>
-<li><a href="./AndiStory.html#book-2-the-documentation-journey">Explore Documentation in Book 2</a></li>
-<li><a href="./AndiStory.html#book-3-from-theory-to-practice-getting-your-hands-dirty">Get Practical in Book 3</a></li>
-<li><a href="./AndiStory.html#book-4-argh-what-does-good-look-like">Define Excellence in Book 4</a></li>
+<li>Clone the repository:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/YavinOwens/What-is-a-Data-Analyst.git</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> What-is-a-Data-Analyst</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>Start the development environment:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> _DevelopmentEnvironment</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> up <span class="at">-d</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Access the services:</li>
+</ol>
+<ul>
+<li>VS Code: http://localhost:8080</li>
+<li>PgAdmin: http://localhost:5050</li>
+<li>PostgreSQL: localhost:5432</li>
+<li>Redis: localhost:6379</li>
+</ul>
+</section>
+<section id="best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="best-practices">Best Practices</h2>
+<ol type="1">
+<li><strong>Version Control</strong>
+<ul>
+<li>Use feature branches for new work</li>
+<li>Write clear commit messages</li>
+<li>Keep branches up to date</li>
+<li>Review code before merging</li>
+</ul></li>
+<li><strong>Documentation</strong>
+<ul>
+<li>Update documentation as you work</li>
+<li>Use the provided templates</li>
+<li>Keep documentation in sync with code</li>
+<li>Document any environment changes</li>
+</ul></li>
+<li><strong>Development Workflow</strong>
+<ul>
+<li>Start with a clear plan</li>
+<li>Write tests for new features</li>
+<li>Follow coding standards</li>
+<li>Review your work before committing</li>
+</ul></li>
+<li><strong>Environment Management</strong>
+<ul>
+<li>Keep dependencies updated</li>
+<li>Document environment changes</li>
+<li>Use virtual environments</li>
+<li>Follow security best practices</li>
+</ul></li>
 </ol>
 </section>
-<section id="key-topics-3" class="level2">
-<h2 class="anchored" data-anchor-id="key-topics-3">Key Topics</h2>
-<ul>
-<li>Data Quality → <a href="./AndiStory.html#book-1-kidlens-law">Book 1</a></li>
-<li>Documentation → <a href="./AndiStory.html#book-2-the-documentation-journey">Book 2</a></li>
-<li>Implementation → <a href="./AndiStory.html#book-3-from-theory-to-practice-getting-your-hands-dirty">Book 3</a></li>
-<li>Excellence → <a href="./AndiStory.html#book-4-argh-what-does-good-look-like">Book 4</a></li>
-</ul>
-<p>Remember: The journey to excellence is continuous. Each book represents a step forward in mastering data analytics and documentation practices.</p>
+<section id="project-structure" class="level2">
+<h2 class="anchored" data-anchor-id="project-structure">Project Structure</h2>
+<pre><code>lean_analytics/
+├── _DevelopmentEnvironment/  # Docker configuration
+├── docs/                     # Documentation and website
+├── src/                      # Source code
+└── data/                     # Data files</code></pre>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<p>If you encounter port conflicts: 1. Check running containers: <code>docker ps</code> 2. Stop all containers: <code>docker-compose down</code> 3. Start containers again: <code>docker-compose up -d</code></p>
+<p>For database connection issues: 1. Verify PostgreSQL container is running: <code>docker ps | grep postgres</code> 2. Check container logs: <code>docker logs andi_postgres</code> 3. Ensure correct credentials are being used</p>
 
 
 <!-- -->
@@ -829,100 +794,120 @@ Framework Components
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Lean Analytics Journey"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "If you write a problem down clearly, then the matter is half solved."</span>  </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; — Kidlens Law</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu"># Lean Analytics Journey</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Welcome to the Lean Analytics Journey, a comprehensive guide to data analysis and engineering.</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Books</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">### [Book 1 - Kidlens Law](AndiStory.qmd#book-1-kidlens-law)</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Explore the fundamentals of data quality and analysis through the lens of Kidlens Law.</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Topics</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Data Quality Assessment</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GDPR Fines Analysis</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Problem Definition</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### [Book 2 - Documentation Journey](AndiStory.qmd#book-2-the-documentation-journey)</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Learn about the importance of documentation and knowledge management in data projects.</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Topics</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>DMBOK2 Principles</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hub and Spoke Model</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Documentation Best Practices</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">### [Book 3 - Getting Your Hands Dirty](AndiStory.qmd#book-3-from-theory-to-practice-getting-your-hands-dirty)</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>Dive into practical implementation and hands-on data engineering.</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Topics</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Implementation Guide</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Code Examples</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Best Practices</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">### [Book 4 - ARGH Framework](AndiStory.qmd#book-4-argh-what-does-good-look-like)</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>Discover the ARGH framework for defining and achieving excellence in data projects.</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Framework Components</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A**ctionable: Insights that drive decisions</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**R**eliable: Trustworthy and consistent data</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**G**overned: Controlled and compliant processes</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**H**armonized: Integrated and synchronized systems</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="fu">### [Andi's Complete Story](AndiStory.qmd)</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Follow Andi's journey through all four books in a single narrative.</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## Andi's Templates {#andis-templates}</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>Access our comprehensive documentation and templates:</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="fu">### Project Management </span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Engineering Documentation</span><span class="co">](docs/analytical_engineering_docs.html)</span> - Main documentation page</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Project Planning</span><span class="co">](docs/project_planning.html)</span> - Templates for project management</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Meeting Templates</span><span class="co">](docs/meeting_templates.html)</span> - Templates for team meetings</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="fu">### Analysis Documentation</span></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Findings Templates</span><span class="co">](docs/findings_templates.html)</span> - Templates for documenting analysis results</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Data Quality Checks</span><span class="co">](docs/data_quality_checks.html)</span> - Templates for data validation</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="fu">### Technical Resources</span></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Issues and Bugs</span><span class="co">](docs/issues_and_bugs.html)</span> - Templates for tracking and managing issues</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Reference Materials</span><span class="co">](docs/reference_materials.html)</span> - Technical standards and best practices</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Analysis Notebooks</span><span class="co">](docs/analysis_notebooks.html)</span> - Templates for data analysis</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="fu">## Getting Started</span></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span><span class="co">[</span><span class="ot">Start with Book 1</span><span class="co">](AndiStory.qmd#book-1-kidlens-law)</span></span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span><span class="co">[</span><span class="ot">Explore Documentation in Book 2</span><span class="co">](AndiStory.qmd#book-2-the-documentation-journey)</span></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span><span class="co">[</span><span class="ot">Get Practical in Book 3</span><span class="co">](AndiStory.qmd#book-3-from-theory-to-practice-getting-your-hands-dirty)</span></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span><span class="co">[</span><span class="ot">Define Excellence in Book 4</span><span class="co">](AndiStory.qmd#book-4-argh-what-does-good-look-like)</span></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Topics</span></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Data Quality → <span class="co">[</span><span class="ot">Book 1</span><span class="co">](AndiStory.qmd#book-1-kidlens-law)</span></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Documentation → <span class="co">[</span><span class="ot">Book 2</span><span class="co">](AndiStory.qmd#book-2-the-documentation-journey)</span></span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Implementation → <span class="co">[</span><span class="ot">Book 3</span><span class="co">](AndiStory.qmd#book-3-from-theory-to-practice-getting-your-hands-dirty)</span></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Excellence → <span class="co">[</span><span class="ot">Book 4</span><span class="co">](AndiStory.qmd#book-4-argh-what-does-good-look-like)</span></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>Remember: The journey to excellence is continuous. Each book represents a step forward in mastering data analytics and documentation practices. </span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Team Wiki"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 3</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: cosmo</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu"># Development Environment Setup</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Docker Services</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>Our development environment uses Docker containers for various services. Here's how to access them:</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### VS Code in Browser (code-server)</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>URL: http://localhost:8080</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Password: andi_password</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Features:</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Full VS Code experience in browser</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Pre-configured extensions</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Integrated terminal</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Git integration</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Debugging support</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="fu">### PostgreSQL Database</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Host: localhost</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Port: 5432</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Database: gdpr_fines</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Username: andi_user</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Password: andi_password</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="fu">### PgAdmin</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>URL: http://localhost:5050</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Username: admin@admin.com</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Password: admin</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="fu">### Redis Cache</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Host: localhost</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Port: 6379</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Password: andi_password</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Getting Started</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Clone the repository:</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/YavinOwens/What-is-a-Data-Analyst.git</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> What-is-a-Data-Analyst</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Start the development environment:</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> _DevelopmentEnvironment</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> up <span class="at">-d</span></span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Access the services:</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>VS Code: http://localhost:8080</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>PgAdmin: http://localhost:5050</span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>PostgreSQL: localhost:5432</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Redis: localhost:6379</span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a><span class="fu">## Best Practices</span></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Version Control**</span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use feature branches for new work</span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Write clear commit messages</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Keep branches up to date</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Review code before merging</span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Documentation**</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Update documentation as you work</span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use the provided templates</span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Keep documentation in sync with code</span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Document any environment changes</span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Development Workflow**</span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Start with a clear plan</span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Write tests for new features</span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Follow coding standards</span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Review your work before committing</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Environment Management**</span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Keep dependencies updated</span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Document environment changes</span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use virtual environments</span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Follow security best practices</span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a><span class="fu">## Project Structure</span></span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a><span class="in">lean_analytics/</span></span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a><span class="in">├── _DevelopmentEnvironment/  # Docker configuration</span></span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a><span class="in">├── docs/                     # Documentation and website</span></span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a><span class="in">├── src/                      # Source code</span></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a><span class="in">└── data/                     # Data files</span></span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a><span class="fu">## Troubleshooting</span></span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>If you encounter port conflicts:</span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Check running containers: <span class="in">`docker ps`</span></span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Stop all containers: <span class="in">`docker-compose down`</span></span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Start containers again: <span class="in">`docker-compose up -d`</span></span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>For database connection issues:</span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Verify PostgreSQL container is running: <span class="in">`docker ps | grep postgres`</span></span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Check container logs: <span class="in">`docker logs andi_postgres`</span></span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Ensure correct credentials are being used </span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/edit/main/team_wiki.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/YavinOwens/What-is-a-Data-Analyst/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

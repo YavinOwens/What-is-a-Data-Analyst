@@ -11,4 +11,102 @@ blockquote {
     border-left: 4px solid #ccc;
     padding-left: 1em;
     margin: 1em 0;
+}
+
+/* Code block styling */
+pre {
+    background-color: #f8f9fa;
+    border-left: 4px solid #dee2e6;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Fira Code', 'Consolas', 'Monaco', 'Andale Mono', monospace;
+    font-size: 0.9em;
+    background-color: #f8f9fa;
+    padding: 0.2em 0.4em;
+    border-radius: 0.25rem;
+}
+
+/* Template styling */
+.markdown-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.markdown-section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Table styling */
+.markdown-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.markdown-section th,
+.markdown-section td {
+    padding: 0.75rem;
+    border: 1px solid #dee2e6;
+}
+
+.markdown-section th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+/* List styling */
+.markdown-section ul,
+.markdown-section ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.markdown-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Template specific styling */
+.template-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.template-section h2 {
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .markdown-section {
+        padding: 1rem;
+    }
+    
+    .markdown-section table {
+        display: block;
+        overflow-x: auto;
+    }
 } 

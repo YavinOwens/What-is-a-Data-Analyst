@@ -1,0 +1,882 @@
+---
+title: "Analysis Notebooks"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    theme: cosmo
+    code-fold: true
+---
+
+# Analysis Notebooks
+
+This document provides templates for standardized analysis notebooks in the GDPR Fines Analysis project.
+
+## Exploratory Data Analysis (EDA) Template
+
+```python
+# ---
+# title: "Exploratory Data Analysis: [Dataset Name]"
+# author: "[Author Name]"
+# date: "[YYYY-MM-DD]"
+# ---
+
+# %% [markdown]
+# # Exploratory Data Analysis: [Dataset Name]
+# 
+# ## Objective
+# 
+# [Brief description of the analysis objectives]
+# 
+# ## Data Description
+# 
+# - **Source**: [Where the data comes from]
+# - **Time Period**: [Time period covered by the data]
+# - **Size**: [Number of records, file size]
+# - **Format**: [File format, e.g., CSV, JSON, database]
+
+# %% [markdown]
+# ## Setup and Configuration
+
+# %%
+# Import necessary libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.express as px
+from datetime import datetime
+
+# Set display options
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', 100)
+pd.set_option('display.width', 1000)
+pd.set_option('display.float_format', '{:.2f}'.format)
+
+# Set visualization style
+plt.style.use('seaborn-v0_8-whitegrid')
+sns.set_palette('Set2')
+
+# %% [markdown]
+# ## Data Loading
+
+# %%
+# Load the data
+df = pd.read_csv('path/to/data.csv')
+
+# Display basic information
+print(f"Data Shape: {df.shape}")
+print("\nData Types:")
+print(df.dtypes)
+print("\nMemory Usage:")
+print(df.memory_usage(deep=True))
+
+# %% [markdown]
+# ## Data Overview
+# 
+# Let's look at the first few rows to understand the structure.
+
+# %%
+# Display sample data
+df.head()
+
+# %% [markdown]
+# ## Data Quality Assessment
+# 
+# Let's check for missing values, duplicates, and other quality issues.
+
+# %%
+# Check for missing values
+missing_values = df.isnull().sum()
+missing_pct = (missing_values / len(df)) * 100
+missing_df = pd.DataFrame({
+    'Missing Values': missing_values,
+    'Percentage': missing_pct
+})
+missing_df = missing_df[missing_df['Missing Values'] > 0].sort_values('Percentage', ascending=False)
+
+if not missing_df.empty:
+    print("Columns with missing values:")
+    display(missing_df)
+else:
+    print("No missing values found.")
+
+# %%
+# Check for duplicates
+duplicate_count = df.duplicated().sum()
+print(f"Number of duplicate rows: {duplicate_count} ({duplicate_count/len(df):.2%} of total)")
+
+# %%
+# Check for unusual values or outliers
+numeric_columns = df.select_dtypes(include=['number']).columns
+for column in numeric_columns:
+    stats = df[column].describe()
+    print(f"\nSummary statistics for {column}:")
+    display(stats)
+    
+    # Box plot for outlier visualization
+    plt.figure(figsize=(10, 4))
+    sns.boxplot(x=df[column])
+    plt.title(f'Box plot of {column}')
+    plt.show()
+
+# %% [markdown]
+# ## Univariate Analysis
+# 
+# Let's analyze each variable independently.
+
+# %%
+# Categorical variables analysis
+categorical_columns = df.select_dtypes(include=['object', 'category']).columns
+for column in categorical_columns:
+    value_counts = df[column].value_counts()
+    value_pct = df[column].value_counts(normalize=True) * 100
+    
+    print(f"\nValue counts for {column}:")
+    display(pd.DataFrame({
+        'Count': value_counts,
+        'Percentage': value_pct
+    }).head(10))
+    
+    # Bar chart
+    plt.figure(figsize=(12, 6))
+    sns.countplot(y=column, data=df, order=value_counts.index[:10])
+    plt.title(f'Count of {column} (Top 10)')
+    plt.xlabel('Count')
+    plt.ylabel(column)
+    plt.tight_layout()
+    plt.show()
+
+# %%
+# Numerical variables analysis
+for column in numeric_columns:
+    plt.figure(figsize=(12, 6))
+    
+    # Histogram and KDE
+    plt.subplot(1, 2, 1)
+    sns.histplot(df[column], kde=True)
+    plt.title(f'Distribution of {column}')
+    
+    # Cumulative distribution
+    plt.subplot(1, 2, 2)
+    sns.ecdfplot(df[column])
+    plt.title(f'Cumulative Distribution of {column}')
+    
+    plt.tight_layout()
+    plt.show()
+
+# %% [markdown]
+# ## Bivariate Analysis
+# 
+# Let's explore relationships between pairs of variables.
+
+# %%
+# Correlation matrix for numerical variables
+if len(numeric_columns) > 1:
+    corr_matrix = df[numeric_columns].corr()
+    
+    plt.figure(figsize=(12, 10))
+    sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt='.2f', linewidths=0.5)
+    plt.title('Correlation Matrix')
+    plt.tight_layout()
+    plt.show()
+
+# %%
+# Categorical vs. Numerical variables
+if len(categorical_columns) > 0 and len(numeric_columns) > 0:
+    for cat_col in categorical_columns[:3]:  # Limit to first 3 categorical columns to avoid too many plots
+        top_categories = df[cat_col].value_counts().head(5).index  # Top 5 categories
+        for num_col in numeric_columns[:3]:  # Limit to first 3 numerical columns
+            plt.figure(figsize=(12, 6))
+            
+            # Box plot
+            sns.boxplot(x=cat_col, y=num_col, data=df[df[cat_col].isin(top_categories)])
+            plt.title(f'{num_col} by {cat_col} (Top 5 categories)')
+            plt.xticks(rotation=45)
+            plt.tight_layout()
+            plt.show()
+
+# %% [markdown]
+# ## Time Series Analysis (if applicable)
+# 
+# If the data has a time component, let's analyze trends over time.
+
+# %%
+# Check if there's a date column
+date_columns = [col for col in df.columns if 'date' in col.lower() or 'time' in col.lower()]
+
+if date_columns:
+    date_col = date_columns[0]  # Use the first date column found
+    
+    # Convert to datetime if not already
+    if df[date_col].dtype != 'datetime64[ns]':
+        df[date_col] = pd.to_datetime(df[date_col], errors='coerce')
+    
+    # Set time period for aggregation (e.g., monthly)
+    df['period'] = df[date_col].dt.to_period('M')
+    
+    # Aggregate by time period
+    for num_col in numeric_columns[:3]:  # First 3 numeric columns
+        time_series = df.groupby('period')[num_col].agg(['mean', 'median', 'sum', 'count'])
+        
+        plt.figure(figsize=(15, 6))
+        time_series['sum'].plot(kind='line')
+        plt.title(f'Sum of {num_col} Over Time')
+        plt.xlabel('Time Period')
+        plt.ylabel(f'Sum of {num_col}')
+        plt.grid(True, alpha=0.3)
+        plt.tight_layout()
+        plt.show()
+
+# %% [markdown]
+# ## Multivariate Analysis
+# 
+# Let's explore relationships between multiple variables.
+
+# %%
+# Scatter plot matrix for numerical variables
+if len(numeric_columns) >= 2:
+    selected_num_cols = numeric_columns[:4]  # Limit to first 4 numerical columns
+    sns.pairplot(df[selected_num_cols], diag_kind='kde')
+    plt.suptitle('Scatter Plot Matrix', y=1.02)
+    plt.tight_layout()
+    plt.show()
+
+# %%
+# Multivariate analysis with categorical variables
+if len(categorical_columns) > 0 and len(numeric_columns) > 1:
+    cat_col = categorical_columns[0]  # Choose first categorical column
+    num_col1 = numeric_columns[0]  # First numerical column
+    num_col2 = numeric_columns[1]  # Second numerical column
+    
+    top_categories = df[cat_col].value_counts().head(5).index  # Top 5 categories
+    
+    plt.figure(figsize=(12, 8))
+    sns.scatterplot(x=num_col1, y=num_col2, hue=cat_col, data=df[df[cat_col].isin(top_categories)])
+    plt.title(f'Scatter Plot of {num_col2} vs {num_col1} by {cat_col}')
+    plt.tight_layout()
+    plt.show()
+
+# %% [markdown]
+# ## Key Insights
+# 
+# [Document key findings from the exploratory analysis]
+# 
+# 1. [Insight 1]
+# 2. [Insight 2]
+# 3. [Insight 3]
+# 
+# ## Next Steps
+# 
+# [Document recommended actions based on the analysis]
+# 
+# 1. [Next step 1]
+# 2. [Next step 2]
+# 3. [Next step 3]
+```
+
+## Data Cleaning and Preprocessing Template
+
+```python
+# ---
+# title: "Data Cleaning and Preprocessing: [Dataset Name]"
+# author: "[Author Name]"
+# date: "[YYYY-MM-DD]"
+# ---
+
+# %% [markdown]
+# # Data Cleaning and Preprocessing: [Dataset Name]
+# 
+# ## Objective
+# 
+# [Brief description of the cleaning and preprocessing objectives]
+# 
+# ## Data Source
+# 
+# - **Source**: [Where the data comes from]
+# - **Raw Data Path**: [Path to raw data]
+# - **Output Path**: [Path where processed data will be saved]
+
+# %% [markdown]
+# ## Setup and Configuration
+
+# %%
+# Import necessary libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from datetime import datetime
+import re
+import os
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder, LabelEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+
+# Set display options
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', 100)
+pd.set_option('display.width', 1000)
+pd.set_option('display.float_format', '{:.2f}'.format)
+
+# %% [markdown]
+# ## Data Loading
+
+# %%
+# Load the raw data
+raw_data_path = 'path/to/raw_data.csv'
+df_raw = pd.read_csv(raw_data_path)
+
+# Display basic information
+print(f"Raw Data Shape: {df_raw.shape}")
+print("\nData Types:")
+print(df_raw.dtypes)
+
+# Make a copy for processing
+df = df_raw.copy()
+
+# %% [markdown]
+# ## Data Quality Assessment
+# 
+# Let's assess the quality of the raw data and identify issues that need to be addressed.
+
+# %%
+# Check for missing values
+missing_values = df.isnull().sum()
+missing_pct = (missing_values / len(df)) * 100
+missing_df = pd.DataFrame({
+    'Missing Values': missing_values,
+    'Percentage': missing_pct
+})
+missing_df = missing_df[missing_df['Missing Values'] > 0].sort_values('Percentage', ascending=False)
+
+if not missing_df.empty:
+    print("Columns with missing values:")
+    display(missing_df)
+else:
+    print("No missing values found.")
+
+# %%
+# Check for duplicates
+duplicate_count = df.duplicated().sum()
+print(f"Number of duplicate rows: {duplicate_count} ({duplicate_count/len(df):.2%} of total)")
+
+# %%
+# Check for unusual values or outliers
+numeric_columns = df.select_dtypes(include=['number']).columns
+for column in numeric_columns:
+    stats = df[column].describe()
+    print(f"\nSummary statistics for {column}:")
+    display(stats)
+
+# %% [markdown]
+# ## Step 1: Handling Missing Values
+
+# %%
+# Define handling strategy for each column with missing values
+# Example strategies:
+# 1. Drop rows with missing values in critical columns
+# 2. Fill missing values with mean/median/mode
+# 3. Use more sophisticated imputation methods
+
+# Strategy 1: Drop rows with missing values in critical columns
+critical_columns = []  # List critical columns here
+if critical_columns:
+    df_clean = df.dropna(subset=critical_columns)
+    print(f"Rows remaining after dropping missing values in critical columns: {len(df_clean)} ({len(df_clean)/len(df):.2%} of original)")
+else:
+    df_clean = df.copy()
+
+# Strategy 2: Impute missing values in numerical columns
+numeric_columns_with_missing = [col for col in numeric_columns if df_clean[col].isnull().sum() > 0]
+if numeric_columns_with_missing:
+    # Simple imputation with median
+    for col in numeric_columns_with_missing:
+        median_value = df_clean[col].median()
+        df_clean[col] = df_clean[col].fillna(median_value)
+        print(f"Filled missing values in {col} with median: {median_value:.2f}")
+
+# Strategy 3: Impute missing values in categorical columns
+categorical_columns = df_clean.select_dtypes(include=['object', 'category']).columns
+categorical_columns_with_missing = [col for col in categorical_columns if df_clean[col].isnull().sum() > 0]
+if categorical_columns_with_missing:
+    # Simple imputation with mode
+    for col in categorical_columns_with_missing:
+        mode_value = df_clean[col].mode()[0]
+        df_clean[col] = df_clean[col].fillna(mode_value)
+        print(f"Filled missing values in {col} with mode: {mode_value}")
+
+# Verify all missing values are handled
+missing_after = df_clean.isnull().sum().sum()
+print(f"\nTotal missing values remaining: {missing_after}")
+
+# %% [markdown]
+# ## Step 2: Handling Duplicates
+
+# %%
+# Check for duplicates after handling missing values
+duplicate_count_after = df_clean.duplicated().sum()
+print(f"Number of duplicate rows: {duplicate_count_after} ({duplicate_count_after/len(df_clean):.2%} of total)")
+
+# Remove duplicates if any
+if duplicate_count_after > 0:
+    df_clean = df_clean.drop_duplicates()
+    print(f"Rows remaining after removing duplicates: {len(df_clean)}")
+
+# %% [markdown]
+# ## Step 3: Data Type Conversions
+
+# %%
+# Convert data types as needed
+# Example conversions:
+
+# Convert date columns to datetime
+date_columns = []  # List date columns here
+for col in date_columns:
+    df_clean[col] = pd.to_datetime(df_clean[col], errors='coerce')
+    print(f"Converted {col} to datetime type")
+
+# Convert categorical columns to category type
+for col in categorical_columns:
+    df_clean[col] = df_clean[col].astype('category')
+    print(f"Converted {col} to category type")
+
+# %% [markdown]
+# ## Step 4: Handling Outliers
+
+# %%
+# Identify and handle outliers in numerical columns
+for col in numeric_columns:
+    # Calculate IQR
+    Q1 = df_clean[col].quantile(0.25)
+    Q3 = df_clean[col].quantile(0.75)
+    IQR = Q3 - Q1
+    
+    # Define bounds
+    lower_bound = Q1 - 1.5 * IQR
+    upper_bound = Q3 + 1.5 * IQR
+    
+    # Identify outliers
+    outliers = df_clean[(df_clean[col] < lower_bound) | (df_clean[col] > upper_bound)]
+    outlier_count = len(outliers)
+    
+    if outlier_count > 0:
+        print(f"\nOutliers in {col}: {outlier_count} ({outlier_count/len(df_clean):.2%} of data)")
+        
+        # Strategy options:
+        # 1. Cap outliers at bounds (winsorization)
+        # 2. Remove outliers
+        # 3. Transform data (e.g., log transformation)
+        # 4. Keep outliers if they are valid data points
+        
+        # Example: Winsorization
+        df_clean[col] = df_clean[col].clip(lower=lower_bound, upper=upper_bound)
+        print(f"Applied winsorization to {col}")
+
+# %% [markdown]
+# ## Step 5: Feature Engineering
+
+# %%
+# Create new features based on existing ones
+# Examples:
+
+# 1. Extract components from date fields
+if date_columns:
+    for col in date_columns:
+        df_clean[f'{col}_year'] = df_clean[col].dt.year
+        df_clean[f'{col}_month'] = df_clean[col].dt.month
+        df_clean[f'{col}_day'] = df_clean[col].dt.day
+        df_clean[f'{col}_dayofweek'] = df_clean[col].dt.dayofweek
+        print(f"Created date components from {col}")
+
+# 2. Create interaction features
+# Example: Multiply two numeric features
+if len(numeric_columns) >= 2:
+    col1 = numeric_columns[0]
+    col2 = numeric_columns[1]
+    df_clean[f'{col1}_{col2}_interaction'] = df_clean[col1] * df_clean[col2]
+    print(f"Created interaction feature between {col1} and {col2}")
+
+# 3. Binning numerical features
+# Example: Convert a continuous feature into categorical bins
+if len(numeric_columns) > 0:
+    col = numeric_columns[0]
+    df_clean[f'{col}_binned'] = pd.qcut(df_clean[col], q=4, labels=['Low', 'Medium-Low', 'Medium-High', 'High'])
+    print(f"Created binned version of {col}")
+
+# %% [markdown]
+# ## Step 6: Feature Scaling and Encoding
+
+# %%
+# Define preprocessing pipeline for numerical and categorical features
+
+# Numerical features preprocessing
+numeric_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='median')),
+    ('scaler', StandardScaler())
+])
+
+# Categorical features preprocessing
+categorical_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
+    ('onehot', OneHotEncoder(handle_unknown='ignore'))
+])
+
+# Combine preprocessing steps
+preprocessor = ColumnTransformer(
+    transformers=[
+        ('num', numeric_transformer, numeric_columns),
+        ('cat', categorical_transformer, categorical_columns)
+    ])
+
+# Create example of preprocessed data for demonstration
+# In a real workflow, you might save the preprocessor to use with new data
+X = df_clean[list(numeric_columns) + list(categorical_columns)]
+try:
+    preprocessor.fit(X)
+    print("Preprocessing pipeline successfully fitted.")
+except Exception as e:
+    print(f"Error fitting preprocessing pipeline: {str(e)}")
+
+# %% [markdown]
+# ## Step 7: Final Quality Checks
+
+# %%
+# Perform final data quality checks
+
+# Check for missing values
+final_missing = df_clean.isnull().sum().sum()
+print(f"Final missing values: {final_missing}")
+
+# Check data shape
+print(f"Original data shape: {df_raw.shape}")
+print(f"Clean data shape: {df_clean.shape}")
+print(f"Rows retained: {len(df_clean)/len(df_raw):.2%}")
+
+# Check column data types
+print("\nFinal data types:")
+print(df_clean.dtypes)
+
+# Sample of final clean data
+print("\nSample of clean data:")
+display(df_clean.head())
+
+# %% [markdown]
+# ## Step 8: Save Processed Data
+
+# %%
+# Save the cleaned and preprocessed data
+output_path = 'path/to/processed_data.csv'
+df_clean.to_csv(output_path, index=False)
+print(f"Saved processed data to {output_path}")
+
+# %% [markdown]
+# ## Summary of Processing Steps
+# 
+# 1. **Loading and Initial Assessment**:
+#    - Loaded raw data with shape {df_raw.shape}
+#    - Identified {missing_df.shape[0]} columns with missing values
+#    - Found {duplicate_count} duplicate rows
+# 
+# 2. **Handling Missing Values**:
+#    - [List strategies used for handling missing values]
+# 
+# 3. **Removing Duplicates**:
+#    - Removed {duplicate_count} duplicate rows
+# 
+# 4. **Data Type Conversions**:
+#    - [List data type conversions performed]
+# 
+# 5. **Handling Outliers**:
+#    - [List outlier handling strategies]
+# 
+# 6. **Feature Engineering**:
+#    - [List new features created]
+# 
+# 7. **Feature Scaling and Encoding**:
+#    - [List preprocessing steps applied]
+# 
+# 8. **Final Dataset**:
+#    - Final shape: {df_clean.shape}
+#    - Retention rate: {len(df_clean)/len(df_raw):.2%}
+# 
+# ## Next Steps
+# 
+# [Document recommended actions for using this processed data]
+# 
+# 1. [Next step 1]
+# 2. [Next step 2]
+# 3. [Next step 3]
+```
+
+## Analysis Report Template
+
+```python
+# ---
+# title: "Analysis Report: [Analysis Title]"
+# author: "[Author Name]"
+# date: "[YYYY-MM-DD]"
+# ---
+
+# %% [markdown]
+# # Analysis Report: [Analysis Title]
+# 
+# ## Executive Summary
+# 
+# [Brief summary of the analysis, key findings, and recommendations (2-3 paragraphs)]
+# 
+# **Key Findings:**
+# 
+# 1. [Key finding 1]
+# 2. [Key finding 2]
+# 3. [Key finding 3]
+# 
+# **Recommendations:**
+# 
+# 1. [Recommendation 1]
+# 2. [Recommendation 2]
+# 3. [Recommendation 3]
+
+# %% [markdown]
+# ## 1. Introduction
+# 
+# ### 1.1 Background
+# 
+# [Context and background information]
+# 
+# ### 1.2 Objectives
+# 
+# [Specific objectives of this analysis]
+# 
+# ### 1.3 Research Questions
+# 
+# 1. [Research question 1]
+# 2. [Research question 2]
+# 3. [Research question 3]
+
+# %% [markdown]
+# ## 2. Methodology
+# 
+# ### 2.1 Data Sources
+# 
+# [Description of data sources used]
+# 
+# | Dataset | Source | Time Period | Size | Description |
+# |---------|--------|-------------|------|-------------|
+# | [Dataset 1] | [Source] | [Time Period] | [Size] | [Description] |
+# | [Dataset 2] | [Source] | [Time Period] | [Size] | [Description] |
+# 
+# ### 2.2 Analysis Approach
+# 
+# [Description of the analytical approach, including methods, models, and techniques used]
+# 
+# ### 2.3 Tools and Technologies
+# 
+# - Python [version]
+# - pandas [version]
+# - scikit-learn [version]
+# - [Other tools/libraries]
+
+# %% [markdown]
+# ## 3. Data Preparation
+# 
+# ### 3.1 Data Cleaning
+# 
+# [Summary of data cleaning steps]
+
+# %%
+# Import necessary libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.express as px
+
+# Load the cleaned data
+df = pd.read_csv('path/to/cleaned_data.csv')
+
+# Display basic information
+print(f"Data Shape: {df.shape}")
+print("\nData Types:")
+print(df.dtypes)
+
+# Display sample data
+df.head()
+
+# %% [markdown]
+# ### 3.2 Feature Engineering
+# 
+# [Description of features created or transformed]
+
+# %%
+# Display the engineered features
+engineered_features = ['feature_1', 'feature_2', 'feature_3']  # List your engineered features
+df[engineered_features].head()
+
+# %% [markdown]
+# ## 4. Analysis Results
+# 
+# ### 4.1 Descriptive Statistics
+# 
+# [Summary of descriptive statistics]
+
+# %%
+# Display summary statistics
+df.describe()
+
+# %%
+# Visualize distribution of key variables
+key_variables = ['variable_1', 'variable_2', 'variable_3']  # List your key variables
+
+for var in key_variables:
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df[var], kde=True)
+    plt.title(f'Distribution of {var}')
+    plt.show()
+
+# %% [markdown]
+# ### 4.2 Key Finding 1: [Title]
+# 
+# [Detailed explanation of finding 1]
+
+# %%
+# Visualization supporting finding 1
+plt.figure(figsize=(12, 8))
+# Add your visualization code here
+plt.title('Visualization Supporting Finding 1')
+plt.show()
+
+# %% [markdown]
+# ### 4.3 Key Finding 2: [Title]
+# 
+# [Detailed explanation of finding 2]
+
+# %%
+# Visualization supporting finding 2
+plt.figure(figsize=(12, 8))
+# Add your visualization code here
+plt.title('Visualization Supporting Finding 2')
+plt.show()
+
+# %% [markdown]
+# ### 4.4 Key Finding 3: [Title]
+# 
+# [Detailed explanation of finding 3]
+
+# %%
+# Visualization supporting finding 3
+plt.figure(figsize=(12, 8))
+# Add your visualization code here
+plt.title('Visualization Supporting Finding 3')
+plt.show()
+
+# %% [markdown]
+# ## 5. Discussion
+# 
+# ### 5.1 Interpretation of Results
+# 
+# [Interpretation of the analysis results in the context of the research questions]
+# 
+# ### 5.2 Limitations
+# 
+# [Discussion of limitations of the analysis]
+# 
+# ### 5.3 Implications
+# 
+# [Discussion of implications of the findings]
+
+# %% [markdown]
+# ## 6. Recommendations
+# 
+# ### 6.1 Recommendation 1: [Title]
+# 
+# [Detailed explanation of recommendation 1, including implementation considerations]
+# 
+# ### 6.2 Recommendation 2: [Title]
+# 
+# [Detailed explanation of recommendation 2, including implementation considerations]
+# 
+# ### 6.3 Recommendation 3: [Title]
+# 
+# [Detailed explanation of recommendation 3, including implementation considerations]
+
+# %% [markdown]
+# ## 7. Conclusion
+# 
+# [Summary of the analysis, findings, and recommendations]
+# 
+# ## 8. Next Steps
+# 
+# [Suggested next steps for further analysis or implementation]
+# 
+# 1. [Next step 1]
+# 2. [Next step 2]
+# 3. [Next step 3]
+
+# %% [markdown]
+# ## Appendix
+# 
+# ### A. Additional Visualizations
+# 
+# [Additional visualizations supporting the analysis]
+
+# %%
+# Additional visualization 1
+plt.figure(figsize=(12, 8))
+# Add your visualization code here
+plt.title('Additional Visualization 1')
+plt.show()
+
+# %% [markdown]
+# ### B. Technical Details
+# 
+# [Technical details of the analysis, such as model parameters, validation methods, etc.]
+# 
+# ### C. References
+# 
+# [References to data sources, methodologies, or other resources used]
+```
+
+## How to Use These Templates
+
+These notebook templates are designed to provide a standardized structure for data analysis work. To use them effectively:
+
+1. **Copy the Template:** Select the appropriate template based on your analysis needs.
+2. **Customize the Template:** Replace placeholders with your specific information.
+3. **Document as You Go:** Keep documentation current as you perform your analysis.
+4. **Include Visualizations:** Add relevant visualizations to support your findings.
+5. **Save in Standard Format:** Save your notebook in a standard format (e.g., Jupyter Notebook, Quarto Document).
+6. **Version Control:** Commit your notebook to version control for tracking changes.
+
+## Best Practices for Analysis Notebooks
+
+1. **Structure and Organization:**
+   - Use clear section headings
+   - Include a table of contents
+   - Number sections and subsections
+
+2. **Documentation:**
+   - Explain your reasoning for key decisions
+   - Document assumptions and limitations
+   - Include sources of data and methodologies
+
+3. **Code Quality:**
+   - Follow the project's coding standards
+   - Use comments to explain complex code
+   - Optimize for readability
+
+4. **Reproducibility:**
+   - Include all necessary import statements
+   - Use relative paths for file references
+   - Document environment requirements
+
+5. **Visualizations:**
+   - Use appropriate chart types for your data
+   - Include clear titles and labels
+   - Consider colorblind-friendly color palettes
+
+6. **Conclusion and Next Steps:**
+   - Summarize key findings
+   - Propose actionable recommendations
+   - Suggest areas for further investigation 

@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/data_quality_checks.html</loc>
-    <lastmod>2025-04-14T11:54:04.561Z</lastmod>
+    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/team_wiki.html</loc>
+    <lastmod>2025-04-14T11:44:54.538Z</lastmod>
   </url>
   <url>
-    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/project_planning.html</loc>
-    <lastmod>2025-04-14T11:49:48.022Z</lastmod>
+    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/analysis_notebooks.html</loc>
+    <lastmod>2025-04-14T12:16:48.471Z</lastmod>
   </url>
   <url>
-    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/AndiStory.html</loc>
-    <lastmod>2025-04-14T12:08:40.143Z</lastmod>
+    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/issues_and_bugs.html</loc>
+    <lastmod>2025-04-14T12:13:39.410Z</lastmod>
   </url>
   <url>
-    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/index.html</loc>
-    <lastmod>2025-04-14T12:02:38.512Z</lastmod>
+    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/meeting_templates.html</loc>
+    <lastmod>2025-04-14T11:50:47.686Z</lastmod>
   </url>
   <url>
     <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/analytical_engineering_docs.html</loc>
     <lastmod>2025-04-14T12:03:29.259Z</lastmod>
   </url>
   <url>
-    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/meeting_templates.html</loc>
-    <lastmod>2025-04-14T11:50:47.686Z</lastmod>
+    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/index.html</loc>
+    <lastmod>2025-04-14T12:02:38.512Z</lastmod>
+  </url>
+  <url>
+    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/AndiStory.html</loc>
+    <lastmod>2025-04-14T12:08:40.143Z</lastmod>
+  </url>
+  <url>
+    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/project_planning.html</loc>
+    <lastmod>2025-04-14T14:18:15.885Z</lastmod>
+  </url>
+  <url>
+    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/findings_templates.html</loc>
+    <lastmod>2025-04-14T12:12:52.603Z</lastmod>
+  </url>
+  <url>
+    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/reference_materials.html</loc>
+    <lastmod>2025-04-14T12:14:59.696Z</lastmod>
+  </url>
+  <url>
+    <loc>https://YavinOwens.github.io/What-is-a-Data-Analyst/data_quality_checks.html</loc>
+    <lastmod>2025-04-14T11:54:04.561Z</lastmod>
   </url>
 </urlset>
