@@ -55,6 +55,24 @@ Discover the ARGH framework for defining and achieving excellence in data projec
 ### [Andi's Complete Story](AndiStory.qmd)
 Follow Andi's journey through all four books in a single narrative.
 
+## Andi's Templates {#andis-templates}
+
+Access our comprehensive documentation and templates:
+
+### Project Management 
+- [Engineering Documentation](docs/analytical_engineering_docs.html) - Main documentation page
+- [Project Planning](docs/project_planning.html) - Templates for project management
+- [Meeting Templates](docs/meeting_templates.html) - Templates for team meetings
+
+### Analysis Documentation
+- [Findings Templates](docs/findings_templates.html) - Templates for documenting analysis results
+- [Data Quality Checks](docs/data_quality_checks.html) - Templates for data validation
+
+### Technical Resources
+- [Issues and Bugs](docs/issues_and_bugs.html) - Templates for tracking and managing issues
+- [Reference Materials](docs/reference_materials.html) - Technical standards and best practices
+- [Analysis Notebooks](docs/analysis_notebooks.html) - Templates for data analysis
+
 ## Getting Started
 
 1. [Start with Book 1](AndiStory.qmd#book-1-kidlens-law)
